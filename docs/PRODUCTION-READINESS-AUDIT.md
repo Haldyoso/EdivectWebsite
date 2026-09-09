@@ -34,7 +34,7 @@ Dátum auditu: 3. 9. 2026. Tento súbor zachytáva stav repozitára pred úprava
 ## UŽ BOLO V PORIADKU
 
 - Statický export, workflow nasadenia na GitHub Pages, centralizované `basePath`/`assetPrefix`, cesty manifestu a cesty snímok sú správne implementované pre `/ScreenMarkWebsite/`.
-- Aktuálny názov EXE, veľkosť (76 219 736 bajtov / 72,7 MiB), verzia, dátum expirácie (26. 9. 2026) a SHA-256 (`361B85770C36A69B74E9B81F1A2B8E64CAFD2503B9C036093F30CBDCE369D3CE`) zodpovedajú súboru `lib/site.ts`.
+- Aktuálny názov EXE, veľkosť (76 230 839 bajtov / 72,7 MiB), verzia, dátum expirácie (9. 10. 2026) a SHA-256 (`7AF778F7B0421AAD21513F9CC3DBA70E2AF3A711EACED6FBC55A744381E80BAD`) zodpovedajú súboru `lib/site.ts`.
 - Hlavné CTA na úvodnej stránke smeruje na distribuovaný EXE a používa spoločnú konfiguráciu vydania.
 - Existujú EN, SK a DE trasy, prepínanie jazykov, lokalizované `<html lang>`, canonical URL a recipročné hreflang odkazy na úrovni stránok.
 - Existujú titulky, popisy, Open Graph, Twitter karty úvodných stránok, favicon, Apple ikona, ikony manifestu a lokalizované obrázky pre sociálne siete.
