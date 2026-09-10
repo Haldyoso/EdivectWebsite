@@ -1,6 +1,6 @@
 # Naming handoff: nový názov namiesto ScreenMark
 
-> Stav dokumentu: 9. september 2026  
+> Stav dokumentu: 10. september 2026  
 > Účel: preniesť celé doterajšie namingové uvažovanie do inej AI alebo na iný počítač bez začínania od nuly.
 
 ## 1. Ako používať tento dokument
@@ -93,6 +93,15 @@ Z doterajších reakcií vyplýva:
 - Príliš známe korene pôsobia lacno alebo genericky; napríklad Luna, Idea a Peno.
 - Význam má byť jemný. Príliš doslovné `nota`, `line`, `screen` alebo `object` znižujú vlastniteľnosť značky.
 - Názov nemá pôsobiť ako latinské odborné slovo, účtovnícky pojem, svetelný výrobok alebo názov lieku.
+- Používateľ uprednostňuje plynulé trojslabičné novotvary typu Velumo a Lumevo pred opisnými anglickými zloženinami typu Inkplane, Inkmode a Editpath.
+- Koncovka `-eta` sa po reakcii na Lumeta nejaví ako perspektívny smer.
+- Nové pozitívne reakcie na Modevo, Dimevo a zvuk Modano naznačujú obľubu rytmu `mo/di + d + otvorená samohláska` a koncoviek `-evo` alebo `-ano`.
+- Podobnosť s bežným slovom alebo známou značkou sa prejaví veľmi rýchlo: Planevo bolo odmietnuté, pretože znie ako Planeo.
+- Používateľ reaguje pozitívne na názvy ukotvené v technickom alebo matematickom pojme: Modelum, Nonius, Modulis a Splino.
+- Názov však musí byť vyhľadateľnejší než samotný všeobecný pojem; Nonius je výborný zvukový a významový smer, nie ideálny finálny názov.
+- Matematický význam môže fungovať, ale nie mechanické modifikácie odborných slov. Spline varianty boli ako smer odmietnuté.
+- **Tangevo** funguje výnimočne dobre: má technický odkaz na tangentu, ale znie ako samostatná plynulá značka.
+- Ďalšie kolá musia vychádzať z nových produktových metafor a architektúry produktu, nie z výmeny koreňa alebo prípony.
 
 ## 7. Aktuálny master tierlist
 
@@ -104,6 +113,12 @@ Tierlist zachytáva predovšetkým reakciu používateľa. Nie je to poradie pr�
 |---|---|---|---|
 | **Anovect** | a-no-vekt | Čistý, technický, zapamätateľný; blízko želanému charakteru Annovio | `anovect.com` je od 9. 9. 2026 v registri; overiť vlastníka a právne konflikty |
 | **Elavect** | e-la-vekt | Elegantný, ľahší a profesionálny technický zvuk | Potrebuje plnú právnu a jazykovú rešerš |
+| **Velumo** | ve-lu-mo | Mäkký trojslabičný novotvar; používateľovi sa páči | Neoverená doména, značky a svetelné asociácie |
+| **Lumevo** | lu-me-vo | Plynulý, vizuálny novotvar; používateľovi sa páči | Neoverená doména, značky a svetelné asociácie |
+| **Modevo** | mo-de-vo | Pevnejší začiatok a plynulé `-evo`; používateľovi sa páči | Neoverená doména a konflikty; preveriť významové asociácie |
+| **Dimevo** | di-me-vo | Technický, presný a plynulý zvuk; používateľovi sa páči | Neoverená doména a konflikty; význam nie je okamžite zrejmý |
+| **Modelum** | mo-de-lum | Technický význam editovateľného modelu; používateľovi sa páči | Overiť doménu, ochranné známky a prípadný latinský dojem |
+| **Tangevo** | tan-ge-vo | Technický odkaz na tangentu spojený s plynulým značkovým zvukom; spontánne „znie super“ | V taliančine je to slovesný tvar od `tangere`; preveriť doménu, jazykové asociácie a značky |
 
 ### A — silné a perspektívne
 
@@ -117,6 +132,12 @@ Tierlist zachytáva predovšetkým reakciu používateľa. Nie je to poradie pr�
 | Názov | Výslovnosť | Stav |
 |---|---|---|
 | **Lumavect** | lu-ma-vekt | Používateľ označil ako „možno“; riziko svetelnej asociácie |
+| **Tenavo** | te-na-vo | Používateľovi sa trochu páči; hladký zvuk, ale abstraktný význam |
+| **Nivelo** | ni-ve-lo | Používateľovi sa trochu páči; evokuje úroveň alebo vrstvu |
+| **Amendo** | a-men-do | Používateľovi znie celkom dobre; prirodzene evokuje úpravu | Overiť firmy, doménu a podobnosť s osobnými menami |
+| **Modulis** | mo-du-lis | Používateľovi znie celkom dobre; technický modulárny charakter | Môže byť všeobecnejší alebo už používaný technický základ |
+| **Nonius** | no-ni-us | Používateľovi sa veľmi páči význam aj zvuk | Je to všeobecný technický pojem, preto slabšia vyhľadateľnosť |
+| **Undalo** | un-da-lo | Používateľ ho označil ako zaujímavý | Význam je abstraktný; preveriť jazykové a značkové asociácie |
 | **Solavect** | so-la-vekt | Neohodnotené používateľom; možné solárne asociácie |
 | **Zanvect** | zan-vekt | Neohodnotené; jedinečné, ale koreň je bez významovej opory |
 | **Zanvum** | zan-vum | Neohodnotené; rovnaký abstraktný koreň, menej technické |
@@ -174,6 +195,41 @@ Tieto názvy neopakovať ani nevytvárať ich bezvýznamné pravopisné varianty
 - Tracavio — problematická výslovnosť a `r`
 - Vectexa
 - Viselora
+- Inkplane — používateľovi sa nepáči; opisná anglická zloženina
+- Inkmode — používateľovi sa nepáči; opisná anglická zloženina
+- Lumeta — používateľovi sa nepáči
+- Editpath — používateľovi sa nepáči; opisná anglická zloženina
+- Nodevo
+- Planevo — znie príliš podobne ako Planeo
+- Folevo
+- Tiltevo
+- Panelo
+- Nodevect
+- Volumo — predbežne interpretované z používateľovho zápisu „vilumo“
+- Spatumo
+- Telumo
+- Volemo
+- Tavuno
+- Mavuno
+- Splimod — spline modifikácie ako celý smer sa používateľovi nepáčia
+- Splimet
+- Splinova
+- Splidim
+- Splion
+- Tangimet — ostatné návrhy z matematického kola používateľa neoslovili
+- Tangenum
+- Tangema
+- Tangon
+- Gonimet
+- Gonivect
+- Nonivect
+- Nonidim
+- Nodimod
+- Nodimet
+- Geonod
+- Sigmelo
+- Deltimo
+- Helimet
 
 ### D — strategicky odfiltrované, bez výslovného používateľského verdiktu
 
@@ -195,6 +251,10 @@ Používateľ ho označil za zvukovo najlepší návrh, ale nie je vhodný ako f
 - existovali alebo existujú podobné obchodné názvy.
 
 Je to iba smerová referencia: plynulé tri slabiky, profesionálny tón, samohlásky okolo `v`. Nekopírovať mechanicky príponu `-vio`.
+
+### Modano
+
+Používateľovi sa páči zvuk `mo-da-no`, ale **Modano** nie je kandidát. Je to priezvisko známeho hráča NHL Mikea Modana. Použiť iba ako fonetickú referenciu pre rytmus, nie na vytváranie tesných variantov jeho mena.
 
 ## 9. Hodnotenie doterajších AI výstupov
 
@@ -357,3 +417,181 @@ Pred právnou rešeršou ešte vytvoriť 1–2 kvalitné kolá zamerané hlavne 
 5. urobiť jazykový a telefonický test s reálnymi ľuďmi,
 6. vybrať 3–5 finalistov,
 7. až potom riešiť definitívny názov, logo a doménu.
+
+## 14. Kolo z 10. septembra 2026
+
+### Páčia sa
+
+- Modevo
+- Dimevo
+
+### Vyradené
+
+- Nodevo
+- Planevo
+- Panelo
+- Folevo
+- Tiltevo
+- Volemo
+- Volumo — interpretácia zápisu „vilumo“
+- Spatumo
+- Telumo
+- Mavuno
+- Tavuno
+- Nodevect
+
+### Bez jasného verdiktu
+
+- Plotevo
+- Folumo
+- Velano
+- Taveno
+- Vemulo
+- Planevect
+
+## 15. Nový nerecyklovaný smer — 10. september 2026
+
+Toto kolo zámerne nepoužíva šablónu obľúbený koreň + `evo/vum/vect`. Kandidáti ešte nemajú používateľský verdikt ani overenú dostupnosť:
+
+1. Modelum
+2. Nodalis
+3. Splino
+4. Nonius
+5. Tangens
+6. Vemodi
+7. Amendo
+8. Undalo
+9. Elasto
+10. Fluido
+11. Haluma
+12. Filuma
+13. Lamino
+14. Folium
+15. Peluma
+16. Geomove
+17. Dimesa
+18. Datumo
+19. Modulis
+20. Signalo
+
+## 16. Matematika, spline a tangens — 10. september 2026
+
+Nové kandidáty na hodnotenie:
+
+1. Splimod
+2. Splimet
+3. Splinova
+4. Splidim
+5. Splion
+6. Tangevo
+7. Tangimet
+8. Tangenum
+9. Tangema
+10. Tangon
+11. Gonimet
+12. Gonivect
+13. Nonivect
+14. Nonidim
+15. Nodimod
+16. Nodimet
+17. Geonod
+18. Sigmelo
+19. Deltimo
+20. Helimet
+
+Orientačná kontrola počas kola:
+
+- `splimod.com`, `splimet.com`, `tangevo.com`, `tangimet.com`, `gonimet.com` a `nodimet.com` neboli v čase kontroly v registri `.com`; presné webové hľadanie bolo bez zjavného etablovaného softvérového výsledku.
+- Splineo a Splivo boli odfiltrované, pretože už existujú ako aktívne značky.
+- Splinode, Splinet, Tangeno, Tansum, Tanmod, Nonimod, Afinum, Ondulo, Nivomet a Segmod boli odfiltrované pre zistené existujúce použitia alebo registrované domény.
+- Ide iba o orientačný webový a doménový filter, nie právnu rešerš ochranných známok.
+
+### Verdikt používateľa
+
+- **Tangevo** — veľmi silná pozitívna reakcia; zaradiť medzi hlavné favority.
+- Modifikácie slova `spline` — celý smer vyradiť.
+- Ostatné návrhy kola — používateľa výraznejšie neoslovili; neopakovať ich ani z nich nevytvárať rodiny.
+- Ďalšie kolo musí skúsiť úplne nové princípy, najmä metafory zachovaného objektového stavu, priesvitnej technickej vrstvy, nedestruktívnej editácie a priamej manipulácie.
+
+## 17. Úplne nové metafory — 10. september 2026
+
+Prieskumné kolo zámerne nepoužíva `vect`, `evo`, `umo` ani rodiny odvodené od spline či trigonometrie. Kandidáti čakajú na používateľský verdikt:
+
+1. Palimod — palimpsest + modification; opakovane upraviteľná plocha
+2. Tenemod — retained-mode graphics; objekty si zachovávajú svoj stav
+3. Gimbalon — gimbal; voľné otáčanie a manipulácia
+4. Pantomod — pantograf + model; prenos, škálovanie a objektová editácia
+5. Dipleto — diple; staroveký znak používaný na označenie textu
+6. Stetio — korektorský pokyn `stet`; objekt zostáva zachovaný
+7. Haptono — haptika; priama manipulácia s objektmi
+8. Plenodo — plná pracovná plocha + aktívne konanie
+9. Basimod — basis + model; anotácia ako objektový základ, nie pixely
+10. Vistado — vista + stav; zachovaný vizuálny stav
+11. Lamiden — lamina + identity; samostatná identita vrstvy
+12. Folimet — technická fólia + meranie
+13. Opisum — opisometer; meranie zakrivených čiar
+14. Pinado — umiestnenie presného bodu alebo značky
+15. Elemant — element + maintain; prvky zostávajú samostatné
+16. Topelon — top layer; vrstva nad ostatnými aplikáciami
+17. Pliaton — pliant; tvárne a neskôr meniteľné objekty
+18. Demoset — vizuálne vysvetlenie + sada objektov
+19. Nivatum — niveau + stav; vrstva a jej uložený stav
+20. Folidan — technická fólia ako nezávislý nosič anotácií
+
+Orientačný filter pred prezentáciou:
+
+- `palimod.com`, `tenemod.com`, `gimbalon.com`, `pantomod.com`, `dipleto.com`, `haptono.com`, `folimet.com`, `plenodo.com`, `basimod.com` a niekoľko ďalších syntetických kandidátov nebolo v okamihu RDAP kontroly v registri `.com`. To nie je rezervácia ani právne preverenie.
+- Presné hľadanie našlo staršie akademické použitie zápisu `PaLiMod` a chemický výskumný projekt `TeneMod`; Palimod a Tenemod preto nie sú čisté výsledky pre Google a vyžadujú prísnejšie hodnotenie.
+- Ostendo, Modatum, Memini, Dispono, Velatum, Tabulo, Obelus a Siglum boli vyradené pre zjavné existujúce softvérové alebo technologické použitie.
+- Manento nebolo posunuté medzi top kandidátov pre priezviskový charakter a registrovanú `.com`.
+
+### Verdikt používateľa
+
+- Používateľ odmietol všetkých 20 kandidátov z tohto kola.
+- Nepokračovať v rodinách ani v drobných obmenách názvov Palimod, Tenemod, Gimbalon, Pantomod, Dipleto, Stetio, Haptono, Plenodo, Basimod, Vistado, Lamiden, Folimet, Opisum, Pinado, Elemant, Topelon, Pliaton, Demoset, Nivatum a Folidan.
+- Nový kvalitatívny prah: prezentovať iba kandidátov, ktoré si úprimne zaslúžia aspoň 95/100. Ak žiadny neprejde, nevypĺňať zoznam priemernými názvami.
+
+## 18. Filter 95+ — 10. september 2026
+
+Po vytvorení a odfiltrovaní širšieho interného poolu prešiel iba jeden nový kandidát:
+
+### Savelum — predbežne 95/100
+
+- Výslovnosť: `sa-ve-lum` (v angličtine prirodzene aj `save-lum`)
+- Pôvod: `save` + `velum` — zachovaná priesvitná vrstva nad obrazovkou.
+- Produktový význam: vystihuje kľúčový rozdiel aplikácie — anotácie nie sú vypálené do screenshotu, ale zostávajú uložené ako samostatná editovateľná vrstva.
+- Silné stránky: 7 písmen, 3 slabiky, bez `r`, bez dvojitého písmena, jednoduchý pravopis, profesionálny a dostatočne široký názov.
+- Riziko: mierne nadväzuje zvukom na obľúbené Velumo; pred finálnym výberom treba reálne otestovať diktovanie medzi rodenými hovoriacimi EN a DE.
+- Orientačné preverenie: presné webové hľadanie nenašlo zjavný softvér ani technologickú firmu s týmto názvom; `savelum.com` nebolo v okamihu kontroly nájdené v registri Verisign `.com`.
+- Stav dostupnosti: iba orientačný; nejde o rezerváciu domény ani právne preverenie ochrannej známky.
+
+Odfiltrované pred prezentáciou: Anovum, Aximod, Savemod, Elemov, Movelum, Mantelo, Edilum, Livelum, Numelo, Modelam, Gimbavo, Anelum, Dimelum a ďalšie. Dôvody: existujúca značka alebo produkt, registrovaná presná `.com`, jazykový konflikt, nejednoznačný pravopis alebo mechanická recyklácia skorších favoritov.
+
+### Kandidáti v pásme 90–94
+
+1. **Dimelum — 92/100**
+   - Výslovnosť: `di-me-lum`
+   - Pôvod: dimension + element; samostatný rozmerový/editovateľný objekt.
+   - Plus: technický význam, hladká výslovnosť, 7 písmen; `dimelum.com` nebolo pri orientačnej kontrole nájdené v registri `.com`.
+   - Mínus: pôsobí ako mechanické zlúčenie dvoch existujúcich favoritov Dimevo a Modelum; preto neprešlo hranicou 95.
+
+2. **Anelum — pôvodne 91/100, po kontrole 84/100**
+   - Výslovnosť: `a-ne-lum`
+   - Pôvod: annotation + element/velum.
+   - Po základnom vyhľadávaní bolo zistené historické použitie Anelum pre svietidlo a podobný farmaceutický názov Ami-Anelum. Kandidát preto už nepatrí do reálneho pásma nad 90 a je vyradený.
+
+### Zvukovo nad 90, ale vyradené po kontrole konfliktov
+
+- **Movelum — pôvodne 94/100**: výborný pohybový a vrstvový význam, ale existuje aktívna švajčiarska spoločnosť Movelum GmbH.
+- **Numelo — pôvodne 93/100**: krátke a technické, ale existuje aktívna matematická aplikácia a technologické použitie rovnakého názvu.
+- **Anovum — pôvodne 92/100**: silný novotvar, ale ide o názov existujúcej firmy v kybernetickej bezpečnosti.
+- **Mantelo — pôvodne 91/100**: dobrá metafora plášťa/prekrytia, ale rovnaký názov používa aktívna softvérová knižnica.
+
+Tieto pôvodné skóre hodnotili iba zvuk, zapamätateľnosť a produktovú metaforu. Po zistení presného technologického alebo firemného konfliktu už kandidáti nespĺňajú reálny prah 90 a zostávajú vyradení.
+
+### Verdikt používateľa k pásmu 90+
+
+- **Savelum** — neutrálna až jemne pozitívna reakcia; nie favorit. Reálne používateľské skóre približne 75–80/100, nie 95.
+- **Dimelum** — neutrálna až jemne pozitívna reakcia; nie favorit. Reálne používateľské skóre približne 75–80/100, nie 92.
+- Záver: samotná formálna čistota, význam a orientačne čistá `.com` nestačia na vysoké skóre. Názov musí vyvolať okamžitú výraznú reakciu podobnú Tangevo.
+- Ďalej mechanicky nerozvíjať rodinu `-lum`; môže sa objaviť iba v prípade skutočne nového a mimoriadne silného konceptu.
