@@ -3,8 +3,6 @@ import { expect, test } from "@playwright/test";
 
 // Accessibility is evaluated in the settled state, not halfway through a fade where
 // temporary opacity mathematically lowers text contrast.
-test.use({ reducedMotion: "reduce" });
-
 const routes = [
   { name: "homepage", path: "/EdivectWebsite/" },
   { name: "FAQ", path: "/EdivectWebsite/#faq" },
