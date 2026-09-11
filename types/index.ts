@@ -61,7 +61,6 @@ export type CompareQualifierId =
   | "untilDeselect"
   | "greenshotFile"
   | "jsonFile"
-  | "planned"
   | "builtIn"
   | "zipBuild";
 
@@ -274,7 +273,6 @@ export type CompareRowId =
   | "scale"
   | "projectFile"
   | "liveScreen"
-  | "magnifier"
   | "portable"
   | "offline";
 

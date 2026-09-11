@@ -188,7 +188,6 @@ export const compareRowIds: CompareRowId[] = [
   "scale",
   "projectFile",
   "liveScreen",
-  "magnifier",
   "portable",
   "offline",
 ];
@@ -203,11 +202,7 @@ export const compareRowIds: CompareRowId[] = [
  * - Pointofix — pointofix.de/bedienung.php. A paint-over annotator: pen, lines,
  *   arrows, rectangles, ellipses, text, ticks and crosses, an eraser that
  *   "partially deletes", and saving to "JPG, PNG oder BMP". No object
- *   re-selection, no layers, no measurement, no project format. It does ship a
- *   "Lupe mit 200 % und 400 % Vergrößerung" plus a stepwise zoom "mit bis zu
- *   10-facher Vergrößerung", which ScreenMark's own README still lists as
- *   planned — hence the one row ScreenMark loses. A table the incumbent loses
- *   10–0 reads as a strawman; this one is real.
+ *   re-selection, no layers, no measurement, no project format.
  *
  * - Snipping Tool — Microsoft's and elevenforum's feature write-ups. Shapes can
  *   be resized, moved and recoloured, but "once the shape is deselected, it
@@ -284,13 +279,6 @@ export const compareValues: Record<
     snippingTool: false,
     greenshot: false,
     shareX: false,
-  },
-  magnifier: {
-    screenMarkPro: { note: "planned" },
-    pointofix: true,
-    snippingTool: false,
-    greenshot: false,
-    shareX: true,
   },
   portable: {
     screenMarkPro: true,
