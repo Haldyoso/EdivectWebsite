@@ -1,6 +1,6 @@
 # Naming handoff: nový názov namiesto ScreenMark
 
-> Stav dokumentu: 10. september 2026  
+> Stav dokumentu: 11. september 2026
 > Účel: preniesť celé doterajšie namingové uvažovanie do inej AI alebo na iný počítač bez začínania od nuly.
 
 ## 1. Ako používať tento dokument
@@ -62,6 +62,7 @@ Výnimkou je zaužívaný technický blok **vect**, pri ktorom je písmeno `c` a
 ## 5. Tvrdé pravidlá
 
 - Jedno slovo.
+- Presná doména `Nazov.com` nesmie byť pri aktuálnej kontrole registrovaná; názov s registrovanou `.com` sa okamžite vyraďuje.
 - Ideálne 6–9 písmen; prijateľných približne 5–10.
 - Najviac 3 prirodzene vyslovené slabiky.
 - Ľahká výslovnosť v angličtine, slovenčine a nemčine.
@@ -100,59 +101,35 @@ Z doterajších reakcií vyplýva:
 - Používateľ reaguje pozitívne na názvy ukotvené v technickom alebo matematickom pojme: Modelum, Nonius, Modulis a Splino.
 - Názov však musí byť vyhľadateľnejší než samotný všeobecný pojem; Nonius je výborný zvukový a významový smer, nie ideálny finálny názov.
 - Matematický význam môže fungovať, ale nie mechanické modifikácie odborných slov. Spline varianty boli ako smer odmietnuté.
-- **Tangevo** funguje výnimočne dobre: má technický odkaz na tangentu, ale znie ako samostatná plynulá značka.
+- **Tangevo** malo výnimočne dobrú používateľskú reakciu, ale následná rešerš našla aktívnu známku TANGELO pre softvér v triedach 9 a 42; názov preto zostáva iba historickým zvukovým benchmarkom a nesmie sa vrátiť medzi kandidátov.
 - Ďalšie kolá musia vychádzať z nových produktových metafor a architektúry produktu, nie z výmeny koreňa alebo prípony.
 
 ## 7. Aktuálny master tierlist
 
-Tierlist zachytáva predovšetkým reakciu používateľa. Nie je to poradie právnej dostupnosti.
+Tierlist zachytáva predovšetkým reakciu používateľa. Od 11. septembra 2026 obsahuje iba názvy, ktorých presná `.com` nebola pri poslednej kontrole v registri a ktoré neboli označené RED v následnom knockout filtri. Registrovaná `.com` alebo relevantný konflikt je tvrdý vyraďovací filter; odstránené názvy zostávajú zaznamenané nižšie iba ako história kontroly.
 
 ### S — používateľovi sa páčia
 
 | Názov | Výslovnosť | Prečo funguje | Otvorené riziko |
 |---|---|---|---|
-| **Anovect** | a-no-vekt | Čistý, technický, zapamätateľný; blízko želanému charakteru Annovio | `anovect.com` je od 9. 9. 2026 v registri; overiť vlastníka a právne konflikty |
-| **Elavect** | e-la-vekt | Elegantný, ľahší a profesionálny technický zvuk | Potrebuje plnú právnu a jazykovú rešerš |
-| **Velumo** | ve-lu-mo | Mäkký trojslabičný novotvar; používateľovi sa páči | Neoverená doména, značky a svetelné asociácie |
-| **Lumevo** | lu-me-vo | Plynulý, vizuálny novotvar; používateľovi sa páči | Neoverená doména, značky a svetelné asociácie |
-| **Modevo** | mo-de-vo | Pevnejší začiatok a plynulé `-evo`; používateľovi sa páči | Neoverená doména a konflikty; preveriť významové asociácie |
-| **Dimevo** | di-me-vo | Technický, presný a plynulý zvuk; používateľovi sa páči | Neoverená doména a konflikty; význam nie je okamžite zrejmý |
-| **Modelum** | mo-de-lum | Technický význam editovateľného modelu; používateľovi sa páči | Overiť doménu, ochranné známky a prípadný latinský dojem |
-| **Tangevo** | tan-ge-vo | Technický odkaz na tangentu spojený s plynulým značkovým zvukom; spontánne „znie super“ | V taliančine je to slovesný tvar od `tangere`; preveriť doménu, jazykové asociácie a značky |
+| **Elavect** | e-la-vekt | Elegantný, ľahší a profesionálny technický zvuk | Presná `.com` nebola v registri, ale podobná aktívna známka ELEVECTA vytvára stredné až vysoké namingové riziko; neodporúča sa bez stanoviska známkového právnika |
 
 ### A — silné a perspektívne
 
 | Názov | Výslovnosť | Doterajšia reakcia | Otvorené riziko |
 |---|---|---|---|
-| **Edivect** | e-di-vekt | „Neznie zle“; dobrý most k editovaniu | Koreň `edi` môže byť o niečo opisnejší |
-| **Edivum** | e-di-vum | Zaujímavý nový smer | Môže pôsobiť abstraktne alebo mierne latinsky |
+| **Edivect** | e-di-vekt | „Neznie zle“; dobrý most k editovaniu | GREEN v predbežnom právnom filtri 11. 9. 2026: bez presnej známky vo WIPO Madrid a USPTO a bez relevantného podobného softvérového označenia |
 
 ### B — možno / potrebuje ďalšiu reakciu
 
-| Názov | Výslovnosť | Stav |
-|---|---|---|
-| **Lumavect** | lu-ma-vekt | Používateľ označil ako „možno“; riziko svetelnej asociácie |
-| **Tenavo** | te-na-vo | Používateľovi sa trochu páči; hladký zvuk, ale abstraktný význam |
-| **Nivelo** | ni-ve-lo | Používateľovi sa trochu páči; evokuje úroveň alebo vrstvu |
-| **Amendo** | a-men-do | Používateľovi znie celkom dobre; prirodzene evokuje úpravu | Overiť firmy, doménu a podobnosť s osobnými menami |
-| **Modulis** | mo-du-lis | Používateľovi znie celkom dobre; technický modulárny charakter | Môže byť všeobecnejší alebo už používaný technický základ |
-| **Nonius** | no-ni-us | Používateľovi sa veľmi páči význam aj zvuk | Je to všeobecný technický pojem, preto slabšia vyhľadateľnosť |
-| **Undalo** | un-da-lo | Používateľ ho označil ako zaujímavý | Význam je abstraktný; preveriť jazykové a značkové asociácie |
-| **Solavect** | so-la-vekt | Neohodnotené používateľom; možné solárne asociácie |
-| **Zanvect** | zan-vekt | Neohodnotené; jedinečné, ale koreň je bez významovej opory |
-| **Zanvum** | zan-vum | Neohodnotené; rovnaký abstraktný koreň, menej technické |
-| **Punktavum** | punk-ta-vum | Neohodnotené; technické, ale ťažkopádne a možné `Punkt/Punct` |
-| **Gestavum** | ges-ta-vum | Neohodnotené; význam gesta sedí, no znie latinsky alebo medicínsky |
+| Názov | Výslovnosť | Doterajšia reakcia | Stav kontroly |
+|---|---|---|---|
+| **Solavect** | so-la-vekt | Neohodnotené používateľom; možné solárne asociácie | AMBER: bez presnej známky vo WIPO Madrid a USPTO; blízke názvy SOLVECT/SOLVECTA a aktívne známky SOLA pre softvér zvyšujú riziko na nízke až stredné |
+| **Zanvum** | zan-vum | Neohodnotené; rovnaký abstraktný koreň, menej technické | GREEN právne: bez presnej alebo relevantnej podobnej známky a bez firmy; AMBER pre vyhľadávanie, pretože slovo sa používa v konkánčine |
 
 ### C — iba ako inšpirácia
 
-- **Planis** — čistý krátky smer, ale bežný latinský základ a registrovaná `.com`.
-- **Avelis** — príjemná fonetika, no slabšia technická identita a registrovaná `.com`.
-- **Anolex** — významová flexibilita, ale možný chemický/materialový dojem a registrovaná `.com`.
-- **Teneo** — dobrý význam „udržať“, ale existujúce slovo a registrovaná `.com`.
-- **Zanivo** — zaujímavý zvuk, no registrovaná `.com` a neoverené konflikty.
-- **Nodex** — užitočný smer uzlov/editovateľných objektov, ale príliš používaný technologický konštrukt.
-- **Taktis** — technický a presný, ale príliš blízko taktike/tactics.
+Po odstránení názvov s registrovanou `.com` v tomto tieri nezostal žiadny kandidát.
 
 ### D — vyradené používateľom
 
@@ -195,50 +172,30 @@ Tieto názvy neopakovať ani nevytvárať ich bezvýznamné pravopisné varianty
 - Tracavio — problematická výslovnosť a `r`
 - Vectexa
 - Viselora
-- Inkplane — používateľovi sa nepáči; opisná anglická zloženina
-- Inkmode — používateľovi sa nepáči; opisná anglická zloženina
-- Lumeta — používateľovi sa nepáči
-- Editpath — používateľovi sa nepáči; opisná anglická zloženina
-- Nodevo
-- Planevo — znie príliš podobne ako Planeo
-- Folevo
 - Tiltevo
-- Panelo
-- Nodevect
-- Volumo — predbežne interpretované z používateľovho zápisu „vilumo“
 - Spatumo
-- Telumo
-- Volemo
-- Tavuno
-- Mavuno
 - Splimod — spline modifikácie ako celý smer sa používateľovi nepáčia
 - Splimet
-- Splinova
 - Splidim
-- Splion
 - Tangimet — ostatné návrhy z matematického kola používateľa neoslovili
 - Tangenum
 - Tangema
-- Tangon
 - Gonimet
 - Gonivect
 - Nonivect
 - Nonidim
 - Nodimod
 - Nodimet
-- Geonod
-- Sigmelo
-- Deltimo
-- Helimet
 
 ### D — strategicky odfiltrované, bez výslovného používateľského verdiktu
 
-- **Vektika** — možné zápisy Vektika/Vectika/Vektica/Vectica; `.com` registrovaná.
-- **Objekta** — generické slovo, viacero existujúcich nemeckých firiem, `.com` registrovaná.
 - **Aktuvum** — znie ako „aktívum“ alebo účtovnícky pojem.
-- **Vivum** — biologický/medicínsky charakter a registrovaná `.com`.
-- **Etalon** — existujúce technické slovo a registrovaná `.com`.
-- **Linea** — veľmi bežné slovo a registrovaná `.com`.
+- **Tangevo** — RED: aktívna známka TANGELO č. 1183233 má ochranu v EÚ pre softvér a vývoj softvéru v triedach 9 a 42; názvy sa líšia iba písmenom `v/l`.
+- **Edivum** — presný názov už používa argentínske vydavateľstvo EDIVUM; známka sa síce v kontrolovaných registroch nenašla, ale názov nespĺňa požiadavku na čistú značku a vyhľadávanie.
+- **Lumavect** — presný názov LuMaVect používal medzinárodný výskumný projekt; vyradené pre identické pomenovanie a znečistené vyhľadávanie.
+- **Zanvect** — RED: veľmi blízke označenie ZenVector je aktívna SaaS platforma a registrovaná indická známka v triedach 9 a 42 pre softvér.
+- **Punktavum** — RED podľa prísneho filtra: blízke označenia PUNKTUM a PUNKT. sa používajú pre technologické produkty; PUNKT. má aktívnu známku v triedach 9 a 42 a PUNKTUM bol názov softvéru pre nevidiacich.
+- **Gestavum** — RED: obsahuje celé označenie GESTAV, ktoré aktívny francúzsky dodávateľ používa pre ERP a platformu elektronickej fakturácie; priamy prekryv so softvérom a európskym trhom.
 
 ## 8. Historický zvukový benchmark
 
@@ -307,6 +264,8 @@ Nevytváraj varianty názvov zo sekcie D a neopakuj žiadny existujúci kandidá
 ### Absolútne pravidlá
 
 - Jedno slovo, ideálne 6–9 písmen.
+- Presná `.com` musí byť pred prezentovaním názvu aktuálne overená cez registračný RDAP alebo registrátora a nesmie byť registrovaná.
+- Ak aktuálnu `.com` nemožno overiť, názov neprezentuj ako kandidáta; vráť radšej menej výsledkov.
 - Najviac 3 prirodzene vyslovené slabiky.
 - Bez písmena `r`.
 - Bez dvojitých písmen, diakritiky, pomlčiek a číslic.
@@ -381,7 +340,7 @@ Na konci uveď:
 - ktoré vlastnosti doterajších favoritov si zachoval,
 - čím sa nové návrhy skutočne odlišujú.
 
-Ak máš aktuálny prístup na internet, až po kreatívnej fáze orientačne prever top 5: presnú `.com`, presný názov vo vyhľadávaní a podobné technologické značky. Nikdy netvrď, že doména alebo ochranná známka je voľná bez aktuálneho dôkazu. Výsledok domény oddeľ od právnej dostupnosti ochrannej známky.
+Po kreatívnej fáze, ale ešte pred prezentovaním výsledkov, aktuálne prever presnú `.com` pri každom navrhovanom názve. Každý názov s registrovanou `.com` bez výnimky vyraď. Pri top 5 navyše prever presný názov vo vyhľadávaní, podobné technologické značky a podobné ochranné známky. Nikdy netvrď, že doména alebo ochranná známka je voľná bez aktuálneho dôkazu. Výsledok domény oddeľ od právnej dostupnosti ochrannej známky.
 
 Po tomto kole počkaj na používateľovo hodnotenie. Bez vyžiadania nevytváraj ďalšie kolo.
 
@@ -508,7 +467,7 @@ Orientačná kontrola počas kola:
 
 ### Verdikt používateľa
 
-- **Tangevo** — veľmi silná pozitívna reakcia; zaradiť medzi hlavné favority.
+- **Tangevo** — historicky veľmi silná pozitívna reakcia; následná právna rešerš tento verdikt prekonala a názov vyradila pre konflikt s TANGELO.
 - Modifikácie slova `spline` — celý smer vyradiť.
 - Ostatné návrhy kola — používateľa výraznejšie neoslovili; neopakovať ich ani z nich nevytvárať rodiny.
 - Ďalšie kolo musí skúsiť úplne nové princípy, najmä metafory zachovaného objektového stavu, priesvitnej technickej vrstvy, nedestruktívnej editácie a priamej manipulácie.
@@ -595,3 +554,149 @@ Tieto pôvodné skóre hodnotili iba zvuk, zapamätateľnosť a produktovú meta
 - **Dimelum** — neutrálna až jemne pozitívna reakcia; nie favorit. Reálne používateľské skóre približne 75–80/100, nie 92.
 - Záver: samotná formálna čistota, význam a orientačne čistá `.com` nestačia na vysoké skóre. Názov musí vyvolať okamžitú výraznú reakciu podobnú Tangevo.
 - Ďalej mechanicky nerozvíjať rodinu `-lum`; môže sa objaviť iba v prípade skutočne nového a mimoriadne silného konceptu.
+
+## 19. Úplná kontrola master tierlistu — 11. september 2026
+
+### Rozsah a metodika
+
+Kontrola zahrnula všetkých pôvodných 107 názvov zo sekcie **Aktuálny master tierlist**, teda S, A, B, C aj oba zoznamy D. Neskoršie experimentálne kolá mimo master tierlistu neboli do počtu 107 započítané. Po kontrole bolo 45 názvov s registrovanou presnou `.com` z aktívneho master tierlistu odstránených; zostalo v ňom 62 doménovo prípustných názvov.
+
+Pri každom názve sa kontrolovala presná doména `nazov.com` cez registračný RDAP služby Verisign. Pri názvoch, ktorých `.com` nebola v registri, nasledovalo presné webové hľadanie firmy, produktu, aplikácie alebo pomenovaného projektu. Výsledok zachytáva stav pri kontrole, nie rezerváciu domény ani právne stanovisko.
+
+Súhrn:
+
+- 45 názvov malo registrovanú presnú `.com`,
+- 12 ďalších malo nezaregistrovanú `.com`, ale relevantný konflikt firmy, produktu alebo projektu,
+- 7 názvov nemalo zistenú firmu, ale malo citeľný vyhľadávací alebo jazykový šum,
+- 43 názvov nemalo v tomto orientačnom filtri zistenú presnú `.com` ani relevantný presný konflikt.
+
+### Shortlist po doménovom, webovom a predbežnom známkovom filtri
+
+Z kandidátov v tieroch S, A a B prešli doménovým a základným webovým filtrom pôvodne tieto názvy:
+
+1. **Elavect** — S
+2. **Edivect** — A
+3. **Edivum** — A
+4. **Gestavum** — B
+5. **Punktavum** — B
+6. **Solavect** — B
+7. **Zanvect** — B
+
+Následná predbežná rešerš našla aktívnu medzinárodnú známku **ELEVECTA** v triedach 1, 5 a 42, vrátane registrácií v Nemecku, Spojenom kráľovstve a USA. **Elavect** je od nej vzdialený iba jednou samohláskou a koncovým `a`; pri požiadavke na minimálne riziko zámeny sa preto neodporúča bez individuálneho stanoviska známkového právnika.
+
+Po právnom knockout filtri tierov A a B z 11. septembra 2026 zostávajú aktívne iba tieto názvy:
+
+1. **Edivect** — GREEN v predbežnom filtri; bez presnej známky vo WIPO Madrid a USPTO a bez relevantného podobného softvérového označenia.
+2. **Solavect** — AMBER; bez presnej známky, ale existujú blízke obchodné názvy SOLVECT/SOLVECTA a známky SOLA pre softvér.
+3. **Zanvum** — GREEN právne, AMBER pre vyhľadávanie pre existujúce použitie slova v konkánčine.
+
+**Edivum, Lumavect, Zanvect, Punktavum a Gestavum** boli presunuté medzi strategicky vyradené. Tangevo bolo vyradené samostatne pre aktívnu známku TANGELO v EÚ. Ani označenie GREEN nie je profesionálne právne stanovisko; znamená iba to, že pri tomto predbežnom knockout filtri nebol nájdený relevantný konflikt.
+
+### Vyradené pre registrovanú presnú `.com`
+
+`Amendo`, `Anolex`, `Anovect`, `Avelis`, `Deltimo`, `Dimevo`, `Editpath`, `Etalon`, `Folevo`, `Geonod`, `Helimet`, `Inkmode`, `Inkplane`, `Linea`, `Lumeta`, `Lumevo`, `Mavuno`, `Modelum`, `Modevo`, `Modulis`, `Nivelo`, `Nodevect`, `Nodevo`, `Nodex`, `Nonius`, `Objekta`, `Panelo`, `Planevo`, `Planis`, `Sigmelo`, `Splinova`, `Splion`, `Taktis`, `Tangon`, `Tavuno`, `Telumo`, `Tenavo`, `Teneo`, `Undalo`, `Vektika`, `Velumo`, `Vivum`, `Volemo`, `Volumo`, `Zanivo`.
+
+Registrovaná doména sama osebe nepreukazuje aktívnu firmu ani ochrannú známku, ale tieto názvy nespĺňajú stanovený cieľ presnej domény `Nazov.com`.
+
+### Nezaregistrovaná `.com`, ale zistený relevantný konflikt
+
+| Názov | Zistený konflikt |
+|---|---|
+| **Arolivo** | Existujúci výskumný projekt AROLIVO |
+| **Curvaneo** | Názov medicínskeho implantátu |
+| **Editexa** | Existujúca španielska spoločnosť a vydavateľské použitie |
+| **Edivero** | Belgická spoločnosť a reštaurácia; spoločnosť bola zlikvidovaná až v roku 2026 |
+| **Imavect** | Historická juhoafrická spoločnosť IMAVECT |
+| **Lumavect** | Medzinárodný výskumný projekt LuMaVect |
+| **Nodimet** | Existujúci liek s metotrexátom |
+| **Splimet** | Používaný názov softvérovej alebo interpolačnej metódy |
+| **Tangema** | Viacero spoločností s rovnakým názvom |
+| **Tangenum** | Názov filmu alebo seriálu |
+| **Vectexa** | Aktívna technologická firma Vectexa LLC a jej mobilné aplikácie |
+| **Viselora** | Používaný názov softvérových balíkov a namespace na npm |
+
+Tieto názvy vyradiť aj v prípade, že ich presná `.com` zostane mimo registra. Zámena alebo znečistenie výsledkov vyhľadávania je už preukázateľné.
+
+### Bez zistenej firmy, ale s vyhľadávacím alebo jazykovým šumom
+
+| Názov | Dôvod opatrnosti |
+|---|---|
+| **Anoveri** | Priezvisko a nepresné výrobné alebo produktové výsledky |
+| **Delinevo** | Používané ako priezvisko |
+| **Ideavect** | Používané ako technický názov objektu a grafického prvku |
+| **Layvanta** | Meno postavy alebo používateľa |
+| **Spatumo** | Existujúce slovo v jazyku Lojban |
+| **Zanvum** | Slovo používané v konkánčine, najmä v textoch piesní |
+
+Tieto názvy nie sú priamym firemným konfliktom, ale pri požiadavke na čo najčistejšie vyhľadávanie ich nepovažovať za rovnako bezpečné ako čistý shortlist.
+
+### Bez zisteného presného konfliktu v orientačnom filtri
+
+`Aktuvum`, `Annavect`, `Anotevo`, `Calivect`, `Clarviro`, `Denovect`, `Edevum`, `Editanova`, `Edivect`, `Edivum`, `Elavect`, `Elucivo`, `Gestavum`, `Gonimet`, `Gonivect`, `Illuvect`, `Lunavect`, `Moduvect`, `Mutavum`, `Mutelum`, `Nexovect`, `Nodimod`, `Nonidim`, `Nonivect`, `Notavect`, `Noterivo`, `Novivect`, `Overelio`, `Penovect`, `Planavect`, `Precivero`, `Punktavum`, `Semavect`, `Semavum`, `Skizavect`, `Solavect`, `Splidim`, `Splimod`, `Tactelio`, `Tangimet`, `Tiltevo`, `Tracavio`, `Zanvect`.
+
+Tento zoznam nevracia používateľom vyradené názvy späť do výberu. Iba zaznamenáva výsledok kontroly dostupnosti pre úplnosť.
+
+### Zdroje zistených konfliktov
+
+- Verisign RDAP pre stav `.com`: `https://rdap.verisign.com/com/v1/domain/NAZOV.COM`
+- Editexa: `https://www.datoscif.es/empresa/gestcontrata-editexa-sl`
+- Edivero: `https://www.besafe.be/sites/default/files/2026-02/KB%20Aanwijzing%20ambtenaar%20artikel%20165%20WPO.pdf`
+- LuMaVect: `https://www.cirdes.org/wp-content/uploads/2022/05/RAPPORT-ANNUEL-2020.pdf`
+- Nodimet: `https://www.invivochem.com/methotrexate-disodium.html`
+- Tangema: `https://ariregister.rik.ee/est/company/10542676/osa%C3%BChing-Tangema`
+- Vectexa LLC: `https://play.google.com/store/apps/developer?id=Vectexa`
+- Viselora: `https://www.npmjs.com/package/%40viselora/scroll-adapters`
+- ELEVECTA, podobná ochranná známka k Elavect: WIPO č. 1499628, USPTO č. 6110170; `https://www.tmdn.org/tmview/#/tmview/results?page=1&pageSize=30&criteria=C&basicSearch=ELEVECT`
+- TANGELO, konflikt k Tangevo: WIPO č. 1183233, aktívna ochrana v EÚ pre triedy 9 a 42; `https://www3.wipo.int/madrid/monitor/en/showData.jsp?ID=ROM.1183233&DES=1`
+- TANGELO, ďalšia aktívna softvérová známka: USPTO serial č. 79355258, registrácia č. 7423779, triedy 9 a 42; `https://tsdr.uspto.gov/#caseNumber=79355258&caseSearchType=US_APPLICATION&caseType=DEFAULT&searchType=statusSearch`
+- EDIVUM, existujúce vydavateľské použitie: `https://cerac.unlpam.edu.ar/index.php/aljaba/article/view/1765`
+- ZenVector, aktívna SaaS platforma: `https://www.aizenalgo.com/zenvector/`; indická známka č. 5149018 v triedach 9 a 42: `https://www.quickcompany.in/trademarks/5149018-zen-vector`
+- GESTAV, aktívny francúzsky ERP a platforma elektronickej fakturácie: `https://gestav.com/`
+- PUNKTUM, technologické a softvérové použitie: `https://www.synphon.de/en/about-us/`; PUNKT. USPTO serial č. 79076871 v triedach 9 a 42.
+- SOLVECT/SOLVECTA, blízke obchodné názvy: `https://www.allabolag.se/foretag/solvect-solutions-ab/malm%C3%B6/konsulter/2KHI86XI5YF3I`, `https://www.companywall.ba/firma/solvecta-doo/MMxKUHIND`
+
+### Povinný ďalší krok pred výberom názvu
+
+Pri troch kandidátoch, ktoré zostali po predbežných filtroch, treba ešte profesionálne preveriť:
+
+1. presné a podobné ochranné známky v EUIPO,
+2. presné a podobné ochranné známky v USPTO,
+3. foneticky a vizuálne podobné názvy v softvéri, CAD, IT a triedach relevantných pre produkt,
+4. obchodné registre hlavných cieľových trhov,
+5. reálny telefonický a jazykový test v angličtine, slovenčine a nemčine.
+
+Výrok „bez zisteného konfliktu“ znamená iba to, že konflikt nebol nájdený pri tejto orientačnej kontrole. Neznamená, že názov je právne voľný alebo že neexistuje neindexovaná či lokálna firma.
+
+## 20. Predbežná právna rešerš tierov A a B — 11. september 2026
+
+### Rozsah
+
+Kontrola zahŕňala presné slovné označenia vo WIPO Madrid Monitor a USPTO, blízke pravopisné a fonetické varianty, triedy 9 a 42 a reálne používanie názvov firmami, produktmi a projektmi. Pri všetkých ôsmich presných názvoch — **Edivect, Edivum, Lumavect, Solavect, Zanvect, Zanvum, Punktavum a Gestavum** — vrátili WIPO Madrid a USPTO nulový počet presných výsledkov. To samo osebe nie je dôkazom úplnej právnej dostupnosti.
+
+TMview počas kontroly odmietol automatizovaný prístup. Výsledok preto nie je náhradou rešerše právnika v úplných registroch EUIPO a národných úradov. Rozhodovanie používa prísnejší interný filter: relevantný aktívny obchodný názov alebo veľmi podobná softvérová známka stačí na vyradenie aj bez presnej zhody.
+
+### Výsledky
+
+| Kandidát | Presná známka WIPO Madrid / USPTO | Najbližší relevantný konflikt | Riziko | Rozhodnutie |
+|---|---|---|---|---|
+| **Edivect** | Nenájdená | EDIVO bola zrušená americká známka v nesúvisiacej triede 41; EDIVET nenájdené | Nízke | **GREEN — ponechať** |
+| **Edivum** | Nenájdená | EDIVUM je presné označenie argentínskeho vydavateľstva a imprintu | Nízke známkové, stredné namingové | **RED — vyradiť podľa filtra čistého názvu** |
+| **Lumavect** | Nenájdená | LuMaVect bol identicky pomenovaný medzinárodný výskumný projekt; LUMIVEC bola zrušená a nesúvisiaca známka pre svietidlá | Nízke známkové, vysoké vyhľadávacie | **RED — vyradiť** |
+| **Solavect** | Nenájdená | SOLVECT/SOLVECTA sú blízke obchodné názvy; samostatné SOLA má aktívne softvérové známky | Nízke až stredné | **AMBER — ponechať iba pod Edivect** |
+| **Zanvect** | Nenájdená | ZenVector je aktívna SaaS platforma a registrovaná indická známka č. 5149018 v triedach 9 a 42 | Stredné až vysoké pri globálnom použití | **RED — vyradiť** |
+| **Zanvum** | Nenájdená | Bez firmy alebo podobnej softvérovej známky; existuje jazykové použitie v konkánčine | Nízke právne, stredné vyhľadávacie | **GREEN právne / AMBER názvovo** |
+| **Punktavum** | Nenájdená | PUNKT. má aktívnu známku v triedach 9 a 42; PUNKTUM sa používa ako technologický názov a názov softvéru pre nevidiacich | Stredné | **RED podľa nulovej tolerancie zámeny** |
+| **Gestavum** | Nenájdená | GESTAV je aktívny francúzsky ERP a platforma elektronickej fakturácie; Gestavum obsahuje celé označenie GESTAV | Vysoké pre softvér v EÚ | **RED — vyradiť** |
+
+### Praktické poradie po kontrole
+
+1. **Edivect** — najčistejší výsledok z tierov A a B.
+2. **Solavect** — použiteľné iba ako záložný kandidát a po profesionálnej rešerši podobných označení.
+3. **Zanvum** — právne čistejšie, ale slabšie pre Google a význam značky.
+
+Pri ďalšom generovaní názvov je povinný tento knockout filter ešte pred prezentovaním kandidáta:
+
+1. presná `.com` nie je registrovaná,
+2. presný názov nepoužíva iná firma, produkt, aplikácia, vydavateľstvo ani pomenovaný projekt,
+3. neexistuje vizuálne alebo foneticky blízka aktívna známka pre softvér, elektroniku alebo technologické služby, najmä v triedach 9 a 42,
+4. názov nemá dominantný relevantný konflikt vo výsledkoch vyhľadávania.
