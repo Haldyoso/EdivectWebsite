@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The ScreenMark mark: a capture bracket, a measurement crosshair and one
+ * The Edivect mark: a capture bracket, a measurement crosshair and one
  * orange node — the product's real icon, transcribed from the brand icon set.
  *
  * This is that set's `small` level of detail. The full mark also carries
@@ -66,7 +66,7 @@ export function Logo({
         )}
       />
       <span>
-        Screen<span className="text-accent">Mark</span>
+        Edi<span className="text-accent">vect</span>
       </span>
     </span>
   );

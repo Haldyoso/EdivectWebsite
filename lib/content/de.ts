@@ -16,9 +16,9 @@ export const de: Copy = {
   },
   ui: {
     skipToContent: "Zum Inhalt springen",
-    backToTop: "ScreenMark — zurück nach oben",
-    home: "ScreenMark — Startseite",
-    githubRepo: "Repository der ScreenMark-Website auf GitHub",
+    backToTop: "Edivect — zurück nach oben",
+    home: "Edivect — Startseite",
+    githubRepo: "Repository der Edivect-Website auf GitHub",
     openMenu: "Menü",
     closeMenu: "Menü schließen",
     download: "Herunterladen",
@@ -30,7 +30,7 @@ export const de: Copy = {
     yes: "Ja",
     no: "Nein",
     primaryNav: "Hauptnavigation",
-    benefitsLabel: "Warum ScreenMark",
+    benefitsLabel: "Warum Edivect",
     galleryLabel: "Screenshot-Galerie",
     enlarge: "Vergrößern",
     close: "Schließen",
@@ -60,9 +60,9 @@ export const de: Copy = {
       "Mehrere Monitore",
       "Vektor · immer bearbeitbar",
     ],
-    frameTitle: "ScreenMark — Standbild · Monitor 1",
+    frameTitle: "Edivect — Standbild · Monitor 1",
     screenshotAlt:
-      "Das Werkzeugfenster von ScreenMark neben einer eingefrorenen technischen Zeichnung mit Anmerkungen: nummerierte Marker ①②③ und ein roter Pfeil, der ausgewählt und weiterhin bearbeitbar ist.",
+      "Das Werkzeugfenster von Edivect neben einer eingefrorenen technischen Zeichnung mit Anmerkungen: nummerierte Marker ①②③ und ein roter Pfeil, der ausgewählt und weiterhin bearbeitbar ist.",
   },
   benefits: {
     speed: {
@@ -212,13 +212,13 @@ export const de: Copy = {
       overline: "Im Vergleich",
       title: "Bearbeiten auf Illustrator-Niveau, so schnell wie das Snipping Tool",
       subtitle:
-        "Pointofix kommt ScreenMark am nächsten — dieselbe Überlagerung zum Zeichnen an beliebiger Stelle, kostenlos, und das seit Jahren. Der Unterschied zeigt sich, sobald Sie die Maus loslassen.",
+        "Pointofix kommt Edivect am nächsten — dieselbe Überlagerung zum Zeichnen an beliebiger Stelle, kostenlos, und das seit Jahren. Der Unterschied zeigt sich, sobald Sie die Maus loslassen.",
     },
     regionLabel:
       "Funktionsvergleich mit Pointofix und weiteren Windows-Werkzeugen zum Anmerken und Aufnehmen",
     scrollHint: "Wischen oder horizontal scrollen, um alle Werkzeuge zu vergleichen.",
     caption:
-      "Wie ScreenMark im Vergleich zu Pointofix, Snipping Tool, Greenshot und ShareX abschneidet",
+      "Wie Edivect im Vergleich zu Pointofix, Snipping Tool, Greenshot und ShareX abschneidet",
     capability: "Funktion",
     rows: {
       editable: "Anmerkungen bleiben nach dem Loslassen bearbeitbar",
@@ -310,7 +310,7 @@ export const de: Copy = {
       install: {
         question: "Muss ich etwas installieren?",
         answer:
-          "Nein. ScreenMark ist eine portable Anwendung — EXE herunterladen und starten. Es braucht kein Installationsprogramm, keine Administratorrechte und keine Eingriffe in die Registry, funktioniert also auch auf gesperrten Firmenrechnern und vom USB-Stick.",
+          "Nein. Edivect ist eine portable Anwendung — EXE herunterladen und starten. Es braucht kein Installationsprogramm, keine Administratorrechte und keine Eingriffe in die Registry, funktioniert also auch auf gesperrten Firmenrechnern und vom USB-Stick.",
       },
       editable: {
         question: "Was heißt „alles bleibt bearbeitbar“ genau?",
@@ -341,7 +341,7 @@ export const de: Copy = {
   },
   downloadCta: {
     platform: "Windows 10 & 11 · 64-Bit",
-    title: "ScreenMark herunterladen",
+    title: "Edivect herunterladen",
     subtitle:
       "Portable EXE — herunterladen und starten. Ohne Installation, ohne Adminrechte, ohne Internet.",
     publicTrialButton: "Öffentliche Testversion herunterladen",
@@ -375,16 +375,16 @@ export const de: Copy = {
       terms: "Nutzungsbedingungen",
       issues: "Fehler melden",
     },
-    legal: "© 2026 ScreenMark.",
+    legal: "© 2026 Edivect.",
     traits: "Portabel · Offline · Keine Telemetrie",
   },
   changelog: {
     title: "Änderungen",
     description:
-      "Jede veröffentlichte Version von ScreenMark und was sich darin geändert hat.",
+      "Jede veröffentlichte Version von Edivect und was sich darin geändert hat.",
     back: "Zurück zur Startseite",
     intro:
-      "Versionshinweise zur Anwendung ScreenMark, die neueste zuerst.",
+      "Versionshinweise zur Anwendung Edivect, die neueste zuerst.",
     empty: "Es wurden noch keine Versionshinweise veröffentlicht.",
     sourceNote:
       "Wörtlich aus der Datei CHANGELOG.md des Anwendungs-Repositorys übernommen, die auf Slowakisch verfasst ist.",

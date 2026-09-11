@@ -1,4 +1,4 @@
-# ScreenMark — stav po opravách vizuálneho a UX auditu
+# Edivect — stav po opravách vizuálneho a UX auditu
 
 Dátum retestu: 22. 8. 2026  
 Rozsah: `/`, `/sk`, `/de`, všetky tri changelog route, tmavý a svetlý motív

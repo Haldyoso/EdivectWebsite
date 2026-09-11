@@ -1,7 +1,7 @@
 # Screenshot backdrop
 
 Nothing here ships to the site. This is the stage set: the thing held open on
-screen *behind* ScreenMark while the captures in `public/screenshots/` are taken.
+screen *behind* Edivect while the captures in `public/screenshots/` are taken.
 
 ## `guide-bracket.svg`
 

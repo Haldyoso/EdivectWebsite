@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const dynamic = "force-static";
 
 /**
- * Emitted at /ScreenMarkWebsite/robots.txt, which crawlers do not read — only
+ * Emitted at /EdivectWebsite/robots.txt, which crawlers do not read — only
  * the one at the domain root counts, and that belongs to haldyoso.github.io.
  * Kept because it costs nothing and starts working unchanged the day this site
  * gets its own domain. The sitemap below is still discoverable: it is an

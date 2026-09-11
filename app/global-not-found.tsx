@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: `Page not found · ${site.name}`,
-  description: "The requested ScreenMark page could not be found.",
+  description: "The requested Edivect page could not be found.",
 };
 
 export default function GlobalNotFound() {
@@ -19,7 +19,7 @@ export default function GlobalNotFound() {
           <main className="relative z-1 mx-auto w-full max-w-[820px] px-4 py-20 md:px-6">
             <a
               href={`${basePath}/`}
-              aria-label="ScreenMark home page"
+              aria-label="Edivect home page"
               className="inline-flex rounded-md"
             >
               <Logo glow />
@@ -31,7 +31,7 @@ export default function GlobalNotFound() {
               Page not found
             </h1>
             <p className="mt-5 max-w-[620px] text-lg leading-7 text-fg-muted">
-              The address may be outdated or mistyped. The ScreenMark home page is still available.
+              The address may be outdated or mistyped. The Edivect home page is still available.
             </p>
             <a
               href={`${basePath}/`}

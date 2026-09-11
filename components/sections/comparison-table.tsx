@@ -80,7 +80,7 @@ export function ComparisonTable({ copy, rows }: ComparisonTableProps) {
                     scope="col"
                     className="border-b border-border bg-accent/10 px-3.5 py-4 text-center font-bold text-fg"
                   >
-                    ScreenMark
+                    Edivect
                   </th>
                   {compareColumns.map((column) => (
                     <th
@@ -108,7 +108,7 @@ export function ComparisonTable({ copy, rows }: ComparisonTableProps) {
                       )}
                     >
                       <Cell
-                        value={row.screenMarkPro}
+                        value={row.edivect}
                         qualifiers={compare.qualifiers}
                         yes={ui.yes}
                         no={ui.no}

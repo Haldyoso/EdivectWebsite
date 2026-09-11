@@ -1,6 +1,6 @@
 # Custom-domain migration
 
-The current production origin is `https://haldyoso.github.io/ScreenMarkWebsite`. Use this checklist when moving to a root custom domain.
+The current production origin is `https://haldyoso.github.io/EdivectWebsite`. Use this checklist when moving to a root custom domain.
 
 ## Code and build configuration
 

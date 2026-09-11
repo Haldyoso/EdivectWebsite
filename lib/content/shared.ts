@@ -137,7 +137,7 @@ export const galleryImages: Record<GalleryId, string> = {
 /**
  * Transcribed from the app's own command table (Core/CommandRegistry.cs) and,
  * for Freeze, its registered global hotkeys (Services/SettingsService.cs).
- * Freeze is the only entry here that fires while ScreenMark has no focus,
+ * Freeze is the only entry here that fires while Edivect has no focus,
  * which is why it alone carries modifiers — the in-overlay tools are all a
  * single letter.
  */
@@ -224,7 +224,7 @@ export const compareRowIds: CompareRowId[] = [
 export const compareValues: Record<
   CompareRowId,
   {
-    screenMarkPro: CompareCell;
+    edivect: CompareCell;
     pointofix: CompareCell;
     snippingTool: CompareCell;
     greenshot: CompareCell;
@@ -232,63 +232,63 @@ export const compareValues: Record<
   }
 > = {
   editable: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: false,
     snippingTool: { note: "untilDeselect" },
     greenshot: { note: "inEditor" },
     shareX: { note: "inEditor" },
   },
   vector: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: false,
     snippingTool: { note: "limited" },
     greenshot: { note: "limited" },
     shareX: { note: "limited" },
   },
   layers: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: false,
     snippingTool: false,
     greenshot: false,
     shareX: false,
   },
   measurement: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: false,
     snippingTool: false,
     greenshot: false,
     shareX: false,
   },
   scale: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: false,
     snippingTool: false,
     greenshot: false,
     shareX: false,
   },
   projectFile: {
-    screenMarkPro: { note: "jsonFile" },
+    edivect: { note: "jsonFile" },
     pointofix: false,
     snippingTool: false,
     greenshot: { note: "greenshotFile" },
     shareX: false,
   },
   liveScreen: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: true,
     snippingTool: false,
     greenshot: false,
     shareX: false,
   },
   portable: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: true,
     snippingTool: { note: "builtIn" },
     greenshot: { note: "zipBuild" },
     shareX: { note: "zipBuild" },
   },
   offline: {
-    screenMarkPro: true,
+    edivect: true,
     pointofix: true,
     snippingTool: true,
     greenshot: true,

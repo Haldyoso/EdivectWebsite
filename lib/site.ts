@@ -1,6 +1,6 @@
 /**
  * Single source of truth for anything that changes per release or per
- * deployment. Release values below are taken from the clean ScreenMark app
+ * deployment. Release values below are taken from the clean Edivect app
  * repository and its reproducible portable build.
  *
  * Nothing here is translated. Everything the visitor reads lives in
@@ -18,20 +18,20 @@
  * Empty string on a root domain. Kept here rather than in next.config.ts so the
  * config and the app can't drift apart.
  */
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/ScreenMarkWebsite";
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
 const publicTrialAssetPath =
-  "/downloads/ScreenMark-v0.9.9.115-public-trial-do-2026-10-09.exe";
+  "/downloads/Edivect-v0.9.9.116-public-trial-do-2026-10-11.exe";
 
 export const site = {
-  name: "ScreenMark",
+  name: "Edivect",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://haldyoso.github.io/ScreenMarkWebsite",
+    "https://haldyoso.github.io/EdivectWebsite",
   // The application repository is private. These public links intentionally
   // point at the website repository so visitors never land on a GitHub 404.
-  repo: "https://github.com/Haldyoso/ScreenMarkWebsite",
-  issuesUrl: "https://github.com/Haldyoso/ScreenMarkWebsite/issues/new",
+  repo: "https://github.com/Haldyoso/EdivectWebsite",
+  issuesUrl: "https://github.com/Haldyoso/EdivectWebsite/issues/new",
   legal: {
     // TODO(launch): replace with the legal owner/company details before a
     // commercial launch. Kept null so the public pages cannot invent an owner.
@@ -41,13 +41,13 @@ export const site = {
     supportEmail: null,
   },
   release: {
-    version: "0.9.9.115",
+    version: "0.9.9.116",
     size: "72.7 MB",
-    sha256: "7AF778F7B0421AAD21513F9CC3DBA70E2AF3A711EACED6FBC55A744381E80BAD",
+    sha256: "C1E75614A1A3E0F0D04AC1692D6E1AC0301BC6946653E19AE32963057D2B4B35",
     assetPath: publicTrialAssetPath,
     downloadUrl: `${basePath}${publicTrialAssetPath}`,
-    publicTrialVersion: "0.9.9.115",
-    publicTrialExpires: "2026-10-09",
+    publicTrialVersion: "0.9.9.116",
+    publicTrialExpires: "2026-10-11",
     publicTrialDownloadUrl: `${basePath}${publicTrialAssetPath}`,
   },
 } as const;

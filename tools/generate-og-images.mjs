@@ -100,14 +100,14 @@ function renderText({ text, color, size, fontfile, weight = "normal" }) {
 
 async function renderCard(card) {
   const brandName = await renderText({
-    text: "Screen",
+    text: "Edi",
     color: "#E8EAF0",
     size: 34,
     fontfile: boldFont,
     weight: "bold",
   });
   const brandMark = await renderText({
-    text: "Mark",
+    text: "vect",
     color: "#2D7DF6",
     size: 34,
     fontfile: boldFont,

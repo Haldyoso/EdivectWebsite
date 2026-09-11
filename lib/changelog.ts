@@ -8,7 +8,7 @@ import { marked } from "marked";
  *
  * Why vendored rather than read from the app repo: this site and the app live
  * in two repositories, and the GitHub Actions job that builds the site only
- * checks out this one. A relative path to ../ScreenMark/CHANGELOG.md works on
+ * checks out this one. A relative path to ../Edivect/CHANGELOG.md works on
  * the author's machine and fails in CI, which is the worst of both. So the file
  * is committed here and refreshed with `npm run sync:changelog`, which takes
  * the app repo's path as an argument.

@@ -66,7 +66,7 @@ export type CompareQualifierId =
 
 export interface CompareRow {
   label: string;
-  screenMarkPro: CompareCell;
+  edivect: CompareCell;
   /** The head-to-head competitor: the other draw-anywhere overlay. */
   pointofix: CompareCell;
   snippingTool: CompareCell;

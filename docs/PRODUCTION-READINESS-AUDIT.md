@@ -11,7 +11,7 @@ Dátum auditu: 3. 9. 2026. Tento súbor zachytáva stav repozitára pred úprava
 - V EN, SK ani DE neexistujú stránky Ochrana súkromia a Podmienky používania a päta neobsahuje odkazy na právne informácie.
 - Verejná softvérová licencia/EULA a komerčný model nie sú rozhodnuté. Web správne nezverejňuje žiadnu licenciu, ale pred spustením je stále potrebné prijať rozhodnutie.
 - GitHub Pages dostáva iba všeobecný exportovaný súbor `404.html` z Next.js; neexistuje značková cesta späť na web.
-- Odkazy na stiahnutie v navigácii stránok changelogu sú obyčajné odkazy relatívne ku koreňu (`/#download`, `/sk#download`, `/de#download`). Vynechávajú základnú cestu GitHub Pages `/ScreenMarkWebsite/` a odvádzajú návštevníka mimo nasadeného projektového webu.
+- Odkazy na stiahnutie v navigácii stránok changelogu sú obyčajné odkazy relatívne ku koreňu (`/#download`, `/sk#download`, `/de#download`). Vynechávajú základnú cestu GitHub Pages `/EdivectWebsite/` a odvádzajú návštevníka mimo nasadeného projektového webu.
 - Neexistujú automatické smoke testy, kontroly prístupnosti ani kontroly nefunkčných odkazov.
 - `npm audit` hlási šesť závažných nálezov v závislostiach. Priamym nálezom je Next.js 15.5.20; npm označuje verziu 15.5.25 ako neprelomovú opravenú verziu. Väčšina serverových upozornení Next.js nie je v tomto statickom exporte zneužiteľná počas prevádzky, zraniteľné build závislosti je však aj tak vhodné aktualizovať.
 
@@ -33,7 +33,7 @@ Dátum auditu: 3. 9. 2026. Tento súbor zachytáva stav repozitára pred úprava
 
 ## UŽ BOLO V PORIADKU
 
-- Statický export, workflow nasadenia na GitHub Pages, centralizované `basePath`/`assetPrefix`, cesty manifestu a cesty snímok sú správne implementované pre `/ScreenMarkWebsite/`.
+- Statický export, workflow nasadenia na GitHub Pages, centralizované `basePath`/`assetPrefix`, cesty manifestu a cesty snímok sú správne implementované pre `/EdivectWebsite/`.
 - Aktuálny názov EXE, veľkosť (76 230 839 bajtov / 72,7 MiB), verzia, dátum expirácie (9. 10. 2026) a SHA-256 (`7AF778F7B0421AAD21513F9CC3DBA70E2AF3A711EACED6FBC55A744381E80BAD`) zodpovedajú súboru `lib/site.ts`.
 - Hlavné CTA na úvodnej stránke smeruje na distribuovaný EXE a používa spoločnú konfiguráciu vydania.
 - Existujú EN, SK a DE trasy, prepínanie jazykov, lokalizované `<html lang>`, canonical URL a recipročné hreflang odkazy na úrovni stránok.

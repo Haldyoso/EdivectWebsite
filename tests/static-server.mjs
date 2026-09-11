@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const host = "127.0.0.1";
 const port = Number(process.env.PORT ?? 4173);
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/ScreenMarkWebsite";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 const outputRoot = resolve("out");
 
 const contentTypes = {

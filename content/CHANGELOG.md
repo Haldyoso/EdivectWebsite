@@ -1,5 +1,16 @@
 ﻿# Changelog
 
+## 0.9.9.116 – 2026-09-11
+
+**ScreenMark sa mení na Edivect.**
+
+- Aplikácia, EXE, projekt, assembly, namespace, okná, preklady, dokumentácia a buildy teraz
+  používajú značku **Edivect**.
+- Neportable nastavenia sa pri prvom spustení automaticky prevezmú zo starého profilu;
+  portable nastavenia a existujúce projekty `*.smpj` zostávajú kompatibilné.
+- Stará a nová verzia zdieľajú ochranu jednej inštancie, aby sa dve prekrytia nemohli
+  spustiť naraz počas prechodu.
+
 ## 0.9.9.61 – 2026-08-10
 
 **Kóta sa dá odtiahnuť nabok ako v Catii, oblasť exportu má vlastné tlačidlá a pečiatky si
@@ -63,7 +74,7 @@ pamätajú veľkosť.**
   vždy prekvapivejšie než to, čo pribudne.
 - Dve rovné čiary idú ďalej starým, odladeným kódom (`Fillet`); nová matematika (`FilletCurve`)
   sa zapína až vtedy, keď je v hre kružnica. Testy to strážia porovnaním oboch ciest.
-- **Opravený `ScreenMark.csproj`** – bol commitnutý s konfliktnými značkami `<<<<<<< / >>>>>>>`
+- **Opravený `Edivect.csproj`** – bol commitnutý s konfliktnými značkami `<<<<<<< / >>>>>>>`
   a projekt sa nedal zostaviť.
 - Testy: 441 (+17).
 
@@ -102,7 +113,7 @@ pamätajú veľkosť.**
 - **Výnimka, ktorá zostáva:** `Esc` počas písania textu ruší editor a nič viac. Písanie je vlastný
   režim a rozpísaný popis sa nesmie stratiť pri pokuse zavrieť nástroj.
 
-- **Všetky výstupy idú do `Dokumenty\ScreenMark\Captures\`** – snímky, GIF, MP4 aj CSV
+- **Všetky výstupy idú do `Dokumenty\Edivect\Captures\`** – snímky, GIF, MP4 aj CSV
   s pripomienkami. Doteraz to bol priečinok `Captures` **vedľa EXE**, a to je pre prenositeľnú
   appku presne opačne, než treba: EXE sa sťahuje, kopíruje a maže. Každá nová verzia sa rozbalila
   inam, galéria začala prázdna a predošlé snímky ostali v priečinku, ktorý sa vzápätí zmazal –
@@ -113,7 +124,7 @@ pamätajú veľkosť.**
   vedľa EXE ako predtým. Stratiť export kvôli nedostupnému zálohovaciemu priečinku by bola horšia
   porucha než tá, ktorú tento priečinok rieši.
 - **„Uložiť ako…" otvára ten istý priečinok** (kým si používateľ nevyberie iný), nie Obrázky –
-  dialóg má začínať medzi výstupmi tejto relácie, nie v priečinku, ktorý ScreenMark nikdy nepoužil.
+  dialóg má začínať medzi výstupmi tejto relácie, nie v priečinku, ktorý Edivect nikdy nepoužil.
 - Nastavenia a šablóny zostávajú vedľa EXE. Prenositeľnosť znamená „zmaž jeden priečinok a je po
   ňom" a to platí ďalej – len sa to už netýka vyrobených snímok.
 - Testy: 416 (+9).
@@ -257,7 +268,7 @@ pamätajú veľkosť.**
   dvojstavové poradie klikov mal **vlastnú predvolenú hodnotu**, takže „žiadny súbor nastavení"
   vyzeral presne ako „starý súbor, ktorý si pýta oblúk 3 bodmi". Kľúč je teraz **nullable** –
   prázdno znamená, že niet čo ctiť, a platí aktuálna predvoľba.
-- **Prečo to bolo vidieť pri každom builde:** `build-portable.ps1` priečinok `dist\ScreenMark`
+- **Prečo to bolo vidieť pri každom builde:** `build-portable.ps1` priečinok `dist\Edivect`
   pred každým zostavením zmaže, a keďže appka je prenosná, zmizne s ním aj `settings.json`.
   Každý spustený build bol teda čerstvá inštalácia – a každý začínal na nesprávnom režime.
   To isté by dostal každý kolega z rozbaleného ZIP-u.
@@ -543,18 +554,18 @@ prehrávania 2,29 s, opakovanie donekonečna, súbor otvorí systémový dekodé
 
 ## 0.9.9.33 – 2026-07-28
 
-**Build si sám zastaví bežiaci ScreenMark.**
+**Build si sám zastaví bežiaci Edivect.**
 
-- **Nový `build\kill-screenmark.ps1`** – natvrdo ukončí bežiaci ScreenMark, počká, kým Windows
+- **Nový `build\kill-edivect.ps1`** – natvrdo ukončí bežiaci Edivect, počká, kým Windows
   naozaj uvoľní zámok na súbore, a napíše, čo zastavil. Bežiaca WPF aplikácia drží výhradný
   zámok na vlastnom `.exe`, takže publish inak spadne na `MSB3027 – being used by another
   process`. **Neukladá** – rozkreslené anotácie sa stratia, to je zámer.
 - **`build-portable.ps1` aj `build-opm-trial.ps1` ho volajú automaticky**, takže na to netreba
   myslieť. Vypnúť sa to dá prepínačom `-KeepRunning`.
-- **Zabíja len procesy spustené z tohto repozitára.** Nainštalovaný ScreenMark inde na stroji
-  ostane bežať; `-Any` to obmedzenie zruší. Meno hľadá ako `ScreenMark*`, takže chytí aj
+- **Zabíja len procesy spustené z tohto repozitára.** Nainštalovaný Edivect inde na stroji
+  ostane bežať; `-Any` to obmedzenie zruší. Meno hľadá ako `Edivect*`, takže chytí aj
   osobné skúšobné buildy, ktoré majú v názve meno a dátum.
-- **`build\kill-screenmark.cmd`** na dvojklik, prepínače `/all`, `/servers`, `/both`.
+- **`build\kill-edivect.cmd`** na dvojklik, prepínače `/all`, `/servers`, `/both`.
   Build skripty ho zámerne nevolajú – volajú `.ps1`, ktorý nepauzuje.
 - Voliteľné `-BuildServers` vypne aj MSBuild a Roslyn servery na pozadí, ktoré vedia držať
   zámky v `obj\`. Nie je to predvolené, lebo ďalší build je potom pomalší.
@@ -616,11 +627,11 @@ prehrávania 2,29 s, opakovanie donekonečna, súbor otvorí systémový dekodé
   vo všetkých štyroch jazykoch a appka spadne späť na slovenčinu **bez akéhokoľvek varovania** –
   v slovenskom UI to nie je vidieť vôbec. Najviac to zasiahlo **okno Porovnanie verzií
   (celé), Pripomienky, Šablóny, Kopírovať formát a Mierku**.
-- **11 hlášok, ktoré cez preklad vôbec neprechádzali**, je teraz preložených: „ScreenMark už
+- **11 hlášok, ktoré cez preklad vôbec neprechádzali**, je teraz preložených: „Edivect už
   beží", obnova neuloženej práce, zlyhanie globálnych skratiek, zmrazenia obrazovky, uloženia
   a načítania projektu, exportu monitora aj výrezu, poškodený súbor projektu, „(žiadne nedávne
   projekty)" a „(začiatok)" v histórii.
-- **Hláška „ScreenMark už beží" si po novom načíta jazyk sama.** Zobrazuje sa ešte pred tým, než
+- **Hláška „Edivect už beží" si po novom načíta jazyk sama.** Zobrazuje sa ešte pred tým, než
   sa nastaví jazyk, takže by po zabalení do prekladu vychádzala všetkým po anglicky – vrátane
   slovenských používateľov, ktorí ju dovtedy mali správne.
 - **Tri nové testy to strážia do budúcna** (225 spolu): každý kľúč zo zdrojáku musí mať preklad
@@ -732,10 +743,10 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 - **Terč sa už „nezasekne" na výplni.** Po pečiatke (kde je VÝPLŇ jediná možnosť) sa pri
   návrate na obdĺžnik vráti späť na OBRYS. Ak si si výplň zvolil ty sám kliknutím, tá ti
   zostane – prepína sa len to, čo predtým prepla appka za teba.
-- **Malé okno je na dva riadky: značka ScreenMark hore, tlačidlo Kresliť pod ňou.** Vedľa seba
+- **Malé okno je na dva riadky: značka Edivect hore, tlačidlo Kresliť pod ňou.** Vedľa seba
   si obe súperili o ten istý pohľad a pilulka bola zbytočne široká na to, že leží na cudzom
   okne. **Logo z tlačidla Kresliť je preč** (vrátilo sa tam kresliace pierko) – identita patrí
-  do značky nad ním; dva razy pod sebou hovorila pilulka „ScreenMark" a ani raz nepovedala, čo
+  do značky nad ním; dva razy pod sebou hovorila pilulka „Edivect" a ani raz nepovedala, čo
   to tlačidlo urobí.
 
 ## 0.9.9.25 – 2026-07-27
@@ -767,7 +778,7 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 - **Malá šípka ▾ v rohu pri KAŽDOM tlačidle, ktoré má na pravý klik ďalšie voľby** – pero,
   zvýrazňovač, šípka, kopírovanie formátu aj rozpoznávanie textu ju predtým nemali, hoci
   pravý klik u nich fungoval; teraz je to vidieť, nielen napísané v popise.
-- **Malé okno: značka ScreenMark je nad nápisom „Kresliť"**, nie vedľa štetca – logo dostalo
+- **Malé okno: značka Edivect je nad nápisom „Kresliť"**, nie vedľa štetca – logo dostalo
   v pilulke druhé, vlastné miesto namiesto všeobecnej ikony štetca.
 
 ## Nezaradené
@@ -823,7 +834,7 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
   Overené ťahaním: hore 12 px medzera = voľné, 3 px = prichytí; nabok 12 px = prichytí, 40 px = voľné.
 - **Značka je teraz aj vo veľkom paneli a v malom okne (pilulke).** Vytiahol som ju do jednej
   šablóny, takže je definovaná raz a nosia ju všetky tri chrómy.
-  **Slovo „ScreenMark" som z panela musel odstrániť:** titulkový riadok má 134 px a zatváracie
+  **Slovo „Edivect" som z panela musel odstrániť:** titulkový riadok má 134 px a zatváracie
   + zbaľovacie tlačidlo z neho zoberú ~59, takže na značku zostáva ~52 px – vojde sa buď 26 px
   značka, **alebo** názov, nie oboje. Pri 10 px názov liezol pod tlačidlo („Screer"), pri 9 px
   skončil na „ScreenM". Značka je silnejšia identita a znesie malý rozmer, tak nesie riadok ona;
@@ -871,7 +882,7 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 
 - Po včerajšej oprave (0.9.9.20) sa ukázalo, že DRAW robilo **doslova to isté** ako šípka COLLAPSE
   v hlavičke: zbaľovanie panela je natrvalo naviazané na režim (`collapse = Mode == Passthrough`
-  v [`UpdateCollapsed`](src/ScreenMark/UI/ToolbarWindow.xaml.cs)), takže hocičo, čo appku vyradí
+  v [`UpdateCollapsed`](src/Edivect/UI/ToolbarWindow.xaml.cs)), takže hocičo, čo appku vyradí
   z kreslenia, vždy skončí rovnako – zbalením na pilulku. Navyše, pokiaľ je panel vôbec otvorený,
   `Mode` je vždy `Annotate` – takže DRAW v ňom v skutočnosti **nikdy neukazovalo "vypnuté"**, len ten
   krátkodobý chybný stav z predchádzajúcej verzie.
@@ -887,7 +898,7 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 
 - Kliknutie na DRAW, keď už bolo aktívne, vizuálne zhaslo ikonu, ale appka **zostala v režime
   kreslenia** – dalo sa kresliť ďalej, aj keď to tlačidlo neukazovalo. Príčina: handler
-  [`OnDraw`](src/ScreenMark/UI/ToolbarWindow.xaml.cs) volal `AppActions.SetAnnotate()`, ktorá
+  [`OnDraw`](src/Edivect/UI/ToolbarWindow.xaml.cs) volal `AppActions.SetAnnotate()`, ktorá
   režim iba **zapína** a pri opakovanom volaní (keď už kreslenie beží) potichu nič neurobí – takže
   sa nikdy neodpálila udalosť, ktorá by tlačidlo vrátilo do súladu so skutočným stavom appky.
 - Klávesová skratka **Ctrl+Alt+D** (rovnaký tooltip ako má tlačidlo) tento problém nemala – tá už
@@ -955,24 +966,24 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 
 - **App ikona (`app.ico`)** je nahradená autorskou brand sadou. Doterajšia ikona bola
   generovaná skriptom (červeno-oranžová „fixka na tmavom štvorci") a nemala nič spoločné
-  so značkou ScreenMark. Nová `ScreenMark.ico` má **9 rozlíšení (16–256 px)**, každé kreslené
+  so značkou Edivect. Nová `Edivect.ico` má **9 rozlíšení (16–256 px)**, každé kreslené
   v správnej úrovni detailu (malé veľkosti bez čerchovaných čiar a tenkého kríža, ktoré sa
   pod 64 px rozpadnú) – ostrá na taskbare, v tray aj pri 150 %/200 % škálovaní.
-- **Panelové logo (úzky panel)** som prekreslil z novej predlohy `screenmark-mark-small.svg`
+- **Panelové logo (úzky panel)** som prekreslil z novej predlohy `edivect-mark-small.svg`
   (256-jednotková mriežka, paleta `#1167F5`/`#FC8B19`). Pri 26 px je „small" správna úroveň
   detailu, takže panel aj taskbar teraz ukazujú **tú istú značku** – žiadny rozdiel medzi
   starou (`#2D7DF6`) a novou modrou.
-- **Sada ikon má poriadny domov:** presunutá z `docs/screenmark-icons/` do
+- **Sada ikon má poriadny domov:** presunutá z `docs/edivect-icons/` do
   `brand/icons/` (zdrojové vektory, Windows `.ico` + PNG, web favicony/PWA, horizontálny
   lockup, `preview.html`). `brand/` je podľa README jediný zdroj pravdy identity, takže tam
   patrí. `brand/README.md` na ňu ukazuje ako na aktuálnu produkčnú sadu.
 - **`build/make-icon.ps1`** už nekreslí starú grafiku – iba **skopíruje** autorskú
-  `brand/icons/windows/ScreenMark.ico` do `src/ScreenMark/app.ico`. Predtým by jeho spustenie
+  `brand/icons/windows/Edivect.ico` do `src/Edivect/app.ico`. Predtým by jeho spustenie
   prepísalo dobrú ikonu zastaraným artom; teraz je to bezpečný inštalačný krok.
 
 ## 0.9.9.15 – 2026-07-22
 
-**Namiesto monogramu „SM" je v úzkom paneli logo ScreenMark.**
+**Namiesto monogramu „SM" je v úzkom paneli logo Edivect.**
 
 - Značku som preložil z `brand/icon.svg` do XAML (Path/Line/Ellipse v `Viewbox`), takže je
   **vektorová** – ostrá pri každom DPI a **bez vlastného pozadia** (čierny štvorec zo screenshotu
@@ -984,18 +995,18 @@ zapečené pri vzniku). Samostatná úloha na 2–3 h, siaha do modelu.
 - Jemné detaily (čiarkované vodidlá, druhý uzol) sú pri tejto veľkosti sub-pixelové – to je
   vlastnosť detailného loga v malom, nie chyba; identitu nesie modrý rám + kríž + oranžová
   rukoväť, ktoré sú čitateľné.
-- Rozšírený panel ďalej ukazuje plný nápis „ScreenMark".
+- Rozšírený panel ďalej ukazuje plný nápis „Edivect".
 
 ## 0.9.9.14 – 2026-07-22
 
-**Nadpis „ScreenMark" sa v úzkom paneli zmenšil na monogram „SM".**
+**Nadpis „Edivect" sa v úzkom paneli zmenšil na monogram „SM".**
 
-Odkedy je bežný panel 3 ikony na šírku (~120 px), plný nápis „ScreenMark" sa vedľa tlačidiel
+Odkedy je bežný panel 3 ikony na šírku (~120 px), plný nápis „Edivect" sa vedľa tlačidiel
 zbaliť/zavrieť nezmestil a orezal sa. Nadpis je pritom čisto značka – ťahať panel sa dá za
 celú plochu, nie len za nadpis – takže:
 
 - **Úzky (bežný) panel:** monogram **„SM"** (tučné), vľavo hore, vždy sa zmestí.
-- **Rozšírený panel:** plný nápis **„ScreenMark"** sa vráti, lebo tam je miesto.
+- **Rozšírený panel:** plný nápis **„Edivect"** sa vráti, lebo tam je miesto.
 - Plná značka je aj naďalej na pilulke (malom okne), takže o brand sa nepríde.
 
 ## 0.9.9.13 – 2026-07-22
@@ -1282,7 +1293,7 @@ Zmerané cez UIA pred aj po, nie odhadnuté: **172 × 833 → 168 × 722 px**, p
   **dvojklik** = na viac objektov (Esc = koniec), **pravý klik** = zaškrtávače, čo sa
   kopíruje (farba, výplň, hrúbka, typ čiary, zaoblenie, šípky). Každé prenesenie je krok
   histórie; voľba masky sa pamätá.
-- **Kratšie názvy exportov** – z `ScreenMark_region_2026-07-15_12-37-34.png` je
+- **Kratšie názvy exportov** – z `Edivect_region_2026-07-15_12-37-34.png` je
   `2026-07-15_12-37-34.png`. Preč názov programu aj slovo „region" (výrez je stále len
   snímka); prefix ostáva len tam, kde ide o iný druh súboru (`annotations_`, `monitor2_`,
   `comments_`). Dátum s pomlčkami zostáva – triedi sa chronologicky a je filesystem-bezpečný.
@@ -1315,7 +1326,7 @@ Zmerané cez UIA pred aj po, nie odhadnuté: **172 × 833 → 168 × 722 px**, p
   stupnica (tri štvorčeky vedľa seba nie); editovateľné číslo v px zostáva vedľa.
 - **Export je v kompaktnom paneli** – sekcia REŽIM: Kresliť · Freeze · Oblasť · **Export**
   (presne 4 bunky). Session končí exportom; nemá čo robiť len v rozšírenej úrovni.
-- **Malé okno reaguje na hover aj menovkou** – rámik „ScreenMark" zmodrie a text sa rozsvieti
+- **Malé okno reaguje na hover aj menovkou** – rámik „Edivect" zmodrie a text sa rozsvieti
   spolu so zmenou priehľadnosti okna.
 
 ## 0.9.8.1.6 – 2026-07-17
@@ -1409,7 +1420,7 @@ Známe: nadpisy sekcií sú zatiaľ len po slovensky (nelokalizujú sa do EN/DE)
 **Component Library (bez aplikácie na toolbar).** Znovupoužiteľné vlastné ovládače postavené
 celé na dizajnovom foundation – každý je `ControlTemplate` riadený tokenmi, žiadny si nedrží
 vlastnú farbu, rozmer či rádius. Zaregistrované app-wide, ale **keyed** (opt-in), takže zatiaľ
-nič neprekresľujú. Prehľad v [Resources/COMPONENTS.md](src/ScreenMark/Resources/COMPONENTS.md).
+nič neprekresľujú. Prehľad v [Resources/COMPONENTS.md](src/Edivect/Resources/COMPONENTS.md).
 
 - **Tlačidlá:** `IconButton`, `PrimaryButton`, `SecondaryButton`, `ToggleIconButton`,
   `ColorButton`, `IconLabel`. Jeden zdieľaný `ControlTemplate` pre všetky – varianty sa líšia
@@ -1419,7 +1430,7 @@ nič neprekresľujú. Prehľad v [Resources/COMPONENTS.md](src/ScreenMark/Resour
 - **Kontajnery:** `ToolbarSection` (titulkovaná karta), `SectionHeader`, `Separator` (vodorovný/zvislý).
 - **Vstupy:** `ModernSlider` (veľký palec rastúci pri hoveri, vyplnená dráha, prístupný z klávesnice),
   `Dropdown` (zaoblený popup s tieňom), `NumericInput` – **skutočný custom control**
-  ([Controls/NumericInput.cs](src/ScreenMark/Controls/NumericInput.cs)): písanie, klik/podrž na
+  ([Controls/NumericInput.cs](src/Edivect/Controls/NumericInput.cs)): písanie, klik/podrž na
   ▲▼, koliesko, orezáva na rozsah.
 - **Tooltip:** moderný – zaoblený, mäkký tieň, jemný fade-in. Jediný **implicitný** (nahrádza
   default Windows tooltip všade), lebo o to pri tooltip komponente ide.
@@ -1437,7 +1448,7 @@ ovládač si nedrží hex ani magické číslo.
 
 - **Nový priečinok `Resources/`** s deviatimi slovníkmi: `Colors`, `Brushes`, `Typography`,
   `Spacing`, `Radius`, `Shadows`, `Animations`, `Icons`, `Controls`. Zlúčené app-wide v
-  `App.xaml` v poradí závislostí. Popis a pravidlá v [Resources/README.md](src/ScreenMark/Resources/README.md).
+  `App.xaml` v poradí závislostí. Popis a pravidlá v [Resources/README.md](src/Edivect/Resources/README.md).
 - **Sémantické tokeny.** Farby žijú ako `Color` v `Colors.xaml` (Primary, Accent, Success,
   Warning, Danger, Background, Surface/Surface2/Hover, Border/BorderLight, Text
   Primary/Secondary/Disabled, Selection, Focus), z nich `SolidColorBrush` v `Brushes.xaml`.
@@ -1748,7 +1759,7 @@ súťaž prehral a spadol s `0x800401D0`. Nič nebolo pokazené – len bolo tre
 **Nová funkcia: Kopírovať text (OCR)**
 
 Nástroj **Kopírovať text** – potiahneš cez text na obrazovke a appka ho prečíta.
-Presne pre situácie, v ktorých ScreenMark existuje a text sa **nedá označiť**:
+Presne pre situácie, v ktorých Edivect existuje a text sa **nedá označiť**:
 CAD viewport, cudzia obrazovka cez Teams/RDP, dialóg, ktorý nedovolí kopírovanie,
 screenshot v tikete.
 
@@ -1778,12 +1789,12 @@ screenshot v tikete.
 
 ## 0.9.1.9 – 2026-07-16
 
-**Panel úloh už nie je súčasťou ScreenMarku**
+**Panel úloh už nie je súčasťou Edivectu**
 
 Namiesto záplaty z 0.9.1.8 (ktorá je vrátená) je problém odstránený v koreni:
 **plocha aplikácie je pracovná plocha monitora, nie celý monitor.**
 
-- **Panel úloh zostáva živý a klikateľný.** Prekrytie ScreenMarku už cezeň
+- **Panel úloh zostáva živý a klikateľný.** Prekrytie Edivectu už cezeň
   nesiaha, takže klik na inú appku dole funguje normálne – appka prejde do
   priepustného režimu a zbalí sa do malého okna, presne ako pri Alt+Tab.
 - **Panel úloh sa nikdy nezmrazí ani nedostane do snímky.** Zmrazenie, blur aj
@@ -2029,7 +2040,7 @@ Séria vyladení z reálneho používania oproti 0.9.1:
   oddelene od polohy malého okna.
 - **Exportované súbory sú po anglicky** – priečinok `Snimky` → `Captures`,
   prípony `_vyrez` → `_region`, `_anotacie` → `_annotations`,
-  `ScreenMark_pripomienky_*.csv` → `ScreenMark_comments_*.csv` (vrátane hlavičky
+  `Edivect_pripomienky_*.csv` → `Edivect_comments_*.csv` (vrátane hlavičky
   CSV). Staré súbory v pôvodnom priečinku zostávajú, appka len odteraz zapisuje
   do nového.
 
@@ -2037,9 +2048,9 @@ Séria vyladení z reálneho používania oproti 0.9.1:
 
 **Oprava buildu 0.6.0** (28 chýb kompilácie nahlásených z `build-portable.ps1`)
 
-- `App.xaml.cs`: chýbal `using ScreenMark.Serialization;` – predvolené
+- `App.xaml.cs`: chýbal `using Edivect.Serialization;` – predvolené
   presety používajú `PenPresetDto`, ktorý žije v Serialization, nie v Services.
-- `UI/PropertiesWindow.xaml.cs`: chýbal `using ScreenMark.Services;` (Loc)
+- `UI/PropertiesWindow.xaml.cs`: chýbal `using Edivect.Services;` (Loc)
   a celá metóda `ApplyLanguage()` – automatická úprava sa vložila na zlú kotvu
   a jej absencia sa neodhalila, pretože UI vrstva nebola v kompilačnej bráne.
 - **Nová UI kompilačná brána v kontajneri**: `build/container-gate/gate.sh`
@@ -2128,7 +2139,7 @@ Séria vyladení z reálneho používania oproti 0.9.1:
   (s viditeľným číslom v %), zaoblenie rohov pri obdĺžniku, poradie
   dopredu/dozadu, zamknúť, zoskupiť/zrušiť, zmazať. Všetko cez históriu (Ctrl+Z).
 - **Modrý okraj = režim Kreslenie** – tenký 3 px akcentový rám po obvode
-  každého monitora, viditeľný len keď kliky idú do ScreenMark. Rám je
+  každého monitora, viditeľný len keď kliky idú do Edivect. Rám je
   vylúčený zo snímania obrazovky (SetWindowDisplayAffinity, Windows 10 2004+),
   takže na screenshotoch, exportoch ani nahrávkach sa nikdy neobjaví –
   vidíš ho len ty.
@@ -2152,13 +2163,13 @@ Séria vyladení z reálneho používania oproti 0.9.1:
   je číslo v %. Percento vidno aj v pravom menu objektu.
 - **Export bez dialógu** – PNG/JPG/výrez/monitor sa uložia rovno do
   podpriečinka **Snimky** vedľa exe, názov
-  `ScreenMark_2026-07-09_14-05-33.png` (triedi sa chronologicky). V pravom
+  `Edivect_2026-07-09_14-05-33.png` (triedi sa chronologicky). V pravom
   dolnom rohu sa objaví nenápadné potvrdenie – klik naň otvorí súbor
   v Prieskumníkovi. Žiadny preblik obrazovky. „Uložiť ako…" s dialógom ostáva
   v menu Export, tam je aj „Otvoriť priečinok Snimky".
-- **Panel úloh a Alt+Tab** – ScreenMark je viditeľný v paneli úloh.
+- **Panel úloh a Alt+Tab** – Edivect je viditeľný v paneli úloh.
   Prepnutie na inú aplikáciu (Alt+Tab, klik na jej okno) automaticky zapne
-  režim Kurzor, takže ju hneď ovládaš; klik na ScreenMark v paneli úloh
+  režim Kurzor, takže ju hneď ovládaš; klik na Edivect v paneli úloh
   vráti Kreslenie.
 - **Úprava prvkov v skupine (ako PowerPoint)** – klik na už vybranú skupinu
   vyberie prvok pod kurzorom; ten sa dá samostatne presúvať, meniť mu veľkosť,

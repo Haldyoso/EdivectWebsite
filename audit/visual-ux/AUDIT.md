@@ -1,7 +1,7 @@
-# ScreenMark — komplexný vizuálny a UX audit
+# Edivect — komplexný vizuálny a UX audit
 
 Audit: 22. 8. 2026  
-Testovaný zdroj: lokálny projekt `ScreenMarkWebsite`, bez zmien aplikačného kódu
+Testovaný zdroj: lokálny projekt `EdivectWebsite`, bez zmien aplikačného kódu
 
 > **Stav po schválení opráv (22. 8. 2026):** všetkých 16 nálezov bolo
 > implementovaných a znovu otestovaných. Pôvodný audit nižšie zostáva zachovaný
@@ -113,7 +113,7 @@ Kompletný označený prehľad je v [23-annotated-findings.png](screenshots/23-a
 - **Dôkaz:** [mobilné porovnanie](screenshots/11-sk-mobile-375-comparison.png)
 - **Meranie:** scroll región má 326 px, tabuľka 780 px; 454 px obsahu je mimo prvého pohľadu.
 - **Pozitívum:** celý dokument nepretečie a región je fokusovateľný pomocou klávesnice.
-- **Problém:** bez šípky, okrajového fade alebo textu nie je zrejmé, že tabuľka pokračuje doprava. Na prvý pohľad používateľ vidí najmä názvy schopností a iba úzky kus stĺpca ScreenMark.
+- **Problém:** bez šípky, okrajového fade alebo textu nie je zrejmé, že tabuľka pokračuje doprava. Na prvý pohľad používateľ vidí najmä názvy schopností a iba úzky kus stĺpca Edivect.
 - **Odporúčanie:** pridať krátky hint „Potiahnite doprava“, pravý gradient/fade, ktorý zmizne po posunutí, a zvážiť sticky prvý stĺpec. Na mobile môže byť účinnejšie prepínanie konkurenta namiesto päťstĺpcovej tabuľky.
 
 ### VUX-07 — Changelog je na mobile neúmerne dlhý
@@ -137,11 +137,11 @@ Kompletný označený prehľad je v [23-annotated-findings.png](screenshots/23-a
 ### VUX-09 — Hierarchia nadpisov preskočí z H1 na H3
 
 - **Závažnosť:** stredná
-- **Miesto:** sekcia benefitov „Prečo ScreenMark“ hneď za hero
+- **Miesto:** sekcia benefitov „Prečo Edivect“ hneď za hero
 - **Breakpoint:** všetky
 - **Nález:** po H1 nasledujú štyri H3 bez H2. Sekcia má iba `aria-label`.
 - **Dopad:** vizuálne je prechod zrozumiteľný, ale dokumentová osnova pre screen readery a nástroje na rýchlu navigáciu je nekonzistentná.
-- **Odporúčanie:** pridať pred zoznam `<h2 className="sr-only">Prečo ScreenMark</h2>` a región pomenovať pomocou `aria-labelledby`.
+- **Odporúčanie:** pridať pred zoznam `<h2 className="sr-only">Prečo Edivect</h2>` a región pomenovať pomocou `aria-labelledby`.
 
 ### VUX-10 — Niektoré mobilné touch targety sú menšie než odporúčaných 44 px
 
@@ -172,8 +172,8 @@ Kompletný označený prehľad je v [23-annotated-findings.png](screenshots/23-a
 
 - **Závažnosť:** nízka
 - **Miesto:** header logo
-- **Nález:** prístupné meno je „ScreenMark ScreenMark — späť nahor“. Na changelogu však odkaz vedie na domovskú stránku, nie späť nahor.
-- **Odporúčanie:** nastaviť jedno explicitné `aria-label`; na landing page „ScreenMark — späť nahor“, na changelogu „ScreenMark — domov“.
+- **Nález:** prístupné meno je „Edivect Edivect — späť nahor“. Na changelogu však odkaz vedie na domovskú stránku, nie späť nahor.
+- **Odporúčanie:** nastaviť jedno explicitné `aria-label`; na landing page „Edivect — späť nahor“, na changelogu „Edivect — domov“.
 
 ### VUX-14 — Runtime chyba obrázka nemá vizuálny fallback
 
@@ -226,7 +226,7 @@ Kompletný označený prehľad je v [23-annotated-findings.png](screenshots/23-a
 
 ## D. Nové nápady
 
-1. **Before/after slider:** čistý CAD výkres verzus ScreenMark anotácia; okamžite demonštruje hodnotu produktu.
+1. **Before/after slider:** čistý CAD výkres verzus Edivect anotácia; okamžite demonštruje hodnotu produktu.
 2. **Use-case prepínač:** CAD kontrola, QA nálezy, technická podpora, školenie — každý s vlastným screenshotom a jednou vetou.
 3. **Trust strip pri downloade:** „Open source · MIT · bez telemetrie · SHA-256 overené · podpis vydavateľa“.
 4. **Jasné release kanály:** samostatná karta „Stable ZIP“ a menšia „Preview/OPM“, každá s verziou, dátumom a formátom.

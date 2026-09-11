@@ -2,8 +2,8 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { extname, join, normalize, resolve } from "node:path";
 
 const outputRoot = resolve("out");
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/ScreenMarkWebsite";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://haldyoso.github.io/ScreenMarkWebsite";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://haldyoso.github.io/EdivectWebsite";
 const checkExternal = process.argv.includes("--external");
 
 if (!existsSync(outputRoot)) {

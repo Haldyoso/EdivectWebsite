@@ -15,9 +15,9 @@ export const en: Copy = {
   },
   ui: {
     skipToContent: "Skip to content",
-    backToTop: "ScreenMark — back to top",
-    home: "ScreenMark — home page",
-    githubRepo: "ScreenMark website repository on GitHub",
+    backToTop: "Edivect — back to top",
+    home: "Edivect — home page",
+    githubRepo: "Edivect website repository on GitHub",
     openMenu: "Menu",
     closeMenu: "Close menu",
     download: "Download",
@@ -29,7 +29,7 @@ export const en: Copy = {
     yes: "Yes",
     no: "No",
     primaryNav: "Primary",
-    benefitsLabel: "Why ScreenMark",
+    benefitsLabel: "Why Edivect",
     galleryLabel: "Screenshot gallery",
     enlarge: "Enlarge",
     close: "Close",
@@ -59,9 +59,9 @@ export const en: Copy = {
       "Multi-monitor",
       "Vector · always editable",
     ],
-    frameTitle: "ScreenMark — Freeze mode · Monitor 1",
+    frameTitle: "Edivect — Freeze mode · Monitor 1",
     screenshotAlt:
-      "ScreenMark's tool panel beside a frozen engineering drawing, marked up with numbered badges ①②③ and a red arrow that is selected and still editable.",
+      "Edivect's tool panel beside a frozen engineering drawing, marked up with numbered badges ①②③ and a red arrow that is selected and still editable.",
   },
   benefits: {
     speed: {
@@ -210,13 +210,13 @@ export const en: Copy = {
       overline: "How it compares",
       title: "Illustrator-grade editing at Snipping-Tool speed",
       subtitle:
-        "Pointofix is the closest thing to ScreenMark — the same draw-anywhere overlay, free, and it has been doing it for years. The difference is what happens after you let go of the mouse.",
+        "Pointofix is the closest thing to Edivect — the same draw-anywhere overlay, free, and it has been doing it for years. The difference is what happens after you let go of the mouse.",
     },
     regionLabel:
       "Feature comparison against Pointofix and other Windows annotation and capture tools",
     scrollHint: "Swipe or scroll horizontally to compare every tool.",
     caption:
-      "How ScreenMark compares with Pointofix, Snipping Tool, Greenshot and ShareX",
+      "How Edivect compares with Pointofix, Snipping Tool, Greenshot and ShareX",
     capability: "Capability",
     rows: {
       editable: "Annotations stay editable after you let go",
@@ -308,7 +308,7 @@ export const en: Copy = {
       install: {
         question: "Do I need to install anything?",
         answer:
-          "No. ScreenMark is a portable application — download and run the executable. It needs no installer, no administrator rights and no registry changes, so it works fine on locked-down corporate machines and from a USB stick.",
+          "No. Edivect is a portable application — download and run the executable. It needs no installer, no administrator rights and no registry changes, so it works fine on locked-down corporate machines and from a USB stick.",
       },
       editable: {
         question: "What does “everything stays editable” actually mean?",
@@ -339,7 +339,7 @@ export const en: Copy = {
   },
   downloadCta: {
     platform: "Windows 10 & 11 · 64-bit",
-    title: "Download ScreenMark",
+    title: "Download Edivect",
     subtitle:
       "Portable EXE — download and run. No installation, no admin rights, no internet.",
     publicTrialButton: "Download public trial",
@@ -372,16 +372,16 @@ export const en: Copy = {
       terms: "Terms of Use",
       issues: "Report an issue",
     },
-    legal: "© 2026 ScreenMark.",
+    legal: "© 2026 Edivect.",
     traits: "Portable · Offline · No telemetry",
   },
   changelog: {
     title: "Changelog",
     description:
-      "Every released version of ScreenMark and what changed in it.",
+      "Every released version of Edivect and what changed in it.",
     back: "Back to the home page",
     intro:
-      "Release notes for the ScreenMark application, newest first.",
+      "Release notes for the Edivect application, newest first.",
     empty:
       "No release notes have been published yet.",
     sourceNote:

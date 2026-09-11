@@ -19,7 +19,7 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
       // Read-only design references shipped with the handoff, not project source.
-      "ScreenMark UX redesign/**",
+      "Edivect UX redesign/**",
     ],
   },
 ];

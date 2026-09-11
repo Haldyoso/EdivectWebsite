@@ -1,15 +1,15 @@
-# ScreenMark — official website
+# Edivect — official website
 
-Marketing site for **ScreenMark**, the portable Windows screen-annotation app whose
+Marketing site for **Edivect**, the portable Windows screen-annotation app whose
 annotations stay fully editable. One conversion goal: download the public trial EXE.
 Published in English, Slovak and German.
 
-The handoff bundle below still says "ScreenMarkPro" throughout — that was the working name
-during design. The shipped product and this site are **ScreenMark**; the bundle is kept
+The handoff bundle below still says "Edivect" throughout — that was the working name
+during design. The shipped product and this site are **Edivect**; the bundle is kept
 verbatim as the original deliverable.
 
 Built to the spec in
-[`ScreenMark UX redesign/design_handoff_screenmarkpro_website/README.md`](<ScreenMark UX redesign/design_handoff_screenmarkpro_website/README.md>).
+[`Edivect UX redesign/design_handoff_edivect_website/README.md`](<Edivect UX redesign/design_handoff_edivect_website/README.md>).
 
 ## Stack
 
@@ -32,7 +32,7 @@ npm test
 Two maintenance scripts, neither part of the build:
 
 ```bash
-npm run sync:changelog -- ../ScreenMark   # refresh content/CHANGELOG.md from the app repo
+npm run sync:changelog -- ../Edivect   # refresh content/CHANGELOG.md from the app repo
 npm run optimize:screenshots              # convert any new PNG in public/screenshots to WebP
 ```
 
@@ -128,7 +128,7 @@ near-black panel.
 
 ## Screenshots
 
-`public/screenshots/` holds twelve real captures of ScreenMark annotating an engineering
+`public/screenshots/` holds twelve real captures of Edivect annotating an engineering
 drawing — not mock-ups. Each is cropped from a full 1920×1080 capture of the app running
 over the drawing held open behind it, so what the site shows is what the product draws.
 
@@ -163,7 +163,7 @@ Three things to keep in mind when replacing one:
 `/changelog` (and its two translations) renders `content/CHANGELOG.md`, a **vendored copy**
 of the application repository's own file. Vendored because the two live in separate
 repositories and the deploy workflow checks out only this one — a build-time path into
-`../ScreenMark` works locally and fails in CI. Refresh it with `npm run sync:changelog`.
+`../Edivect` works locally and fails in CI. Refresh it with `npm run sync:changelog`.
 
 Only the most recent `RELEASE_LIMIT` (20) entries render. The app's changelog is a
 development log — 106 entries by 0.9.9.61 — and all of them produced a 557 kB page.
@@ -181,19 +181,19 @@ dates recorded in the comment above `compareValues` in
 value**, and update that comment in the same commit.
 
 A 2026-08-11 pass against the vendors' own pages corrected three claims that were wrong
-in ScreenMark's favour: Greenshot and ShareX both ship portable ZIP builds (they were
+in Edivect's favour: Greenshot and ShareX both ship portable ZIP builds (they were
 marked installer-only), Greenshot's `.greenshot` format does keep elements editable for
 later (it was marked a flat No), and ShareX's offline row carried an "opt-out" note that
 nothing in its documentation supports.
 
-The magnifier row, which ScreenMark loses to Pointofix, stays in on purpose. A table the
+The magnifier row, which Edivect loses to Pointofix, stays in on purpose. A table the
 incumbent loses 10–0 reads as a strawman.
 
 ## Deployment
 
 Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 lint → typecheck → `next build` → publish `out/` to GitHub Pages. Live at
-**https://haldyoso.github.io/ScreenMarkWebsite/**.
+**https://haldyoso.github.io/EdivectWebsite/**.
 
 Pages is a static file host with no Node process, which forces four things:
 
@@ -222,7 +222,7 @@ Noto Sans fonts and Sharp, so output is deterministic and Pages serves real `.pn
 with the correct content type instead of the extensionless file produced by Next's image
 convention.
 
-`robots.txt` is emitted at `/ScreenMarkWebsite/robots.txt`, which crawlers ignore; only a
+`robots.txt` is emitted at `/EdivectWebsite/robots.txt`, which crawlers ignore; only a
 root-domain one counts. It costs nothing and starts working the day this gets a real
 domain.
 

@@ -10,7 +10,8 @@
  * light page whose screenshots are all dark, which is a design decision rather
  * than a fix, so it is deliberately not done here.
  */
-export const THEME_STORAGE_KEY = "screenmark-theme";
+export const THEME_STORAGE_KEY = "edivect-theme";
+export const LEGACY_THEME_STORAGE_KEY = "screenmark-theme";
 
 export type Theme = "light" | "dark";
 

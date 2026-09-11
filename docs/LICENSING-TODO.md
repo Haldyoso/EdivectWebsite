@@ -1,6 +1,6 @@
 # Licensing decision required before commercial launch
 
-ScreenMark currently has no public software licence or EULA. The website must not claim that the application is MIT-licensed merely because some website dependencies use MIT licences.
+Edivect currently has no public software licence or EULA. The website must not claim that the application is MIT-licensed merely because some website dependencies use MIT licences.
 
 ## Decisions the owner must make
 
@@ -25,7 +25,7 @@ ScreenMark currently has no public software licence or EULA. The website must no
 1. Add the final licence/EULA to the application distribution and, if appropriate, a localized website route.
 2. Fill in the legal owner and support/privacy contact in `lib/site.ts`.
 3. Update the Terms pages so they link to and accurately summarize the final licence.
-4. Revisit the `Offer` in `lib/structured-data.ts` if ScreenMark is no longer free to obtain.
+4. Revisit the `Offer` in `lib/structured-data.ts` if Edivect is no longer free to obtain.
 5. Add licence acceptance to the product flow only if the chosen legal model requires it.
 6. Re-run the production build, link check, smoke tests and accessibility tests.
 

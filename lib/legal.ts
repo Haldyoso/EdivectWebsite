@@ -27,9 +27,9 @@ const privacy: Record<Lang, LegalPageCopy> = {
   en: {
     title: "Privacy Policy",
     description:
-      "How the ScreenMark website and downloaded application handle personal information, cookies, telemetry and third-party services.",
+      "How the Edivect website and downloaded application handle personal information, cookies, telemetry and third-party services.",
     intro:
-      "ScreenMark is designed to collect as little information as possible. This policy separates the static website from the Windows application you download.",
+      "Edivect is designed to collect as little information as possible. This policy separates the static website from the Windows application you download.",
     lastUpdated: "3 September 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Operator",
@@ -43,31 +43,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Scope",
         paragraphs: [
-          "This policy applies to the ScreenMark marketing website and the ScreenMark application distributed from it. It does not cover websites reached through third-party links.",
+          "This policy applies to the Edivect marketing website and the Edivect application distributed from it. It does not cover websites reached through third-party links.",
         ],
       },
       {
         title: "Website hosting",
         paragraphs: [
-          "The website is a static site hosted on GitHub Pages. ScreenMark does not run its own server-side database, account system or form processing on this site. GitHub may process technical request data, such as IP addresses and browser information, as the hosting provider under its own privacy terms.",
+          "The website is a static site hosted on GitHub Pages. Edivect does not run its own server-side database, account system or form processing on this site. GitHub may process technical request data, such as IP addresses and browser information, as the hosting provider under its own privacy terms.",
         ],
       },
       {
         title: "Data, cookies and local storage",
         paragraphs: [
-          "The website does not set tracking cookies and does not collect names, email addresses or other personal information. It stores only your light or dark theme preference in your browser's local storage. That preference stays on your device and is not sent to ScreenMark.",
+          "The website does not set tracking cookies and does not collect names, email addresses or other personal information. It stores only your light or dark theme preference in your browser's local storage. That preference stays on your device and is not sent to Edivect.",
         ],
       },
       {
         title: "Analytics and telemetry",
         paragraphs: [
-          "No analytics, advertising pixels or third-party tracking scripts are currently installed. The downloaded ScreenMark application is designed to run offline and does not include accounts, cloud sync or telemetry.",
+          "No analytics, advertising pixels or third-party tracking scripts are currently installed. The downloaded Edivect application is designed to run offline and does not include accounts, cloud sync or telemetry.",
         ],
       },
       {
         title: "Downloaded application",
         paragraphs: [
-          "Screenshots, annotations and project files created in ScreenMark remain on your computer unless you choose to share or move them. The application does not need a network connection for its normal operation.",
+          "Screenshots, annotations and project files created in Edivect remain on your computer unless you choose to share or move them. The application does not need a network connection for its normal operation.",
         ],
       },
       {
@@ -87,9 +87,9 @@ const privacy: Record<Lang, LegalPageCopy> = {
   sk: {
     title: "Ochrana súkromia",
     description:
-      "Ako web ScreenMark a stiahnutá aplikácia pracujú s osobnými údajmi, cookies, telemetriou a službami tretích strán.",
+      "Ako web Edivect a stiahnutá aplikácia pracujú s osobnými údajmi, cookies, telemetriou a službami tretích strán.",
     intro:
-      "ScreenMark je navrhnutý tak, aby zhromažďoval čo najmenej údajov. Tieto zásady odlišujú statickú webovú stránku od aplikácie pre Windows, ktorú si stiahnete.",
+      "Edivect je navrhnutý tak, aby zhromažďoval čo najmenej údajov. Tieto zásady odlišujú statickú webovú stránku od aplikácie pre Windows, ktorú si stiahnete.",
     lastUpdated: "3. septembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Prevádzkovateľ",
@@ -103,31 +103,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Rozsah",
         paragraphs: [
-          "Tieto zásady sa vzťahujú na marketingový web ScreenMark a aplikáciu ScreenMark, ktorá sa z neho distribuuje. Nevzťahujú sa na weby otvorené cez odkazy tretích strán.",
+          "Tieto zásady sa vzťahujú na marketingový web Edivect a aplikáciu Edivect, ktorá sa z neho distribuuje. Nevzťahujú sa na weby otvorené cez odkazy tretích strán.",
         ],
       },
       {
         title: "Hosťovanie webu",
         paragraphs: [
-          "Web je statická stránka hosťovaná službou GitHub Pages. ScreenMark na tomto webe neprevádzkuje vlastnú serverovú databázu, používateľské účty ani spracovanie formulárov. GitHub môže ako poskytovateľ hostingu podľa vlastných zásad spracovať technické údaje požiadavky, napríklad IP adresu a informácie o prehliadači.",
+          "Web je statická stránka hosťovaná službou GitHub Pages. Edivect na tomto webe neprevádzkuje vlastnú serverovú databázu, používateľské účty ani spracovanie formulárov. GitHub môže ako poskytovateľ hostingu podľa vlastných zásad spracovať technické údaje požiadavky, napríklad IP adresu a informácie o prehliadači.",
         ],
       },
       {
         title: "Údaje, cookies a lokálne úložisko",
         paragraphs: [
-          "Web nepoužíva sledovacie cookies a nezhromažďuje mená, e-mailové adresy ani iné osobné údaje. Do lokálneho úložiska prehliadača ukladá iba voľbu svetlej alebo tmavej témy. Táto voľba zostáva vo vašom zariadení a ScreenMarku sa neposiela.",
+          "Web nepoužíva sledovacie cookies a nezhromažďuje mená, e-mailové adresy ani iné osobné údaje. Do lokálneho úložiska prehliadača ukladá iba voľbu svetlej alebo tmavej témy. Táto voľba zostáva vo vašom zariadení a Edivectu sa neposiela.",
         ],
       },
       {
         title: "Analytika a telemetria",
         paragraphs: [
-          "Momentálne nie je nasadená analytika, reklamné pixely ani sledovacie skripty tretích strán. Stiahnutá aplikácia ScreenMark je navrhnutá na prácu offline a neobsahuje účty, cloudovú synchronizáciu ani telemetriu.",
+          "Momentálne nie je nasadená analytika, reklamné pixely ani sledovacie skripty tretích strán. Stiahnutá aplikácia Edivect je navrhnutá na prácu offline a neobsahuje účty, cloudovú synchronizáciu ani telemetriu.",
         ],
       },
       {
         title: "Stiahnutá aplikácia",
         paragraphs: [
-          "Snímky obrazovky, anotácie a projektové súbory vytvorené v ScreenMarku zostávajú vo vašom počítači, pokiaľ sa ich sami nerozhodnete zdieľať alebo presunúť. Aplikácia na bežnú prevádzku nepotrebuje sieťové pripojenie.",
+          "Snímky obrazovky, anotácie a projektové súbory vytvorené v Edivectu zostávajú vo vašom počítači, pokiaľ sa ich sami nerozhodnete zdieľať alebo presunúť. Aplikácia na bežnú prevádzku nepotrebuje sieťové pripojenie.",
         ],
       },
       {
@@ -147,9 +147,9 @@ const privacy: Record<Lang, LegalPageCopy> = {
   de: {
     title: "Datenschutzerklärung",
     description:
-      "Wie die ScreenMark-Website und die heruntergeladene Anwendung mit personenbezogenen Daten, Cookies, Telemetrie und Drittanbietern umgehen.",
+      "Wie die Edivect-Website und die heruntergeladene Anwendung mit personenbezogenen Daten, Cookies, Telemetrie und Drittanbietern umgehen.",
     intro:
-      "ScreenMark ist darauf ausgelegt, so wenige Daten wie möglich zu erfassen. Diese Erklärung unterscheidet zwischen der statischen Website und der heruntergeladenen Windows-Anwendung.",
+      "Edivect ist darauf ausgelegt, so wenige Daten wie möglich zu erfassen. Diese Erklärung unterscheidet zwischen der statischen Website und der heruntergeladenen Windows-Anwendung.",
     lastUpdated: "3. September 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Betreiber",
@@ -163,31 +163,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Geltungsbereich",
         paragraphs: [
-          "Diese Erklärung gilt für die ScreenMark-Marketingwebsite und die darüber bereitgestellte ScreenMark-Anwendung. Sie gilt nicht für Websites, die über Links zu Drittanbietern aufgerufen werden.",
+          "Diese Erklärung gilt für die Edivect-Marketingwebsite und die darüber bereitgestellte Edivect-Anwendung. Sie gilt nicht für Websites, die über Links zu Drittanbietern aufgerufen werden.",
         ],
       },
       {
         title: "Hosting der Website",
         paragraphs: [
-          "Die Website ist eine statische, auf GitHub Pages gehostete Seite. ScreenMark betreibt hier keine eigene serverseitige Datenbank, Benutzerkonten oder Formularverarbeitung. GitHub kann als Hostinganbieter technische Anfragedaten wie IP-Adresse und Browserinformationen nach seinen eigenen Datenschutzbestimmungen verarbeiten.",
+          "Die Website ist eine statische, auf GitHub Pages gehostete Seite. Edivect betreibt hier keine eigene serverseitige Datenbank, Benutzerkonten oder Formularverarbeitung. GitHub kann als Hostinganbieter technische Anfragedaten wie IP-Adresse und Browserinformationen nach seinen eigenen Datenschutzbestimmungen verarbeiten.",
         ],
       },
       {
         title: "Daten, Cookies und lokaler Speicher",
         paragraphs: [
-          "Die Website setzt keine Tracking-Cookies und erfasst keine Namen, E-Mail-Adressen oder anderen personenbezogenen Daten. Sie speichert lediglich Ihre Wahl zwischen hellem und dunklem Design im lokalen Speicher des Browsers. Diese Einstellung bleibt auf Ihrem Gerät und wird nicht an ScreenMark übertragen.",
+          "Die Website setzt keine Tracking-Cookies und erfasst keine Namen, E-Mail-Adressen oder anderen personenbezogenen Daten. Sie speichert lediglich Ihre Wahl zwischen hellem und dunklem Design im lokalen Speicher des Browsers. Diese Einstellung bleibt auf Ihrem Gerät und wird nicht an Edivect übertragen.",
         ],
       },
       {
         title: "Analyse und Telemetrie",
         paragraphs: [
-          "Derzeit sind keine Analysewerkzeuge, Werbepixel oder Tracking-Skripte von Drittanbietern installiert. Die heruntergeladene ScreenMark-Anwendung ist für den Offlinebetrieb ausgelegt und enthält keine Konten, Cloud-Synchronisierung oder Telemetrie.",
+          "Derzeit sind keine Analysewerkzeuge, Werbepixel oder Tracking-Skripte von Drittanbietern installiert. Die heruntergeladene Edivect-Anwendung ist für den Offlinebetrieb ausgelegt und enthält keine Konten, Cloud-Synchronisierung oder Telemetrie.",
         ],
       },
       {
         title: "Heruntergeladene Anwendung",
         paragraphs: [
-          "Screenshots, Anmerkungen und Projektdateien, die Sie in ScreenMark erstellen, bleiben auf Ihrem Computer, sofern Sie sie nicht selbst teilen oder verschieben. Für den normalen Betrieb benötigt die Anwendung keine Netzwerkverbindung.",
+          "Screenshots, Anmerkungen und Projektdateien, die Sie in Edivect erstellen, bleiben auf Ihrem Computer, sofern Sie sie nicht selbst teilen oder verschieben. Für den normalen Betrieb benötigt die Anwendung keine Netzwerkverbindung.",
         ],
       },
       {
@@ -210,9 +210,9 @@ const terms: Record<Lang, LegalPageCopy> = {
   en: {
     title: "Terms of Use",
     description:
-      "Terms governing use of the ScreenMark website and the software download made available through it.",
+      "Terms governing use of the Edivect website and the software download made available through it.",
     intro:
-      "These terms cover this website and the ScreenMark download. They do not replace the final software licence or EULA that must be selected before commercial launch.",
+      "These terms cover this website and the Edivect download. They do not replace the final software licence or EULA that must be selected before commercial launch.",
     lastUpdated: "3 September 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Provider",
@@ -226,19 +226,19 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Acceptance and scope",
         paragraphs: [
-          "By using this website or downloading ScreenMark, you agree to follow these terms and applicable law. If you do not agree, do not use the website or download the software.",
+          "By using this website or downloading Edivect, you agree to follow these terms and applicable law. If you do not agree, do not use the website or download the software.",
         ],
       },
       {
         title: "Website use",
         paragraphs: [
-          "You may use the website to learn about ScreenMark, review release information and obtain the published download. You must not attempt to disrupt the site, misrepresent its content, or use it in a way that infringes another person's rights.",
+          "You may use the website to learn about Edivect, review release information and obtain the published download. You must not attempt to disrupt the site, misrepresent its content, or use it in a way that infringes another person's rights.",
         ],
       },
       {
         title: "Software download and integrity",
         paragraphs: [
-          "ScreenMark is currently distributed as a portable Windows executable. Verify the published filename, version, file size and SHA-256 before running it. Do not run a copy whose checksum does not match the value shown on the official download page.",
+          "Edivect is currently distributed as a portable Windows executable. Verify the published filename, version, file size and SHA-256 before running it. Do not run a copy whose checksum does not match the value shown on the official download page.",
         ],
       },
       {
@@ -250,7 +250,7 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Intellectual property",
         paragraphs: [
-          "ScreenMark, its website content, branding and software remain the property of their respective rights holders. No ownership is transferred by viewing the website or downloading a build. Third-party names and trademarks belong to their respective owners.",
+          "Edivect, its website content, branding and software remain the property of their respective rights holders. No ownership is transferred by viewing the website or downloading a build. Third-party names and trademarks belong to their respective owners.",
         ],
       },
       {
@@ -276,9 +276,9 @@ const terms: Record<Lang, LegalPageCopy> = {
   sk: {
     title: "Podmienky používania",
     description:
-      "Podmienky používania webu ScreenMark a softvéru, ktorý je prostredníctvom neho dostupný na stiahnutie.",
+      "Podmienky používania webu Edivect a softvéru, ktorý je prostredníctvom neho dostupný na stiahnutie.",
     intro:
-      "Tieto podmienky sa vzťahujú na web a stiahnutie ScreenMarku. Nenahrádzajú konečnú softvérovú licenciu alebo EULA, ktorú treba zvoliť pred komerčným spustením.",
+      "Tieto podmienky sa vzťahujú na web a stiahnutie Edivectu. Nenahrádzajú konečnú softvérovú licenciu alebo EULA, ktorú treba zvoliť pred komerčným spustením.",
     lastUpdated: "3. septembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Poskytovateľ",
@@ -292,19 +292,19 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Súhlas a rozsah",
         paragraphs: [
-          "Používaním webu alebo stiahnutím ScreenMarku súhlasíte s dodržiavaním týchto podmienok a platných právnych predpisov. Ak nesúhlasíte, web nepoužívajte a softvér nesťahujte.",
+          "Používaním webu alebo stiahnutím Edivectu súhlasíte s dodržiavaním týchto podmienok a platných právnych predpisov. Ak nesúhlasíte, web nepoužívajte a softvér nesťahujte.",
         ],
       },
       {
         title: "Používanie webu",
         paragraphs: [
-          "Web môžete používať na získanie informácií o ScreenMarku, prezeranie vydaní a stiahnutie zverejneného súboru. Nesmiete sa pokúšať narušiť jeho prevádzku, skresľovať obsah ani ho používať spôsobom, ktorý porušuje práva iných osôb.",
+          "Web môžete používať na získanie informácií o Edivectu, prezeranie vydaní a stiahnutie zverejneného súboru. Nesmiete sa pokúšať narušiť jeho prevádzku, skresľovať obsah ani ho používať spôsobom, ktorý porušuje práva iných osôb.",
         ],
       },
       {
         title: "Stiahnutie a integrita softvéru",
         paragraphs: [
-          "ScreenMark sa momentálne distribuuje ako prenosný spustiteľný súbor pre Windows. Pred spustením overte zverejnený názov súboru, verziu, veľkosť a SHA-256. Nespúšťajte kópiu, ktorej kontrolný súčet sa nezhoduje s hodnotou na oficiálnej stránke sťahovania.",
+          "Edivect sa momentálne distribuuje ako prenosný spustiteľný súbor pre Windows. Pred spustením overte zverejnený názov súboru, verziu, veľkosť a SHA-256. Nespúšťajte kópiu, ktorej kontrolný súčet sa nezhoduje s hodnotou na oficiálnej stránke sťahovania.",
         ],
       },
       {
@@ -316,7 +316,7 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Duševné vlastníctvo",
         paragraphs: [
-          "ScreenMark, obsah webu, značka a softvér zostávajú vlastníctvom príslušných držiteľov práv. Zobrazením webu ani stiahnutím zostavenia sa vlastníctvo neprevádza. Názvy a ochranné známky tretích strán patria ich vlastníkom.",
+          "Edivect, obsah webu, značka a softvér zostávajú vlastníctvom príslušných držiteľov práv. Zobrazením webu ani stiahnutím zostavenia sa vlastníctvo neprevádza. Názvy a ochranné známky tretích strán patria ich vlastníkom.",
         ],
       },
       {
@@ -342,9 +342,9 @@ const terms: Record<Lang, LegalPageCopy> = {
   de: {
     title: "Nutzungsbedingungen",
     description:
-      "Bedingungen für die Nutzung der ScreenMark-Website und des darüber bereitgestellten Softwaredownloads.",
+      "Bedingungen für die Nutzung der Edivect-Website und des darüber bereitgestellten Softwaredownloads.",
     intro:
-      "Diese Bedingungen gelten für die Website und den ScreenMark-Download. Sie ersetzen nicht die endgültige Softwarelizenz oder EULA, die vor dem kommerziellen Start festgelegt werden muss.",
+      "Diese Bedingungen gelten für die Website und den Edivect-Download. Sie ersetzen nicht die endgültige Softwarelizenz oder EULA, die vor dem kommerziellen Start festgelegt werden muss.",
     lastUpdated: "3. September 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Anbieter",
@@ -358,19 +358,19 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Zustimmung und Geltungsbereich",
         paragraphs: [
-          "Mit der Nutzung dieser Website oder dem Download von ScreenMark erklären Sie sich mit diesen Bedingungen und dem geltenden Recht einverstanden. Wenn Sie nicht einverstanden sind, nutzen Sie die Website nicht und laden Sie die Software nicht herunter.",
+          "Mit der Nutzung dieser Website oder dem Download von Edivect erklären Sie sich mit diesen Bedingungen und dem geltenden Recht einverstanden. Wenn Sie nicht einverstanden sind, nutzen Sie die Website nicht und laden Sie die Software nicht herunter.",
         ],
       },
       {
         title: "Nutzung der Website",
         paragraphs: [
-          "Sie dürfen die Website nutzen, um sich über ScreenMark zu informieren, Versionshinweise zu lesen und den veröffentlichten Download zu beziehen. Sie dürfen den Betrieb nicht stören, Inhalte nicht verfälschen und die Website nicht rechtsverletzend nutzen.",
+          "Sie dürfen die Website nutzen, um sich über Edivect zu informieren, Versionshinweise zu lesen und den veröffentlichten Download zu beziehen. Sie dürfen den Betrieb nicht stören, Inhalte nicht verfälschen und die Website nicht rechtsverletzend nutzen.",
         ],
       },
       {
         title: "Softwaredownload und Integrität",
         paragraphs: [
-          "ScreenMark wird derzeit als portable Windows-Programmdatei bereitgestellt. Prüfen Sie vor dem Start den veröffentlichten Dateinamen, die Version, Dateigröße und SHA-256-Prüfsumme. Führen Sie keine Kopie aus, deren Prüfsumme nicht mit der offiziellen Downloadseite übereinstimmt.",
+          "Edivect wird derzeit als portable Windows-Programmdatei bereitgestellt. Prüfen Sie vor dem Start den veröffentlichten Dateinamen, die Version, Dateigröße und SHA-256-Prüfsumme. Führen Sie keine Kopie aus, deren Prüfsumme nicht mit der offiziellen Downloadseite übereinstimmt.",
         ],
       },
       {
@@ -382,7 +382,7 @@ const terms: Record<Lang, LegalPageCopy> = {
       {
         title: "Geistiges Eigentum",
         paragraphs: [
-          "ScreenMark, Website-Inhalte, Marke und Software bleiben Eigentum der jeweiligen Rechteinhaber. Durch den Besuch der Website oder den Download eines Builds wird kein Eigentum übertragen. Namen und Marken Dritter gehören ihren jeweiligen Inhabern.",
+          "Edivect, Website-Inhalte, Marke und Software bleiben Eigentum der jeweiligen Rechteinhaber. Durch den Besuch der Website oder den Download eines Builds wird kein Eigentum übertragen. Namen und Marken Dritter gehören ihren jeweiligen Inhabern.",
         ],
       },
       {

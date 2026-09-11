@@ -1,5 +1,5 @@
 import type { Lang } from "@/lib/i18n";
-import { THEME_STORAGE_KEY } from "@/lib/theme";
+import { LEGACY_THEME_STORAGE_KEY, THEME_STORAGE_KEY } from "@/lib/theme";
 
 /**
  * The <html>/<body> pair, shared by the three root layouts.
@@ -26,7 +26,11 @@ import { THEME_STORAGE_KEY } from "@/lib/theme";
  */
 const bootScript = `document.documentElement.dataset.js="on";try{var t=localStorage.getItem(${JSON.stringify(
   THEME_STORAGE_KEY,
-)});if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+)})||localStorage.getItem(${JSON.stringify(
+  LEGACY_THEME_STORAGE_KEY,
+)});if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t;localStorage.setItem(${JSON.stringify(
+  THEME_STORAGE_KEY,
+)},t)}}catch(e){}`;
 
 interface DocumentShellProps {
   lang: Lang;

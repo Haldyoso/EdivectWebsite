@@ -2,7 +2,7 @@
 
 import { Moon, Sun } from "lucide-react";
 
-import { THEME_STORAGE_KEY } from "@/lib/theme";
+import { LEGACY_THEME_STORAGE_KEY, THEME_STORAGE_KEY } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 import type { Copy } from "@/types";
 
@@ -25,6 +25,7 @@ export function ThemeToggle({ ui, className }: { ui: Copy["ui"]; className?: str
     root.dataset.theme = next;
     try {
       localStorage.setItem(THEME_STORAGE_KEY, next);
+      localStorage.removeItem(LEGACY_THEME_STORAGE_KEY);
     } catch {
       // Private mode or blocked storage: the theme still applies for this page.
     }

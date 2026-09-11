@@ -16,9 +16,9 @@ export const sk: Copy = {
   },
   ui: {
     skipToContent: "Preskočiť na obsah",
-    backToTop: "ScreenMark — späť nahor",
-    home: "ScreenMark — úvodná stránka",
-    githubRepo: "Repozitár webu ScreenMark na GitHube",
+    backToTop: "Edivect — späť nahor",
+    home: "Edivect — úvodná stránka",
+    githubRepo: "Repozitár webu Edivect na GitHube",
     openMenu: "Menu",
     closeMenu: "Zavrieť menu",
     download: "Stiahnuť",
@@ -30,7 +30,7 @@ export const sk: Copy = {
     yes: "Áno",
     no: "Nie",
     primaryNav: "Hlavná navigácia",
-    benefitsLabel: "Prečo ScreenMark",
+    benefitsLabel: "Prečo Edivect",
     galleryLabel: "Galéria snímok",
     enlarge: "Zväčšiť",
     close: "Zavrieť",
@@ -60,9 +60,9 @@ export const sk: Copy = {
       "Viac monitorov",
       "Vektor · vždy editovateľný",
     ],
-    frameTitle: "ScreenMark — zmrazená obrazovka · Monitor 1",
+    frameTitle: "Edivect — zmrazená obrazovka · Monitor 1",
     screenshotAlt:
-      "Panel nástrojov ScreenMarku vedľa zmrazeného technického výkresu so zákresom: číslované značky ①②③ a červená šípka, ktorá je vybratá a stále editovateľná.",
+      "Panel nástrojov Edivectu vedľa zmrazeného technického výkresu so zákresom: číslované značky ①②③ a červená šípka, ktorá je vybratá a stále editovateľná.",
   },
   benefits: {
     speed: {
@@ -211,13 +211,13 @@ export const sk: Copy = {
       overline: "Ako obstojí",
       title: "Úpravy na úrovni Illustratora rýchlosťou nástroja Výstrižky",
       subtitle:
-        "ScreenMarku je najbližšie Pointofix — to isté prekrytie na kreslenie kdekoľvek, zadarmo, a robí to už roky. Rozdiel je v tom, čo sa stane, keď pustíte myš.",
+        "Edivectu je najbližšie Pointofix — to isté prekrytie na kreslenie kdekoľvek, zadarmo, a robí to už roky. Rozdiel je v tom, čo sa stane, keď pustíte myš.",
     },
     regionLabel:
       "Porovnanie funkcií s Pointofixom a ďalšími nástrojmi na anotáciu a snímanie obrazovky vo Windows",
     scrollHint: "Potiahnite alebo rolujte do strany a porovnajte všetky nástroje.",
     caption:
-      "Ako ScreenMark obstojí voči Pointofixu, nástroju Výstrižky, Greenshotu a ShareX-u",
+      "Ako Edivect obstojí voči Pointofixu, nástroju Výstrižky, Greenshotu a ShareX-u",
     capability: "Schopnosť",
     rows: {
       editable: "Anotácie zostávajú editovateľné aj po pustení myši",
@@ -309,7 +309,7 @@ export const sk: Copy = {
       install: {
         question: "Musím niečo inštalovať?",
         answer:
-          "Nie. ScreenMark je prenosná aplikácia — stiahnite a spustite súbor .exe. Nepotrebuje inštalátor, práva správcu ani zásahy do registrov, takže funguje aj na zamknutých firemných počítačoch a z USB kľúča.",
+          "Nie. Edivect je prenosná aplikácia — stiahnite a spustite súbor .exe. Nepotrebuje inštalátor, práva správcu ani zásahy do registrov, takže funguje aj na zamknutých firemných počítačoch a z USB kľúča.",
       },
       editable: {
         question: "Čo presne znamená „všetko zostáva editovateľné“?",
@@ -340,7 +340,7 @@ export const sk: Copy = {
   },
   downloadCta: {
     platform: "Windows 10 a 11 · 64-bit",
-    title: "Stiahnuť ScreenMark",
+    title: "Stiahnuť Edivect",
     subtitle:
       "Prenosné EXE — stiahnite a spustite. Bez inštalácie, bez admin práv, bez internetu.",
     publicTrialButton: "Stiahnuť verejnú skúšobnú verziu",
@@ -374,14 +374,14 @@ export const sk: Copy = {
       terms: "Podmienky používania",
       issues: "Nahlásiť chybu",
     },
-    legal: "© 2026 ScreenMark.",
+    legal: "© 2026 Edivect.",
     traits: "Prenosný · Offline · Bez telemetrie",
   },
   changelog: {
     title: "Zmeny",
-    description: "Každé vydanie ScreenMarku a čo sa v ňom zmenilo.",
+    description: "Každé vydanie Edivectu a čo sa v ňom zmenilo.",
     back: "Späť na úvodnú stránku",
-    intro: "Poznámky k vydaniam aplikácie ScreenMark, od najnovšieho.",
+    intro: "Poznámky k vydaniam aplikácie Edivect, od najnovšieho.",
     empty: "Zatiaľ neboli zverejnené žiadne poznámky k vydaniu.",
     sourceNote:
       "Prevzaté doslova zo súboru CHANGELOG.md v repozitári aplikácie.",
