@@ -21,7 +21,7 @@
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
 const publicTrialAssetPath =
-  "/downloads/Edivect-v0.9.9.116-public-trial-do-2026-10-11.exe";
+  "/downloads/Edivect-v0.9.9.123-public-trial-do-2026-10-11.exe";
 
 export const site = {
   name: "Edivect",
@@ -41,12 +41,12 @@ export const site = {
     supportEmail: null,
   },
   release: {
-    version: "0.9.9.116",
+    version: "0.9.9.123",
     size: "72.7 MB",
-    sha256: "C1E75614A1A3E0F0D04AC1692D6E1AC0301BC6946653E19AE32963057D2B4B35",
+    sha256: "DB74872461DAE1F81A20E77F65DC16D2BC5B327E41E9CAC2C6BD90C451E4C0F9",
     assetPath: publicTrialAssetPath,
     downloadUrl: `${basePath}${publicTrialAssetPath}`,
-    publicTrialVersion: "0.9.9.116",
+    publicTrialVersion: "0.9.9.123",
     publicTrialExpires: "2026-10-11",
     publicTrialDownloadUrl: `${basePath}${publicTrialAssetPath}`,
   },
