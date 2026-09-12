@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.9.127 – 2026-09-12
+
+- Malý panel možno presúvať potiahnutím za logo alebo názov; kliknutie naďalej spúšťa kreslenie. Pridaný úchyt, zatváranie zostáva samostatné.
+- Licenčný štítok sa v malom paneli nezobrazuje. Rozbalený panel používa krátke označenie Personal alebo Trial.
+- Úvodný výber režimu je stručnejší; plné licenčné podmienky sa dajú rozbaliť.
+
 ## 0.9.9.126 – 2026-09-12
 
 - Jedna aplikácia s režimami Personal (bez expirácie, osobné nekomerčné použitie) a Commercial Trial (30 dní od prvého začatia).
