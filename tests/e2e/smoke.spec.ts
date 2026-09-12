@@ -23,11 +23,15 @@ for (const locale of locales) {
     await expect(page.locator("html")).toHaveAttribute("lang", locale.lang);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     const download = page.locator("#download a[download]");
-    await expect(download).toBeVisible();
-    await expect(download).toHaveAttribute(
+    await expect(download).toHaveCount(2);
+    await expect(download.first()).toBeVisible();
+    await expect(download.first()).toHaveAttribute(
       "href",
       /\/EdivectWebsite\/downloads\/Edivect-v[\w.-]+\.exe$/,
     );
+    expect(await download.nth(1).getAttribute("href")).toBe(await download.first().getAttribute("href"));
+    await expect(page.getByRole("heading", { name: "Edivect Personal", exact: true })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Edivect Commercial Trial", exact: true })).toBeVisible();
     expect(errors).toEqual([]);
   });
 

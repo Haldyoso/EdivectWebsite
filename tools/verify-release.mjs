@@ -10,11 +10,10 @@ function capture(pattern, label) {
   return value;
 }
 
-const assetPath = capture(/publicTrialAssetPath\s*=\s*\n?\s*"([^"]+)"/, "asset path");
+const assetPath = capture(/publicAssetPath\s*=\s*\n?\s*"([^"]+)"/, "asset path");
 const version = capture(/version:\s*"([^"]+)"/, "version");
 const displayedSize = capture(/size:\s*"([^"]+)"/, "display size");
 const expectedHash = capture(/sha256:\s*"([A-Fa-f0-9]{64})"/, "SHA-256").toUpperCase();
-const expires = capture(/publicTrialExpires:\s*"(\d{4}-\d{2}-\d{2})"/, "expiry date");
 const file = join("public", ...assetPath.split("/").filter(Boolean));
 const stats = statSync(file);
 const actualSize = `${(stats.size / 1024 / 1024).toFixed(1)} MB`;
@@ -28,7 +27,7 @@ const failures = [];
 if (actualHash !== expectedHash) failures.push("SHA-256 does not match the executable");
 if (actualSize !== displayedSize) failures.push(`display size is ${displayedSize}, actual is ${actualSize}`);
 if (!filename.includes(`v${version}`)) failures.push("filename does not contain the configured version");
-if (!filename.includes(expires)) failures.push("filename does not contain the configured expiry date");
+if (/public-trial-do-/.test(filename)) failures.push("download still points at the obsolete fixed-expiry trial");
 
 if (failures.length) {
   for (const failure of failures) console.error(`ERROR: ${failure}`);

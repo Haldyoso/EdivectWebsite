@@ -1,4 +1,11 @@
-﻿# Changelog
+# Changelog
+
+## 0.9.9.126 – 2026-09-12
+
+- Jedna aplikácia s režimami Personal (bez expirácie, osobné nekomerčné použitie) a Commercial Trial (30 dní od prvého začatia).
+- Výber a potvrdenie licencie pri prvom spustení; klikateľné označenie v paneli, bez watermarkov v exporte.
+- Po vypršaní trialu zostáva otvorenie, uloženie a export existujúcej práce. Prepnutie na Personal nemení pôvodný začiatok trialu.
+- Lokálny stav licencie je oddelený od priečinka s portable EXE; aktualizácia ho neresetuje.
 
 ## 0.9.9.116 – 2026-09-11
 

@@ -206,9 +206,6 @@ export interface Copy {
     platform: string;
     title: string;
     subtitle: string;
-    publicTrialButton: string;
-    /** `{version}` and `{date}` describe the public time-limited trial build. */
-    publicTrialValidity: string;
     olderVersions: string;
     versionLabel: string;
     checksumLabel: string;

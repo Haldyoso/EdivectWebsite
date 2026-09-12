@@ -1,5 +1,5 @@
 import { getCopy } from "@/lib/content";
-import { absoluteUrl, homePath, type Lang } from "@/lib/i18n";
+import { absoluteUrl, homePath, termsPath, type Lang } from "@/lib/i18n";
 import { hasRealRelease, site } from "@/lib/site";
 
 /**
@@ -19,6 +19,7 @@ export function softwareApplicationJsonLd(lang: Lang) {
     operatingSystem: "Windows 10, Windows 11",
     applicationCategory: "DesignApplication",
     softwareVersion: site.release.version,
+    license: absoluteUrl(site.url, termsPath(lang)),
     fileSize: site.release.size.replace("~", "").trim(),
     url: absoluteUrl(site.url, homePath(lang)),
     // Structured data needs an absolute URL; the visible download link keeps
@@ -28,6 +29,7 @@ export function softwareApplicationJsonLd(lang: Lang) {
       : {}),
     offers: {
       "@type": "Offer",
+      name: "Edivect Personal / Commercial Trial",
       price: "0",
       priceCurrency: "USD",
     },

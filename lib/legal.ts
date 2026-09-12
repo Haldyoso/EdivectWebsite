@@ -1,3 +1,4 @@
+import usageTerms from "@/lib/usage-terms.json";
 import type { Lang } from "@/lib/i18n";
 
 export type LegalPageKind = "privacy" | "terms";
@@ -211,9 +212,8 @@ const terms: Record<Lang, LegalPageCopy> = {
     title: "Terms of Use",
     description:
       "Terms governing use of the Edivect website and the software download made available through it.",
-    intro:
-      "These terms cover this website and the Edivect download. They do not replace the final software licence or EULA that must be selected before commercial launch.",
-    lastUpdated: "3 September 2026",
+    intro: "Terms for the website, Edivect Personal and the 30-day Commercial Trial.",
+    lastUpdated: "12 September 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Provider",
     ownerPending: "Legal owner details must be added before commercial launch.",
@@ -241,24 +241,14 @@ const terms: Record<Lang, LegalPageCopy> = {
           "Edivect is currently distributed as a portable Windows executable. Verify the published filename, version, file size and SHA-256 before running it. Do not run a copy whose checksum does not match the value shown on the official download page.",
         ],
       },
-      {
-        title: "Software licence status",
-        paragraphs: [
-          "A final public software licence or EULA has not yet been published on this website. These website terms do not grant a software licence or define commercial-use rights. The provider must publish the applicable licence before commercial launch; any licence supplied with a future build will govern use of that build.",
-        ],
-      },
+      { title: "Personal / Commercial Trial", paragraphs: usageTerms.en.split("\n\n") },
       {
         title: "Intellectual property",
         paragraphs: [
           "Edivect, its website content, branding and software remain the property of their respective rights holders. No ownership is transferred by viewing the website or downloading a build. Third-party names and trademarks belong to their respective owners.",
         ],
       },
-      {
-        title: "Availability and changes",
-        paragraphs: [
-          "The website, download and trial availability may be changed, suspended or withdrawn. Release information may be corrected when an error is discovered. Time-limited trial builds may stop working after their published expiry date.",
-        ],
-      },
+      { title: "Availability and changes", paragraphs: ["Personal has no time limit. Commercial Trial lasts 30 days from its first activation; opening, saving and exporting existing work remain available after expiry. Updates and trial extensions are not guaranteed."] },
       {
         title: "No warranty and limitation of liability",
         paragraphs: [
@@ -277,9 +267,8 @@ const terms: Record<Lang, LegalPageCopy> = {
     title: "Podmienky používania",
     description:
       "Podmienky používania webu Edivect a softvéru, ktorý je prostredníctvom neho dostupný na stiahnutie.",
-    intro:
-      "Tieto podmienky sa vzťahujú na web a stiahnutie Edivectu. Nenahrádzajú konečnú softvérovú licenciu alebo EULA, ktorú treba zvoliť pred komerčným spustením.",
-    lastUpdated: "3. septembra 2026",
+    intro: "Podmienky webu, Edivect Personal a 30-dňového Commercial Trial.",
+    lastUpdated: "12. septembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Poskytovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
@@ -307,24 +296,14 @@ const terms: Record<Lang, LegalPageCopy> = {
           "Edivect sa momentálne distribuuje ako prenosný spustiteľný súbor pre Windows. Pred spustením overte zverejnený názov súboru, verziu, veľkosť a SHA-256. Nespúšťajte kópiu, ktorej kontrolný súčet sa nezhoduje s hodnotou na oficiálnej stránke sťahovania.",
         ],
       },
-      {
-        title: "Stav softvérovej licencie",
-        paragraphs: [
-          "Na tomto webe zatiaľ nie je zverejnená konečná softvérová licencia ani EULA. Tieto webové podmienky neudeľujú softvérovú licenciu ani neurčujú práva na komerčné použitie. Poskytovateľ musí príslušnú licenciu zverejniť pred komerčným spustením; licencia priložená k budúcemu zostaveniu bude upravovať používanie daného zostavenia.",
-        ],
-      },
+      { title: "Personal / Commercial Trial", paragraphs: usageTerms.sk.split("\n\n") },
       {
         title: "Duševné vlastníctvo",
         paragraphs: [
           "Edivect, obsah webu, značka a softvér zostávajú vlastníctvom príslušných držiteľov práv. Zobrazením webu ani stiahnutím zostavenia sa vlastníctvo neprevádza. Názvy a ochranné známky tretích strán patria ich vlastníkom.",
         ],
       },
-      {
-        title: "Dostupnosť a zmeny",
-        paragraphs: [
-          "Web, súbor na stiahnutie a dostupnosť skúšobnej verzie sa môžu zmeniť, pozastaviť alebo ukončiť. Chybné informácie o vydaní môžu byť opravené. Časovo obmedzené skúšobné zostavenia môžu po zverejnenom dátume platnosti prestať fungovať.",
-        ],
-      },
+      { title: "Dostupnos\u0165 a zmeny", paragraphs: ["Personal nemá časový limit. Commercial Trial trvá 30 dní od prvej aktivácie; otvorenie, uloženie a export existujúcej práce zostávajú dostupné aj po vypršaní. Aktualizácie a predĺženia trialu nie sú zaručené."] },
       {
         title: "Bez záruky a obmedzenie zodpovednosti",
         paragraphs: [
@@ -343,9 +322,8 @@ const terms: Record<Lang, LegalPageCopy> = {
     title: "Nutzungsbedingungen",
     description:
       "Bedingungen für die Nutzung der Edivect-Website und des darüber bereitgestellten Softwaredownloads.",
-    intro:
-      "Diese Bedingungen gelten für die Website und den Edivect-Download. Sie ersetzen nicht die endgültige Softwarelizenz oder EULA, die vor dem kommerziellen Start festgelegt werden muss.",
-    lastUpdated: "3. September 2026",
+    intro: "Bedingungen für die Website, Edivect Personal und den 30-tägigen Commercial Trial.",
+    lastUpdated: "12. September 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Anbieter",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
@@ -373,24 +351,14 @@ const terms: Record<Lang, LegalPageCopy> = {
           "Edivect wird derzeit als portable Windows-Programmdatei bereitgestellt. Prüfen Sie vor dem Start den veröffentlichten Dateinamen, die Version, Dateigröße und SHA-256-Prüfsumme. Führen Sie keine Kopie aus, deren Prüfsumme nicht mit der offiziellen Downloadseite übereinstimmt.",
         ],
       },
-      {
-        title: "Status der Softwarelizenz",
-        paragraphs: [
-          "Auf dieser Website ist noch keine endgültige öffentliche Softwarelizenz oder EULA veröffentlicht. Diese Website-Bedingungen gewähren keine Softwarelizenz und regeln keine gewerbliche Nutzung. Der Anbieter muss die anwendbare Lizenz vor dem kommerziellen Start veröffentlichen; eine einem künftigen Build beiliegende Lizenz regelt dessen Nutzung.",
-        ],
-      },
+      { title: "Personal / Commercial Trial", paragraphs: usageTerms.de.split("\n\n") },
       {
         title: "Geistiges Eigentum",
         paragraphs: [
           "Edivect, Website-Inhalte, Marke und Software bleiben Eigentum der jeweiligen Rechteinhaber. Durch den Besuch der Website oder den Download eines Builds wird kein Eigentum übertragen. Namen und Marken Dritter gehören ihren jeweiligen Inhabern.",
         ],
       },
-      {
-        title: "Verfügbarkeit und Änderungen",
-        paragraphs: [
-          "Website, Download und Testverfügbarkeit können geändert, ausgesetzt oder eingestellt werden. Fehlerhafte Versionsangaben können berichtigt werden. Zeitlich begrenzte Test-Builds können nach dem veröffentlichten Ablaufdatum ihre Funktion einstellen.",
-        ],
-      },
+      { title: "Verf\u00fcgbarkeit und \u00c4nderungen", paragraphs: ["Personal hat kein Zeitlimit. Commercial Trial läuft 30 Tage ab erster Aktivierung; vorhandene Arbeit bleibt danach zum Öffnen, Speichern und Export verfügbar. Updates und Testverlängerungen sind nicht garantiert."] },
       {
         title: "Keine Gewährleistung und Haftungsbegrenzung",
         paragraphs: [

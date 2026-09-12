@@ -6,8 +6,8 @@ Release metadata has one source of truth: `lib/site.ts`. The CTA and SoftwareApp
 2. Obtain the final, signed EXE that will actually be published. Do not hash an intermediate build.
 3. Calculate its SHA-256 (PowerShell: `Get-FileHash -Algorithm SHA256 <file>`).
 4. Record its exact byte size and the one-decimal MiB display value used by the site.
-5. Update the version, trial version and expiry in `lib/site.ts`.
-6. Copy the final EXE to `public/downloads/` and update the single `publicTrialAssetPath` constant. The filename must contain the version and ISO expiry date.
+5. Update the version, file size and SHA-256 in `lib/site.ts`.
+6. Copy the final EXE to `public/downloads/` and update the single `publicAssetPath` constant. The filename must contain the version; the trial starts per user, not on a fixed release date.
 7. Update `content/CHANGELOG.md` with `npm run sync:changelog -- <application-repository-path>` and verify the latest entry.
 8. Update the SHA-256 and display size in `lib/site.ts`, then run `npm run verify:release`.
 9. Run `npm run lint`, `npm run typecheck`, `npm run build`, `npm run check:links` and `npm test`.

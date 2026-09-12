@@ -50,7 +50,7 @@ export const en: Copy = {
     titleAccent: "Edit everything later.",
     description:
       "Portable screen annotation for engineers. Every arrow, callout and measurement stays editable — with no installation, account or internet.",
-    ctaPrimary: "Download public trial",
+    ctaPrimary: "Download free",
     ctaSecondary: "See what’s new",
     chips: [
       "Offline",
@@ -342,8 +342,6 @@ export const en: Copy = {
     title: "Download Edivect",
     subtitle:
       "Portable EXE — download and run. No installation, no admin rights, no internet.",
-    publicTrialButton: "Download public trial",
-    publicTrialValidity: "Public trial v{version}, valid through {date}",
     olderVersions: "Release history",
     versionLabel: "Version",
     checksumLabel: "SHA-256",

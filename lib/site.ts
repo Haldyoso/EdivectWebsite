@@ -20,8 +20,7 @@
  */
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
-const publicTrialAssetPath =
-  "/downloads/Edivect-v0.9.9.124-public-trial-do-2026-10-12.exe";
+const publicAssetPath = "/downloads/Edivect-v0.9.9.126.exe";
 
 export const site = {
   name: "Edivect",
@@ -33,22 +32,19 @@ export const site = {
   repo: "https://github.com/Haldyoso/EdivectWebsite",
   issuesUrl: "https://github.com/Haldyoso/EdivectWebsite/issues/new",
   legal: {
-    // TODO(launch): replace with the legal owner/company details before a
-    // commercial launch. Kept null so the public pages cannot invent an owner.
-    owner: null,
+    // Author named by the application metadata. Business/address details remain
+    // a separate decision before any paid launch.
+    owner: "Martin Haluš",
     // TODO(launch): add a dedicated support/privacy email if GitHub Issues is
     // not the desired long-term contact channel.
     supportEmail: null,
   },
   release: {
-    version: "0.9.9.124",
+    version: "0.9.9.126",
     size: "72.7 MB",
-    sha256: "C8CF9ABFB4B2671123D5E2025DA0DCE13166F7AAD93106F920CFCD8D8DEEA165",
-    assetPath: publicTrialAssetPath,
-    downloadUrl: `${basePath}${publicTrialAssetPath}`,
-    publicTrialVersion: "0.9.9.124",
-    publicTrialExpires: "2026-10-12",
-    publicTrialDownloadUrl: `${basePath}${publicTrialAssetPath}`,
+    sha256: "00BFE2787EF1867B4421DD8CFA58A40EC9B089B6C6D0DA86289FEFDD63418EB9",
+    assetPath: publicAssetPath,
+    downloadUrl: `${basePath}${publicAssetPath}`,
   },
 } as const;
 

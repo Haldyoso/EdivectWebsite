@@ -51,7 +51,7 @@ export const de: Copy = {
     titleAccent: "Alles später bearbeiten.",
     description:
       "Portable Anmerkungen für Ingenieure. Pfeile, Sprechblasen und Maße bleiben bearbeitbar — ohne Installation, Konto oder Internet.",
-    ctaPrimary: "Öffentliche Testversion herunterladen",
+    ctaPrimary: "Kostenlos herunterladen",
     ctaSecondary: "Neuigkeiten ansehen",
     chips: [
       "Offline",
@@ -344,9 +344,6 @@ export const de: Copy = {
     title: "Edivect herunterladen",
     subtitle:
       "Portable EXE — herunterladen und starten. Ohne Installation, ohne Adminrechte, ohne Internet.",
-    publicTrialButton: "Öffentliche Testversion herunterladen",
-    publicTrialValidity:
-      "Öffentliche Testversion v{version}, gültig bis {date}",
     olderVersions: "Versionsverlauf",
     versionLabel: "Version",
     checksumLabel: "SHA-256",

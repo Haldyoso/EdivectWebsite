@@ -51,7 +51,7 @@ export const sk: Copy = {
     titleAccent: "Upravujte kedykoľvek potom.",
     description:
       "Prenosná anotácia pre technikov. Každá šípka, bublina aj kóta zostáva editovateľná — bez inštalácie, účtu a internetu.",
-    ctaPrimary: "Stiahnuť verejnú skúšobnú verziu",
+    ctaPrimary: "Stiahnuť zadarmo",
     ctaSecondary: "Pozrieť novinky",
     chips: [
       "Offline",
@@ -343,9 +343,6 @@ export const sk: Copy = {
     title: "Stiahnuť Edivect",
     subtitle:
       "Prenosné EXE — stiahnite a spustite. Bez inštalácie, bez admin práv, bez internetu.",
-    publicTrialButton: "Stiahnuť verejnú skúšobnú verziu",
-    publicTrialValidity:
-      "Verejná skúšobná verzia v{version}, platná do {date}",
     olderVersions: "História vydaní",
     versionLabel: "Verzia",
     checksumLabel: "SHA-256",

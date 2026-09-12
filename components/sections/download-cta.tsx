@@ -8,24 +8,18 @@ import { WindowsIcon } from "@/components/ui/github-icon";
 import { changelogPath, type Lang } from "@/lib/i18n";
 import { hasRealRelease, site } from "@/lib/site";
 import type { Copy } from "@/types";
+import { licensing } from "@/lib/licensing";
+import { termsPath } from "@/lib/i18n";
 
 export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
   const {
     version,
     size,
     sha256,
-    publicTrialVersion,
-    publicTrialExpires,
-    publicTrialDownloadUrl,
+    downloadUrl,
   } = site.release;
   const cta = copy.downloadCta;
-  const publicTrialDate = new Intl.DateTimeFormat(lang, {
-    dateStyle: "medium",
-    timeZone: "UTC",
-  }).format(new Date(`${publicTrialExpires}T00:00:00Z`));
-  const publicTrialValidity = cta.publicTrialValidity
-    .replace("{version}", publicTrialVersion)
-    .replace("{date}", publicTrialDate);
+  const licence = licensing[lang];
 
   return (
     <section
@@ -33,7 +27,7 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
       className="mx-auto max-w-[1200px] scroll-mt-16 px-4 pt-16 pb-24 md:px-6"
     >
       <Reveal>
-        <div className="relative overflow-hidden rounded-xl border border-border bg-surface px-8 py-14 text-center">
+        <div className="relative overflow-hidden rounded-xl border border-border bg-surface px-5 py-14 text-center sm:px-8">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-[radial-gradient(600px_300px_at_50%_-20%,rgb(45_125_246/0.22),transparent_60%)]"
@@ -52,13 +46,26 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
               {cta.subtitle}
             </p>
 
+            <h3 className="mt-10 text-2xl font-semibold">{licence.heading}</h3>
+            <div className="mt-6 grid gap-5 text-left md:grid-cols-2">
+              {[
+                { title: "Edivect Personal", text: licence.personal, button: licence.personalButton },
+                { title: "Edivect Commercial Trial", text: licence.trial, button: licence.trialButton },
+              ].map((plan) => (
+                <div key={plan.title} className="flex flex-col rounded-xl border border-border bg-surface p-6">
+                  <h4 className="text-xl font-semibold">{plan.title}</h4>
+                  <p className="mt-3 mb-6 flex-1 leading-relaxed text-fg-muted">{plan.text}</p>
+                  <Button asChild size="lg"><a href={downloadUrl} download><Download aria-hidden="true" className="size-5" />{plan.button}</a></Button>
+                </div>
+              ))}
+            </div>
+            <p className="mx-auto mt-6 max-w-[760px] text-sm leading-relaxed text-fg-muted">{licence.shared}</p>
+            <p className="mx-auto mt-4 max-w-[760px] text-sm leading-relaxed text-fg-muted">{licence.expiry}</p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm underline underline-offset-4">
+              <a href={`${site.issuesUrl}?title=Commercial%20Trial%20extension`}>{licence.contact}</a>
+              <Link href={termsPath(lang)}>{licence.terms}</Link>
+            </div>
             <div className="mt-8 flex flex-wrap justify-center gap-3.5">
-              <Button asChild size="lg" className="shadow-[0_8px_24px_rgb(36_111_229/0.35)]">
-                <a href={publicTrialDownloadUrl} download>
-                  <Download aria-hidden="true" className="size-5" />
-                  {cta.publicTrialButton} (v{publicTrialVersion})
-                </a>
-              </Button>
               <Button asChild size="lg" variant="elevated">
                 <Link href={changelogPath(lang)}>
                   {cta.olderVersions}
@@ -66,7 +73,6 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
               </Button>
             </div>
 
-            <p className="mt-4 text-sm text-fg-muted">{publicTrialValidity}</p>
 
             <p className="mt-7 flex flex-wrap justify-center gap-5 text-[13px] text-fg-subtle">
               <span>

@@ -1,7 +1,7 @@
 # Edivect — official website
 
 Marketing site for **Edivect**, the portable Windows screen-annotation app whose
-annotations stay fully editable. One conversion goal: download the public trial EXE.
+annotations stay fully editable. One conversion goal: download the Personal / Commercial Trial EXE.
 Published in English, Slovak and German.
 
 The handoff bundle below still says "Edivect" throughout — that was the working name
@@ -228,14 +228,10 @@ domain.
 
 ## Release and launch notes
 
-- The only public download is the time-limited `0.9.9.124` trial EXE. Its version,
-  expiry date, byte size and SHA-256 live together in `lib/site.ts`; the same data feeds
-  the CTA and JSON-LD.
-- The application repository is private, so public GitHub and issue links target this
-  website repository. Footer entries without a public destination are omitted.
-- The app repository still has no `LICENSE` file and its commercial model is undecided.
-  The site therefore makes no MIT claim and renders no licence link until that decision is
-  backed by a published document. Revisit the JSON-LD offer if access stops being free.
+- The public download is `0.9.9.126`: one app with Personal and 30-day Commercial Trial modes.
+- Version, size and SHA-256 are verified against the bundled EXE in `lib/site.ts`.
+- Licence behaviour and paid-launch follow-ups: [Personal / Commercial Trial](docs/PERSONAL-COMMERCIAL-TRIAL.md).
+- The app repository is private; support links point to the website repository.
 
 ## Accessibility & motion
 
