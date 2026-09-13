@@ -381,7 +381,7 @@ export const sk: Copy = {
     intro: "Poznámky k vydaniam aplikácie Edivect, od najnovšieho.",
     empty: "Zatiaľ neboli zverejnené žiadne poznámky k vydaniu.",
     sourceNote:
-      "Prevzaté doslova zo súboru CHANGELOG.md v repozitári aplikácie.",
+      "Vychádza z histórie vydaní v repozitári aplikácie.",
     currentBuild:
       "Aktuálne sa sťahuje v{current}; podrobné poznámky nižšie zatiaľ končia verziou v{notes}.",
     truncated:

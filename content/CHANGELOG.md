@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.9.130 – 2026-09-13
+
+- Panel zostáva pri presúvaní celý v pracovnej ploche monitora, takže sa už nedá nechtiac odtiahnuť mimo obrazovky.
+- Magnetické prichytenie panela k okrajom má užšiu a presnejšiu zónu; panel sa neprichytáva priskoro.
+- Vylepšené je presúvanie malého panela aj rozbaľovanie nastavení vzhľadu, vrátane správneho zachytenia myši počas ťahania.
+
 ## 0.9.9.127 – 2026-09-12
 
 - Malý panel možno presúvať potiahnutím za logo alebo názov; kliknutie naďalej spúšťa kreslenie. Pridaný úchyt, zatváranie zostáva samostatné.

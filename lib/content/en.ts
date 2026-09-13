@@ -383,7 +383,7 @@ export const en: Copy = {
     empty:
       "No release notes have been published yet.",
     sourceNote:
-      "Taken verbatim from the application repository's CHANGELOG.md, which is written in Slovak.",
+      "Based on the release history in the application repository; release notes are written in Slovak.",
     currentBuild:
       "The current download is v{current}; detailed release notes below currently end at v{notes}.",
     truncated:

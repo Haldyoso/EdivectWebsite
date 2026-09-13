@@ -384,7 +384,7 @@ export const de: Copy = {
       "Versionshinweise zur Anwendung Edivect, die neueste zuerst.",
     empty: "Es wurden noch keine Versionshinweise veröffentlicht.",
     sourceNote:
-      "Wörtlich aus der Datei CHANGELOG.md des Anwendungs-Repositorys übernommen, die auf Slowakisch verfasst ist.",
+      "Basiert auf dem Veröffentlichungsverlauf im Anwendungs-Repository; die Versionshinweise sind auf Slowakisch verfasst.",
     currentBuild:
       "Der aktuelle Download ist v{current}; die ausführlichen Hinweise unten reichen derzeit bis v{notes}.",
     truncated:
