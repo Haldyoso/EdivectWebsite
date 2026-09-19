@@ -2,6 +2,13 @@
 
 Release metadata has one source of truth: `lib/site.ts`. The CTA and SoftwareApplication structured data consume it, while `npm run verify:release` checks it against the committed executable.
 
+For an EXE-only update requested with an already built, versioned executable,
+follow the optimized workflow in `AGENTS.md`. In that path, run only
+`npm run verify:release` locally and let the GitHub Actions deployment workflow
+perform lint, type checking, the production build, link checks and Playwright
+tests. Run the broader checks locally only after web source/configuration changes
+or to investigate a failed verification or CI run.
+
 1. Build the application from the intended release commit.
 2. Obtain the final, signed EXE that will actually be published. Do not hash an intermediate build.
 3. Calculate its SHA-256 (PowerShell: `Get-FileHash -Algorithm SHA256 <file>`).
