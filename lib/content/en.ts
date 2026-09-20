@@ -89,7 +89,7 @@ export const en: Copy = {
     heading: {
       overline: "Interactive editing",
       title: "A vector editor that opens as fast as a screenshot",
-      subtitle: "Hover a capability to see it in the workspace.",
+      subtitle: "Tools for drawing, measuring and reviewing directly on your screen.",
     },
     items: {
       "editable-objects": {
@@ -281,10 +281,17 @@ export const en: Copy = {
     heading: {
       overline: "Keyboard-first",
       title: "Built for hands that never leave the keyboard",
-      subtitle:
-        "Every tool is one letter. Every shortcut is printed in its tooltip — the UI teaches itself.",
+      subtitle: "Default shortcuts. Tool keys work in drawing mode; global shortcuts also work outside the app. You can change bindings in Edivect. F1 opens the full help.",
     },
     items: {
+      drawMode: "Toggle drawing / cursor (global)",
+      freezeLocal: "Freeze screen (drawing mode)",
+      savePng: "Save PNG",
+      redo: "Redo",
+      layers: "Layers",
+      palette: "Command palette",
+      help: "Help",
+
       select: "Selection tool",
       arrow: "Arrow",
       rectangle: "Rectangle",
@@ -293,8 +300,8 @@ export const en: Copy = {
       dimension: "Dimension",
       angle: "Angle measure",
       blur: "Blur",
-      exportRegion: "Export region",
-      freeze: "Freeze screen",
+      exportRegion: "Choose export area",
+      freeze: "Freeze screen (global)",
       undo: "Undo",
       repeat: "Repeat last command",
     },

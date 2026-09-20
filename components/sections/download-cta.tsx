@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { WindowsIcon } from "@/components/ui/github-icon";
-import { changelogPath, type Lang } from "@/lib/i18n";
+import { type Lang } from "@/lib/i18n";
 import { hasRealRelease, site } from "@/lib/site";
 import type { Copy } from "@/types";
 import { licensing } from "@/lib/licensing";
@@ -46,33 +46,13 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
               {cta.subtitle}
             </p>
 
-            <h3 className="mt-10 text-2xl font-semibold">{licence.heading}</h3>
-            <div className="mt-6 grid gap-5 text-left md:grid-cols-2">
-              {[
-                { title: "Edivect Personal", text: licence.personal, button: licence.personalButton },
-                { title: "Edivect Commercial Trial", text: licence.trial, button: licence.trialButton },
-              ].map((plan) => (
-                <div key={plan.title} className="flex flex-col rounded-xl border border-border bg-surface p-6">
-                  <h4 className="text-xl font-semibold">{plan.title}</h4>
-                  <p className="mt-3 mb-6 flex-1 leading-relaxed text-fg-muted">{plan.text}</p>
-                  <Button asChild size="lg"><a href={downloadUrl} download><Download aria-hidden="true" className="size-5" />{plan.button}</a></Button>
-                </div>
-              ))}
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg"><a href={downloadUrl} download><Download aria-hidden="true" className="size-5" />{copy.ui.downloadForWindows}</a></Button>
             </div>
             <p className="mx-auto mt-6 max-w-[760px] text-sm leading-relaxed text-fg-muted">{licence.shared}</p>
-            <p className="mx-auto mt-4 max-w-[760px] text-sm leading-relaxed text-fg-muted">{licence.expiry}</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm underline underline-offset-4">
-              <a href={`${site.issuesUrl}?title=Commercial%20Trial%20extension`}>{licence.contact}</a>
+            <div className="mt-4 text-sm underline underline-offset-4">
               <Link href={termsPath(lang)}>{licence.terms}</Link>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-3.5">
-              <Button asChild size="lg" variant="elevated">
-                <Link href={changelogPath(lang)}>
-                  {cta.olderVersions}
-                </Link>
-              </Button>
-            </div>
-
 
             <p className="mt-7 flex flex-wrap justify-center gap-5 text-[13px] text-fg-subtle">
               <span>

@@ -90,7 +90,7 @@ export const sk: Copy = {
     heading: {
       overline: "Interaktívne úpravy",
       title: "Vektorový editor, ktorý sa otvorí rýchlosťou snímky obrazovky",
-      subtitle: "Prejdite myšou po funkcii a uvidíte ju v pracovnej ploche.",
+      subtitle: "Nástroje na kreslenie, meranie a kontrolu priamo na obrazovke.",
     },
     items: {
       "editable-objects": {
@@ -282,10 +282,17 @@ export const sk: Copy = {
     heading: {
       overline: "Najprv klávesnica",
       title: "Pre ruky, ktoré neopúšťajú klávesnicu",
-      subtitle:
-        "Každý nástroj je na jednom písmene. Každá skratka je vypísaná v bublinovej nápovede — rozhranie sa naučí samo.",
+      subtitle: "Predvolené skratky. Klávesy nástrojov fungujú v režime kreslenia; globálne skratky aj mimo aplikácie. Skratky si môžete zmeniť v Edivect. F1 otvorí úplného pomocníka.",
     },
     items: {
+      drawMode: "Kresliť / kurzor (globálne)",
+      freezeLocal: "Zmraziť obrazovku (pri kreslení)",
+      savePng: "Uložiť PNG",
+      redo: "Znova",
+      layers: "Vrstvy",
+      palette: "Paleta príkazov",
+      help: "Pomocník",
+
       select: "Nástroj výberu",
       arrow: "Šípka",
       rectangle: "Obdĺžnik",
@@ -294,8 +301,8 @@ export const sk: Copy = {
       dimension: "Kóta",
       angle: "Meranie uhla",
       blur: "Rozostrenie",
-      exportRegion: "Export oblasti",
-      freeze: "Zmraziť obrazovku",
+      exportRegion: "Nastaviť oblasť exportu",
+      freeze: "Zmraziť obrazovku (globálne)",
       undo: "Späť",
       repeat: "Zopakovať posledný príkaz",
     },

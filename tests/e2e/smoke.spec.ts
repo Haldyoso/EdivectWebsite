@@ -23,15 +23,13 @@ for (const locale of locales) {
     await expect(page.locator("html")).toHaveAttribute("lang", locale.lang);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     const download = page.locator("#download a[download]");
-    await expect(download).toHaveCount(2);
+    await expect(download).toHaveCount(1);
     await expect(download.first()).toBeVisible();
     await expect(download.first()).toHaveAttribute(
       "href",
       /\/EdivectWebsite\/downloads\/Edivect-v[\w.-]+\.exe$/,
     );
-    expect(await download.nth(1).getAttribute("href")).toBe(await download.first().getAttribute("href"));
-    await expect(page.getByRole("heading", { name: "Edivect Personal", exact: true })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Edivect Commercial Trial", exact: true })).toBeVisible();
+    await expect(page.locator("img[src*=screenshots], a[href*=changelog], header a[href*=github]" )).toHaveCount(0);
     expect(errors).toEqual([]);
   });
 
@@ -57,7 +55,7 @@ test("language switching preserves the equivalent page", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "de");
 });
 
-test("navigation, FAQ and changelog download path work", async ({ page }) => {
+test("navigation, FAQ and legal download path work", async ({ page }) => {
   await page.goto("/EdivectWebsite/");
   await page.locator("header").getByRole("link", { name: "Features" }).click();
   await expect(page).toHaveURL(/#features$/);
@@ -67,7 +65,7 @@ test("navigation, FAQ and changelog download path work", async ({ page }) => {
   await questions.nth(1).click();
   await expect(questions.nth(1)).toHaveAttribute("aria-expanded", "true");
 
-  await page.goto("/EdivectWebsite/changelog");
+  await page.goto("/EdivectWebsite/terms");
   const download = page.locator("header").getByRole("link", { name: "Download" });
   await expect(download).toHaveAttribute("href", /\/EdivectWebsite\/?#download$/);
 });
@@ -83,7 +81,7 @@ test("mobile navigation and legal layout fit a narrow viewport", async ({ page }
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto("/EdivectWebsite/");
   await page.getByRole("button", { name: "Menu" }).click();
-  await expect(page.getByRole("link", { name: "Download for Windows" })).toBeVisible();
+  await expect(page.locator("#mobile-menu").getByRole("link", { name: "Download for Windows" })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
   await page.goto("/EdivectWebsite/privacy");

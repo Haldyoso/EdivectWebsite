@@ -14,13 +14,11 @@ import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Logo } from "@/components/layout/logo";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { GitHubIcon } from "@/components/ui/github-icon";
 import { Button } from "@/components/ui/button";
 import { useLockBodyScroll } from "@/hooks/use-lock-body-scroll";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { homePath, type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import { site } from "@/lib/site";
 import type { Copy, NavItem } from "@/types";
 
 interface NavbarProps {
@@ -121,16 +119,6 @@ export function Navbar({
 
             <ThemeToggle ui={ui} />
 
-            <Button asChild variant="ghost" size="icon">
-              <a
-                href={site.repo}
-                target="_blank"
-                rel="noopener"
-                aria-label={ui.githubRepo}
-              >
-                <GitHubIcon className="size-5" />
-              </a>
-            </Button>
 
             <Button asChild size="sm" className="ml-2">
               <Link href={downloadHref}>

@@ -282,6 +282,14 @@ export type GalleryId =
   | "export";
 
 export type ShortcutId =
+  | "drawMode"
+  | "freezeLocal"
+  | "savePng"
+  | "redo"
+  | "layers"
+  | "palette"
+  | "help"
+
   | "select"
   | "arrow"
   | "rectangle"

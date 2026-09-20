@@ -8,7 +8,7 @@ The current production origin is `https://haldyoso.github.io/EdivectWebsite`. Us
 2. Set `NEXT_PUBLIC_BASE_PATH` to an empty string for a root-domain deployment. If the new host still uses a subdirectory, set the exact public path instead.
 3. Verify `basePath` and `assetPrefix` in the generated build. Do not remove the shared `lib/site.ts` configuration in only one place.
 4. Check manifest `start_url` and icon URLs; these are manually prefixed because they are plain JSON strings.
-5. Check screenshot, download and Next.js asset URLs in the exported HTML.
+5. Check download and Next.js asset URLs in the exported HTML.
 
 ## SEO and discovery
 
@@ -31,6 +31,34 @@ The current host also serves one repository-level `404.html` for every missing U
 ## Final verification
 
 1. Run lint, typecheck, production build, release verification, link checking, smoke tests and accessibility tests with the custom-domain environment variables.
-2. Test all language routes, legal pages, changelog, download, manifest, icons, social cards and the branded 404 on desktop and mobile.
+2. Test all language routes, legal pages, download, manifest, icons, social cards and the branded 404 on desktop and mobile.
 3. Verify the downloaded EXE and SHA-256 from the public domain.
 4. Inspect actual HTTP response headers and add the policies listed in `docs/SECURITY-AND-ANALYTICS.md` if the new host supports them.
+
+## edivect.com via Cloudflare — preparation (20 September 2026)
+
+No DNS or hosting changes have been applied yet. Two deployment options:
+
+- Keep GitHub Pages hosting and manage edivect.com DNS through Cloudflare. This
+  preserves the current release file and deployment workflow. Configure the custom
+  domain in GitHub Pages before pointing DNS at it; verify HTTPS and redirects.
+- Move the static site to Cloudflare Pages and put the EXE in R2 with a production
+  custom download domain. Pages assets are limited to 25 MiB; the current EXE is
+  72.7 MB, so uploading the existing out/ directory unchanged will fail. Exclude
+  downloads from the Pages upload, configure an external release download URL in
+  lib/site.ts, and update release verification to check the deployed R2 object.
+
+For either option, build with NEXT_PUBLIC_SITE_URL=https://edivect.com and an
+explicitly empty NEXT_PUBLIC_BASE_PATH. The current defaults intentionally keep
+GitHub Pages working until migration. Parameterize browser-test paths and the
+static test server's prefix before validating the root-domain build.
+
+Before launch, supply a real support/privacy email. The header and footer GitHub
+links have been removed, but legal pages still use GitHub Issues as their contact
+channel. Replace that contact and update the privacy policy's hosting disclosures
+when the destination is chosen. Do not publish an invented contact address.
+
+Sources:
+- https://developers.cloudflare.com/pages/platform/limits/
+- https://developers.cloudflare.com/pages/configuration/custom-domains/
+- https://developers.cloudflare.com/dns/get-started/

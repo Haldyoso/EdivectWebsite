@@ -1,22 +1,16 @@
-import { ArrowRight, Download } from "lucide-react";
-import Link from "next/link";
+import { Download } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Screenshot } from "@/components/ui/screenshot";
-import { WindowFrame } from "@/components/ui/window-frame";
-import { changelogPath, type Lang } from "@/lib/i18n";
-import type { Copy, Screenshot as ScreenshotData } from "@/types";
+import type { Copy } from "@/types";
 
 interface HeroProps {
   copy: Copy;
-  lang: Lang;
-  screenshot: ScreenshotData;
   chips: string[];
 }
 
-export function Hero({ copy, lang, screenshot, chips }: HeroProps) {
+export function Hero({ copy, chips }: HeroProps) {
   const { hero } = copy;
 
   return (
@@ -45,12 +39,6 @@ export function Hero({ copy, lang, screenshot, chips }: HeroProps) {
             {hero.ctaPrimary}
           </a>
         </Button>
-        <Button asChild variant="secondary">
-          <Link href={changelogPath(lang)}>
-            {hero.ctaSecondary}
-            <ArrowRight aria-hidden="true" className="size-[18px]" />
-          </Link>
-        </Button>
       </div>
 
       <Reveal>
@@ -63,23 +51,6 @@ export function Hero({ copy, lang, screenshot, chips }: HeroProps) {
         </ul>
       </Reveal>
 
-      <Reveal index={1}>
-        <div className="relative mt-4 sm:mt-14">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-px rounded-xl bg-linear-[120deg] from-accent/50 to-accent-soft/35 opacity-50 blur-[22px]"
-          />
-          <WindowFrame title={hero.frameTitle} className="relative shadow-e3">
-            <Screenshot
-              screenshot={screenshot}
-              ratio="aspect-[16/9]"
-              sizes="(max-width: 1200px) 100vw, 1152px"
-              priority
-              showGlyph
-            />
-          </WindowFrame>
-        </div>
-      </Reveal>
     </section>
   );
 }

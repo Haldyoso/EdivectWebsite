@@ -7,7 +7,6 @@ import { DownloadCta } from "@/components/sections/download-cta";
 import { Faq } from "@/components/sections/faq";
 import { FeatureGrid } from "@/components/sections/feature-grid";
 import { FeatureShowcase } from "@/components/sections/feature-showcase";
-import { Gallery } from "@/components/sections/gallery";
 import { Hero } from "@/components/sections/hero";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { PageBackdrop } from "@/components/layout/page-backdrop";
@@ -40,8 +39,6 @@ export function Landing({ lang }: { lang: Lang }) {
       <main id="top" tabIndex={-1} className="relative z-1 focus:outline-none">
         <Hero
           copy={copy}
-          lang={lang}
-          screenshot={content.hero.screenshot}
           chips={content.hero.chips}
         />
         <Benefits benefits={content.benefits} label={copy.ui.benefitsLabel} />
@@ -49,7 +46,6 @@ export function Landing({ lang }: { lang: Lang }) {
         <HowItWorks heading={copy.howItWorks.heading} steps={content.steps} />
         <FeatureGrid heading={copy.featureGrid.heading} features={content.gridFeatures} />
         <ComparisonTable copy={copy} rows={content.compareRows} />
-        <Gallery heading={copy.gallery.heading} items={content.gallery} ui={copy.ui} />
         <Shortcuts heading={copy.shortcuts.heading} shortcuts={content.shortcuts} />
         <Faq heading={copy.faq.heading} faqs={content.faqs} />
         <DownloadCta copy={copy} lang={lang} />

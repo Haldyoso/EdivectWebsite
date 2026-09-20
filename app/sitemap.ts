@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 
 import {
   absoluteUrl,
-  changelogPath,
   homePath,
   langs,
   privacyPath,
@@ -15,7 +14,7 @@ import { site } from "@/lib/site";
 export const dynamic = "force-static";
 
 /**
- * Six URLs: a landing page and a changelog per locale. Each entry repeats the
+ * Landing and legal pages in each locale. Each entry repeats the
  * full xhtml:link alternate set, which is what Google asks for — an alternate
  * group is only trusted when every member points back at every other.
  */
@@ -39,13 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alternatesFor(homePath),
   }));
 
-  const changelog = langs.map((lang) => ({
-    url: absoluteUrl(site.url, changelogPath(lang)),
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.5,
-    alternates: alternatesFor(changelogPath),
-  }));
 
   const legal = [privacyPath, termsPath].flatMap((pathFor) =>
     langs.map((lang) => ({
@@ -57,5 +49,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...home, ...changelog, ...legal];
+  return [...home, ...legal];
 }

@@ -4,7 +4,6 @@
  * English-only. Server-side and pure, so each page pays for it once at build.
  */
 import {
-  changelogPath,
   homePath,
   privacyPath,
   termsPath,
@@ -32,7 +31,6 @@ import {
   showcaseImages,
   stepIds,
 } from "@/lib/content/shared";
-import { site } from "@/lib/site";
 import type {
   Benefit,
   CompareRow,
@@ -155,17 +153,9 @@ function buildFooterColumns(lang: Lang, copy: Copy): FooterColumn[] {
       title: copy.footer.columns.resources,
       links: [
         { label: l.faq, href: `${home}#faq` },
-        { label: l.changelog, href: changelogPath(lang) },
         { label: l.shortcuts, href: `${home}#shortcuts` },
         { label: l.privacy, href: privacyPath(lang) },
         { label: l.terms, href: termsPath(lang) },
-      ],
-    },
-    {
-      title: copy.footer.columns.connect,
-      links: [
-        { label: l.github, href: site.repo, external: true },
-        { label: l.issues, href: site.issuesUrl, external: true },
       ],
     },
   ];

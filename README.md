@@ -1,7 +1,7 @@
 # Edivect — official website
 
 Marketing site for **Edivect**, the portable Windows screen-annotation app whose
-annotations stay fully editable. One conversion goal: download the Personal / Commercial Trial EXE.
+annotations stay fully editable. One conversion goal: download one portable EXE; choose the licence mode in the app.
 Published in English, Slovak and German.
 
 The handoff bundle below still says "Edivect" throughout — that was the working name
@@ -40,9 +40,9 @@ npm run optimize:screenshots              # convert any new PNG in public/screen
 
 ```
 app/
-  (en)/  page + changelog + root layout   -> /          /changelog
-  (sk)/  page + changelog + root layout   -> /sk        /sk/changelog
-  (de)/  page + changelog + root layout   -> /de        /de/changelog
+  (en)/  landing + legal pages + root layout -> /
+  (sk)/  landing + legal pages + root layout -> /sk
+  (de)/  landing + legal pages + root layout -> /de
   manifest.ts, robots.ts, sitemap.ts, globals.css
 components/
   layout/     DocumentShell, Landing, ChangelogPage, Navbar, Footer, Logo,
@@ -126,52 +126,20 @@ and `--color-hatch-a/b` exist because a hard-coded dark navbar scrim and a hard-
 dark hatch both broke the light theme, the second by putting near-black body copy on a
 near-black panel.
 
-## Screenshots
+## Screenshots and release history
 
-`public/screenshots/` holds twelve real captures of Edivect annotating an engineering
-drawing — not mock-ups. Each is cropped from a full 1920×1080 capture of the app running
-over the drawing held open behind it, so what the site shows is what the product draws.
+The public website currently has no application screenshots or gallery. Features
+are presented as text cards. The previous screenshot files have been removed.
 
-Every entry in the locale files pairs the file with its `alt`, and the `alt` describes
-**that specific image**, not the feature in the abstract. If you re-shoot a capture and
-the contents change — a different angle reading, a different stamp — change the `alt` in
-**all three locales** in the same commit or it quietly starts lying to screen readers.
+What's new and the localized changelog routes are removed for the 1.0.0 launch.
+The archived source history is not published. Future public release notes should
+start with 1.0.0 and document subsequent versions, excluding the old development log.
 
-```ts
-// lib/content/shared.ts — the file, without an extension
-"cad-measurement": "/screenshots/measurement",
+## Keyboard shortcuts
 
-// lib/content/en.ts — what that specific image shows
-alt: "An angle measured across two bolt holes reading 35.2° …",
-```
-
-Three things to keep in mind when replacing one:
-
-- **Format.** The captures ship as **WebP**, ~a third of the PNG bytes for identical
-  linework. Drop the PNG in and run `npm run optimize:screenshots`, which converts and
-  deletes the original. Paths in `shared.ts` carry no extension —
-  [`components/ui/screenshot.tsx`](components/ui/screenshot.tsx) appends it, so switching
-  format later is one constant.
-- **Size.** Image optimization is off (see Deployment), so the browser downloads exactly
-  what you commit. The hero renders ~1200 px wide at 16:9; showcase and gallery slots are
-  16:10. Match those ratios or `object-cover` will crop the sides off.
-- **`basePath` is applied in `screenshot.tsx`, not in the data.** See Deployment for why
-  it has to be.
-
-## Changelog page
-
-`/changelog` (and its two translations) renders `content/CHANGELOG.md`, a **vendored copy**
-of the application repository's own file. Vendored because the two live in separate
-repositories and the deploy workflow checks out only this one — a build-time path into
-`../Edivect` works locally and fails in CI. Refresh it with `npm run sync:changelog`.
-
-Only the most recent `RELEASE_LIMIT` (20) entries render. The app's changelog is a
-development log — 106 entries by 0.9.9.61 — and all of them produced a 557 kB page.
-
-The entries are reproduced verbatim, so they are in Slovak on all three pages; the
-framing copy says so rather than pretending otherwise. `marked` runs at build time on a
-file in this repository, never ships to the browser, and its output is as trusted as the
-JSX around it.
+Default bindings are checked against `../Edivect/src/Edivect/Core/CommandRegistry.cs`
+and `UI/HelpWindow.xaml.cs`. The website distinguishes global shortcuts from drawing
+mode and export-area selection from saving PNG. Custom user bindings can differ.
 
 ## Comparison table
 

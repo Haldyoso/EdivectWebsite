@@ -142,6 +142,14 @@ export const galleryImages: Record<GalleryId, string> = {
  * single letter.
  */
 export const shortcutIds: ShortcutId[] = [
+  "drawMode",
+  "freezeLocal",
+  "savePng",
+  "redo",
+  "layers",
+  "palette",
+  "help",
+
   "select",
   "arrow",
   "rectangle",
@@ -156,7 +164,16 @@ export const shortcutIds: ShortcutId[] = [
   "repeat",
 ];
 
+// Defaults checked against Edivect Core/CommandRegistry.cs and UI/HelpWindow.xaml.cs.
 export const shortcutKeys: Record<ShortcutId, string[]> = {
+  drawMode: ["Ctrl", "Alt", "D"],
+  freezeLocal: ["Ctrl", "End"],
+  savePng: ["Ctrl", "S"],
+  redo: ["Ctrl", "Y"],
+  layers: ["F8"],
+  palette: ["Ctrl", "Shift", "P"],
+  help: ["F1"],
+
   select: ["V"],
   arrow: ["A"],
   rectangle: ["R"],

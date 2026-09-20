@@ -90,8 +90,7 @@ export const de: Copy = {
     heading: {
       overline: "Interaktives Bearbeiten",
       title: "Ein Vektoreditor, der so schnell öffnet wie ein Screenshot",
-      subtitle:
-        "Fahren Sie über eine Funktion, um sie im Arbeitsbereich zu sehen.",
+      subtitle: "Werkzeuge zum Zeichnen, Messen und Prüfen direkt auf dem Bildschirm.",
     },
     items: {
       "editable-objects": {
@@ -283,10 +282,17 @@ export const de: Copy = {
     heading: {
       overline: "Tastatur zuerst",
       title: "Für Hände, die die Tastatur nie verlassen",
-      subtitle:
-        "Jedes Werkzeug liegt auf einem Buchstaben. Jedes Kürzel steht in seinem Tooltip — die Oberfläche erklärt sich selbst.",
+      subtitle: "Standardbelegung. Werkzeugtasten gelten im Zeichenmodus; globale Kürzel auch außerhalb der App. Die Belegung lässt sich in Edivect ändern. F1 öffnet die vollständige Hilfe.",
     },
     items: {
+      drawMode: "Zeichnen / Cursor (global)",
+      freezeLocal: "Bildschirm einfrieren (Zeichenmodus)",
+      savePng: "PNG speichern",
+      redo: "Wiederholen",
+      layers: "Ebenen",
+      palette: "Befehlspalette",
+      help: "Hilfe",
+
       select: "Auswahlwerkzeug",
       arrow: "Pfeil",
       rectangle: "Rechteck",
@@ -295,8 +301,8 @@ export const de: Copy = {
       dimension: "Bemaßung",
       angle: "Winkelmessung",
       blur: "Unschärfe",
-      exportRegion: "Bereich exportieren",
-      freeze: "Bildschirm einfrieren",
+      exportRegion: "Exportbereich festlegen",
+      freeze: "Bildschirm einfrieren (global)",
       undo: "Rückgängig",
       repeat: "Letzten Befehl wiederholen",
     },
