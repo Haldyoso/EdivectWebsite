@@ -20,7 +20,7 @@
  */
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
-const publicAssetPath = "/downloads/Edivect-v0.9.9.160.exe";
+const publicAssetPath = "/downloads/Edivect-v1.0.0.exe";
 
 export const site = {
   name: "Edivect",
@@ -40,9 +40,9 @@ export const site = {
     supportEmail: null,
   },
   release: {
-    version: "0.9.9.160",
+    version: "1.0.0",
     size: "72.7 MB",
-    sha256: "EB29AF0BE92C34B7330E3E0C93774A96ABD6807BA9592EE0AA29463E23BB44AE",
+    sha256: "1E9E57FEC86834CF87CA5E1E805F78BAA6B792B5781AA632F97F291263A25FCB",
     assetPath: publicAssetPath,
     downloadUrl: `${basePath}${publicAssetPath}`,
   },

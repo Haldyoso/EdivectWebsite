@@ -228,7 +228,7 @@ domain.
 
 ## Release and launch notes
 
-- The public download is `0.9.9.160`: one app with Personal and 30-day Commercial Trial modes.
+- The public download is `1.0.0`: one app with Personal and 30-day Commercial Trial modes.
 - Version, size and SHA-256 are verified against the bundled EXE in `lib/site.ts`.
 - Licence behaviour and paid-launch follow-ups: [Personal / Commercial Trial](docs/PERSONAL-COMMERCIAL-TRIAL.md).
 - The app repository is private; support links point to the website repository.
