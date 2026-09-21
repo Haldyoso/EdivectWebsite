@@ -1,13 +1,14 @@
+import { basePath } from "../../lib/site";
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 // Accessibility is evaluated in the settled state, not halfway through a fade where
 // temporary opacity mathematically lowers text contrast.
 const routes = [
-  { name: "homepage", path: "/EdivectWebsite/" },
-  { name: "FAQ", path: "/EdivectWebsite/#faq" },
-  { name: "Privacy Policy", path: "/EdivectWebsite/privacy" },
-  { name: "Terms of Use", path: "/EdivectWebsite/terms" },
+  { name: "homepage", path: `${basePath}/` },
+  { name: "FAQ", path: `${basePath}/#faq` },
+  { name: "Privacy Policy", path: `${basePath}/privacy` },
+  { name: "Terms of Use", path: `${basePath}/terms` },
 ] as const;
 
 for (const route of routes) {

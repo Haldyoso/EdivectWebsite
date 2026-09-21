@@ -22,10 +22,9 @@ export function softwareApplicationJsonLd(lang: Lang) {
     license: absoluteUrl(site.url, termsPath(lang)),
     fileSize: site.release.size.replace("~", "").trim(),
     url: absoluteUrl(site.url, homePath(lang)),
-    // Structured data needs an absolute URL; the visible download link keeps
-    // its basePath-prefixed local URL so it also works in development.
+    // Use the same public R2 URL as the visible download button.
     ...(hasRealRelease
-      ? { downloadUrl: absoluteUrl(site.url, site.release.assetPath) }
+      ? { downloadUrl: site.release.downloadUrl }
       : {}),
     offers: {
       "@type": "Offer",

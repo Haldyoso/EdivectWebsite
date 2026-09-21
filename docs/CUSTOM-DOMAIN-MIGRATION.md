@@ -1,64 +1,112 @@
-# Custom-domain migration
+# Presun webu na vlastnú doménu
 
-The current production origin is `https://haldyoso.github.io/EdivectWebsite`. Use this checklist when moving to a root custom domain.
+Aktuálna produkčná adresa je `https://haldyoso.github.io/EdivectWebsite`. Tento postup použite pri presune na vlastnú doménu, napríklad `https://edivect.com`.
 
-## Code and build configuration
+## Stav migrácie k 21. septembru 2026
 
-1. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin without a trailing slash.
-2. Set `NEXT_PUBLIC_BASE_PATH` to an empty string for a root-domain deployment. If the new host still uses a subdirectory, set the exact public path instead.
-3. Verify `basePath` and `assetPrefix` in the generated build. Do not remove the shared `lib/site.ts` configuration in only one place.
-4. Check manifest `start_url` and icon URLs; these are manually prefixed because they are plain JSON strings.
-5. Check download and Next.js asset URLs in the exported HTML.
+- R2 je aktivované so súhlasom vlastníka účtu.
+- Bucket `edivect-releases` je vytvorený; `downloads.edivect.com` je pripojená ako verejná doména.
+- Príkaz v Cloudflare je uložený s `--name edivect`.
+- Miestny zdrojový EXE je v `releases/Edivect-v1.0.0.exe`, mimo `public/` a `out/`.
+- Odkazy na R2, údaje o hostingu, konfigurácia Workera, HTTP hlavičky a testy sú pripravené lokálne.
+- Zostavenie pre koreň domény, kontrola odkazov, overenie EXE a 14 testov prešli.
+- EXE je nahratý do R2. Verejné stiahnutie bolo overené: 76 274 395 bajtov a SHA-256 súhlasia s miestnym súborom.
+- Zmeny ešte nie sú pushnuté. Hlavná doména zatiaľ nie je pripojená k Workeru, aby sa nespustila nedokončená stránka.
 
-## SEO and discovery
+Dokončiť: pushnúť zmeny, počkať na úspešný Workers build, pripojiť `edivect.com` a overiť verejný web. Stav nasadenia kontrolovať v intervaloch 30 až 60 sekúnd. GitHub Pages zostáva počas migrácie dostupný.
 
-1. Rebuild canonical, Open Graph and Twitter URLs from the new `NEXT_PUBLIC_SITE_URL`.
-2. Verify every EN/SK/DE hreflang set, including reciprocal links and `x-default`.
-3. Rebuild `sitemap.xml`, inspect every URL and submit it to the relevant search engines.
-4. Make `robots.txt` available at the custom domain root. The current GitHub project-path copy is not authoritative for `haldyoso.github.io`.
-5. Add and verify the new domain property in Google Search Console and any other webmaster tools in use.
-6. Keep the old GitHub Pages URL reachable long enough for migration. Configure permanent redirects from old URLs where the chosen host supports them; GitHub Pages project sites cannot provide arbitrary HTTP redirect rules.
+Pre nové vydania platí postup v `releases/README.md`. Kontaktný e-mail nebol dodaný, preto zostáva doterajší kontakt cez GitHub Issues. Overenie Search Console vyžaduje prístup k príslušnému účtu.
 
-The current host also serves one repository-level `404.html` for every missing URL. It cannot select a localized 404 from `/sk` or `/de`, so the branded fallback is intentionally English. A future host with edge routing can choose a locale before serving the error page.
+## Nastavenie kódu a zostavenia webu
 
-## GitHub Pages and DNS
+1. Nastavte `NEXT_PUBLIC_SITE_URL` na konečnú HTTPS adresu bez lomky na konci, napríklad `https://edivect.com`.
+2. Nastavte `NEXT_PUBLIC_BASE_PATH` na prázdny reťazec, ak web bude priamo na doméne. Ak bude v podadresári, nastavte presnú verejnú cestu.
+3. Vo výslednom zostavení overte `basePath` a `assetPrefix`. Spoločnú konfiguráciu v `lib/site.ts` nemeňte iba na jednom mieste.
+4. Skontrolujte `start_url` v manifeste a adresy ikon. Predpona sa k nim pridáva ručne, pretože ide o obyčajné textové hodnoty v JSON.
+5. V exportovanom HTML skontrolujte odkaz na stiahnutie a adresy súborov Next.js.
 
-1. Add the custom domain in the repository's GitHub Pages settings and commit the generated `CNAME` file if GitHub requires it for this publishing flow.
-2. Configure the DNS records exactly as shown by GitHub for an apex or subdomain.
-3. Wait for DNS validation, then enable and enforce HTTPS.
-4. Protect the domain against takeover by keeping repository and DNS ownership aligned.
+## Vyhľadávače a zdieľanie
 
-## Final verification
+1. Znovu vygenerujte kanonické adresy a adresy pre Open Graph a Twitter podľa novej hodnoty `NEXT_PUBLIC_SITE_URL`.
+2. Overte všetky jazykové prepojenia EN/SK/DE cez `hreflang`, vrátane spätných odkazov a `x-default`.
+3. Znovu vygenerujte `sitemap.xml`, skontrolujte každú adresu a odošlite mapu webu používaným vyhľadávačom.
+4. Sprístupnite `robots.txt` priamo v koreni vlastnej domény. Súčasný súbor v podadresári projektu neurčuje pravidlá pre doménu `haldyoso.github.io`.
+5. Pridajte a overte novú doménu v Google Search Console a ďalších používaných nástrojoch pre správcov webov.
+6. Počas migrácie ponechajte pôvodnú adresu GitHub Pages dostupnú. Tam, kde to hosting umožňuje, nastavte trvalé presmerovania zo starých adries. Projektové weby GitHub Pages nepodporujú ľubovoľné pravidlá HTTP presmerovania.
 
-1. Run lint, typecheck, production build, release verification, link checking, smoke tests and accessibility tests with the custom-domain environment variables.
-2. Test all language routes, legal pages, download, manifest, icons, social cards and the branded 404 on desktop and mobile.
-3. Verify the downloaded EXE and SHA-256 from the public domain.
-4. Inspect actual HTTP response headers and add the policies listed in `docs/SECURITY-AND-ANALYTICS.md` if the new host supports them.
+Súčasný hosting používa jeden súbor `404.html` pre všetky neexistujúce adresy. Nedokáže podľa `/sk` alebo `/de` vybrať jazyk chybovej stránky, preto je táto stránka v angličtine. Nový hosting môže podporovať výber jazyka pred jej zobrazením.
 
-## edivect.com via Cloudflare � preparation (20 September 2026)
+## GitHub Pages a DNS
 
-No DNS or hosting changes have been applied yet. Two deployment options:
+1. V nastaveniach repozitára v časti `GitHub Pages` pridajte vlastnú doménu. Ak použitý spôsob publikovania vyžaduje súbor `CNAME`, zahrňte ho do repozitára.
+2. DNS záznamy nastavte presne podľa pokynov GitHubu pre hlavnú doménu alebo subdoménu.
+3. Počkajte na overenie DNS a potom zapnite a vynúťte HTTPS.
+4. Udržujte vlastníctvo repozitára a DNS pod kontrolou, aby doménu nemohol prevziať niekto iný.
 
-- Keep GitHub Pages hosting and manage edivect.com DNS through Cloudflare. This
-  preserves the current release file and deployment workflow. Configure the custom
-  domain in GitHub Pages before pointing DNS at it; verify HTTPS and redirects.
-- Move the static site to Cloudflare Pages and put the EXE in R2 with a production
-  custom download domain. Pages assets are limited to 25 MiB; the current EXE is
-  72.7 MB, so uploading the existing out/ directory unchanged will fail. Exclude
-  downloads from the Pages upload, configure an external release download URL in
-  lib/site.ts, and update release verification to check the deployed R2 object.
+## Záverečné overenie
 
-For either option, build with NEXT_PUBLIC_SITE_URL=https://edivect.com and an
-explicitly empty NEXT_PUBLIC_BASE_PATH. The current defaults intentionally keep
-GitHub Pages working until migration. Parameterize browser-test paths and the
-static test server's prefix before validating the root-domain build.
+1. S premennými nastavenými pre vlastnú doménu spustite tieto kontroly:
 
-Before launch, supply a real support/privacy email. The header and footer GitHub
-links have been removed, but legal pages still use GitHub Issues as their contact
-channel. Replace that contact and update the privacy policy's hosting disclosures
-when the destination is chosen. Do not publish an invented contact address.
+   ```sh
+   npm run lint
+   npm run typecheck
+   npm run build
+   npm run verify:release
+   npm run check:links
+   npm test
+   ```
 
-Sources:
-- https://developers.cloudflare.com/pages/platform/limits/
-- https://developers.cloudflare.com/pages/configuration/custom-domains/
-- https://developers.cloudflare.com/dns/get-started/
+2. Na počítači aj mobile otestujte všetky jazykové verzie, právne stránky, sťahovanie, manifest, ikony, náhľady pri zdieľaní a chybovú stránku 404.
+3. Stiahnite EXE z verejnej domény a overte jeho presnú veľkosť a SHA-256.
+4. Skontrolujte skutočné HTTP hlavičky odpovedí. Ak ich nový hosting podporuje, doplňte pravidlá uvedené v `docs/SECURITY-AND-ANALYTICS.md`.
+
+## edivect.com cez Cloudflare — príprava (20. september 2026)
+
+Tento dokument nemení DNS ani hosting. Existujú dve možnosti:
+
+- **Ponechať hosting na GitHub Pages a DNS spravovať cez Cloudflare.** Zachová sa súčasný EXE aj postup nasadenia. Najprv nastavte vlastnú doménu v GitHub Pages, až potom na ňu nasmerujte DNS. Overte HTTPS a presmerovania.
+- **Presunúť web na Cloudflare a EXE uložiť samostatne do R2.** Statický web môže obsluhovať Cloudflare Pages alebo Workers Static Assets. Obe služby majú limit 25 MiB na jeden statický súbor. Súčasný EXE má 72,7 MB, preto nemožno nahrať priečinok `out/` bez úprav. Súbor EXE musí zostať mimo balíka statického webu. Pre R2 nastavte verejnú doménu na sťahovanie, v `lib/site.ts` upravte odkaz a pri nasadení overte aj veľkosť a SHA-256 verejného súboru.
+
+Pre obe možnosti nastavte pri zostavení:
+
+| Názov premennej | Hodnota |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | `https://edivect.com` |
+| `NEXT_PUBLIC_BASE_PATH` | prázdny reťazec |
+
+Premenná `NEXT_PUBLIC_BASE_PATH` musí mať skutočne prázdnu hodnotu. Ak chýba, kód použije predvolenú cestu `/EdivectWebsite`. Súčasné predvolené hodnoty zachovávajú funkčnosť GitHub Pages až do migrácie.
+
+Pred testovaním webu priamo na doméne upravte cesty v testoch prehliadača aj predponu lokálneho testovacieho servera tak, aby vychádzali z konfigurácie namiesto pevnej cesty `/EdivectWebsite`.
+
+Pred spustením doplňte skutočnú kontaktnú e-mailovú adresu pre podporu a otázky o súkromí. GitHub odkazy sú z hlavičky a pätičky odstránené, právne stránky však zatiaľ používajú GitHub Issues. Po výbere hostingu nahraďte kontakt a aktualizujte informácie o hostingu v zásadách ochrany súkromia.
+
+## Zlyhaná kontrola Workers Builds: edivect
+
+Kontrola `Workers Builds: edivect` patrí k samostatnému nasadeniu do Cloudflare Workers. Úspešné kontroly `Deploy to GitHub Pages / build` a `Deploy to GitHub Pages / deploy` znamenajú, že nasadenie na GitHub Pages prešlo nezávisle od nej.
+
+V zázname zostavenia `48a168a7-cd07-4deb-b20e-f10549e4031e` bola overená presná príčina: zostavenie webu prešlo, ale nasadenie zlyhalo s chybou `Asset too large.` Súbor `out/downloads/Edivect-v1.0.0.exe` prekračuje limit 25 MiB pre Workers Static Assets.
+
+Záznam obsahuje aj upozornenie na nesúlad názvov: príkaz používa `--name edivectwebsite`, ale pripojený Worker sa volá `edivect`. Cloudflare názov automaticky prepísal; toto upozornenie nebolo príčinou zlyhania.
+
+Po presunutí EXE do R2 a úprave odkazu na stiahnutie musí nasadzovaný priečinok obsahovať iba súbory webu. Samotné odstránenie EXE z balíka bez zmeny odkazu by pokazilo sťahovanie.
+
+Aktuálny `Build command` je nastavený správne pre vlastnú doménu:
+
+```sh
+NEXT_PUBLIC_BASE_PATH="" NEXT_PUBLIC_SITE_URL="https://edivect.com" npm run build
+```
+
+Po vyriešení uloženia EXE použite pre `Deploy command` názov existujúceho Workera:
+
+```sh
+npx wrangler deploy --assets ./out --name edivect --compatibility-date 2026-09-15
+```
+
+Zmena názvu v príkaze sama osebe chybu veľkosti nevyrieši. Pri tomto overení sa nastavenia Cloudflare nemenili.
+
+## Zdroje
+
+- [Limity Cloudflare Pages](https://developers.cloudflare.com/pages/platform/limits/)
+- [Limity Cloudflare Workers](https://developers.cloudflare.com/workers/platform/limits/)
+- [Vlastné domény v Cloudflare Pages](https://developers.cloudflare.com/pages/configuration/custom-domains/)
+- [Nastavenie Cloudflare DNS](https://developers.cloudflare.com/dns/get-started/)

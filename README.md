@@ -197,7 +197,10 @@ domain.
 ## Release and launch notes
 
 - The public download is `1.0.0`: one app with Personal and 30-day Commercial Trial modes.
-- Version, size and SHA-256 are verified against the bundled EXE in `lib/site.ts`.
+- Version, size and SHA-256 in `lib/site.ts` are verified against `releases/`; downloads are served from Cloudflare R2.
+- Cloudflare Worker: `edivect`, static assets in `out/`. The EXE must never be bundled in `out/`.
+- Production build: `NEXT_PUBLIC_BASE_PATH="" NEXT_PUBLIC_SITE_URL="https://edivect.com" npm run build`.
+- Public release verification: `npm run verify:release -- --remote`.
 - Licence behaviour and paid-launch follow-ups: [Personal / Commercial Trial](docs/PERSONAL-COMMERCIAL-TRIAL.md).
 - The app repository is private; support links point to the website repository.
 

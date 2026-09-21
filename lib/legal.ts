@@ -31,7 +31,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "How the Edivect website and downloaded application handle personal information, cookies, telemetry and third-party services.",
     intro:
       "Edivect is designed to collect as little information as possible. This policy separates the static website from the Windows application you download.",
-    lastUpdated: "3 September 2026",
+    lastUpdated: "21 September 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Operator",
     ownerPending: "Legal owner details must be added before commercial launch.",
@@ -50,7 +50,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Website hosting",
         paragraphs: [
-          "The website is a static site hosted on GitHub Pages. Edivect does not run its own server-side database, account system or form processing on this site. GitHub may process technical request data, such as IP addresses and browser information, as the hosting provider under its own privacy terms.",
+          "The website at edivect.com is hosted on Cloudflare Workers. The previous GitHub Pages address may remain available during migration. Edivect does not run its own server-side database, account system or form processing on this site. Hosting providers may process technical request data, such as IP addresses and browser information, under their own privacy terms.",
         ],
       },
       {
@@ -74,7 +74,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Downloads and external services",
         paragraphs: [
-          "The application download is served as a static file from the same GitHub Pages site. Links to GitHub, including the repository and issue tracker, take you to a third-party service whose own terms and privacy policy apply.",
+          "The application download is served from Cloudflare R2 at downloads.edivect.com. Links to GitHub, including the repository and issue tracker, take you to a third-party service whose own terms and privacy policy apply.",
         ],
       },
       {
@@ -91,7 +91,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Ako web Edivect a stiahnutá aplikácia pracujú s osobnými údajmi, cookies, telemetriou a službami tretích strán.",
     intro:
       "Edivect je navrhnutý tak, aby zhromažďoval čo najmenej údajov. Tieto zásady odlišujú statickú webovú stránku od aplikácie pre Windows, ktorú si stiahnete.",
-    lastUpdated: "3. septembra 2026",
+    lastUpdated: "21. septembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Prevádzkovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
@@ -110,7 +110,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Hosťovanie webu",
         paragraphs: [
-          "Web je statická stránka hosťovaná službou GitHub Pages. Edivect na tomto webe neprevádzkuje vlastnú serverovú databázu, používateľské účty ani spracovanie formulárov. GitHub môže ako poskytovateľ hostingu podľa vlastných zásad spracovať technické údaje požiadavky, napríklad IP adresu a informácie o prehliadači.",
+          "Web na edivect.com je hosťovaný službou Cloudflare Workers. Pôvodná adresa GitHub Pages môže zostať dostupná počas migrácie. Edivect na tomto webe neprevádzkuje vlastnú serverovú databázu, používateľské účty ani spracovanie formulárov. Poskytovatelia hostingu môžu podľa vlastných zásad spracovať technické údaje požiadavky, napríklad IP adresu a informácie o prehliadači.",
         ],
       },
       {
@@ -134,7 +134,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Sťahovanie a externé služby",
         paragraphs: [
-          "Aplikácia sa sťahuje ako statický súbor z toho istého webu GitHub Pages. Odkazy na GitHub, vrátane repozitára a hlásenia chýb, vedú na službu tretej strany, pre ktorú platia jej vlastné podmienky a zásady súkromia.",
+          "Aplikácia sa sťahuje z úložiska Cloudflare R2 na downloads.edivect.com. Odkazy na GitHub, vrátane repozitára a hlásenia chýb, vedú na službu tretej strany, pre ktorú platia jej vlastné podmienky a zásady súkromia.",
         ],
       },
       {
@@ -151,7 +151,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Wie die Edivect-Website und die heruntergeladene Anwendung mit personenbezogenen Daten, Cookies, Telemetrie und Drittanbietern umgehen.",
     intro:
       "Edivect ist darauf ausgelegt, so wenige Daten wie möglich zu erfassen. Diese Erklärung unterscheidet zwischen der statischen Website und der heruntergeladenen Windows-Anwendung.",
-    lastUpdated: "3. September 2026",
+    lastUpdated: "21. September 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Betreiber",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
@@ -170,7 +170,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Hosting der Website",
         paragraphs: [
-          "Die Website ist eine statische, auf GitHub Pages gehostete Seite. Edivect betreibt hier keine eigene serverseitige Datenbank, Benutzerkonten oder Formularverarbeitung. GitHub kann als Hostinganbieter technische Anfragedaten wie IP-Adresse und Browserinformationen nach seinen eigenen Datenschutzbestimmungen verarbeiten.",
+          "Die Website unter edivect.com wird auf Cloudflare Workers gehostet. Die bisherige GitHub-Pages-Adresse kann während der Migration weiterhin verfügbar sein. Edivect betreibt hier keine eigene serverseitige Datenbank, Benutzerkonten oder Formularverarbeitung. Hostinganbieter können technische Anfragedaten wie IP-Adresse und Browserinformationen nach ihren eigenen Datenschutzbestimmungen verarbeiten.",
         ],
       },
       {
@@ -194,7 +194,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Downloads und externe Dienste",
         paragraphs: [
-          "Der Anwendungsdownload wird als statische Datei von derselben GitHub-Pages-Website bereitgestellt. Links zu GitHub, einschließlich Repository und Fehlerverwaltung, führen zu einem Drittanbieter, für den dessen eigene Bedingungen und Datenschutzerklärung gelten.",
+          "Der Anwendungsdownload wird über Cloudflare R2 unter downloads.edivect.com bereitgestellt. Links zu GitHub, einschließlich Repository und Fehlerverwaltung, führen zu einem Drittanbieter, für den dessen eigene Bedingungen und Datenschutzerklärung gelten.",
         ],
       },
       {

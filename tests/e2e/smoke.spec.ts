@@ -1,9 +1,10 @@
+import { basePath, site } from "../../lib/site";
 import { expect, test, type Page } from "@playwright/test";
 
 const locales = [
-  { lang: "en", path: "/EdivectWebsite/", privacy: "/EdivectWebsite/privacy", terms: "/EdivectWebsite/terms" },
-  { lang: "sk", path: "/EdivectWebsite/sk", privacy: "/EdivectWebsite/sk/privacy", terms: "/EdivectWebsite/sk/terms" },
-  { lang: "de", path: "/EdivectWebsite/de", privacy: "/EdivectWebsite/de/privacy", terms: "/EdivectWebsite/de/terms" },
+  { lang: "en", path: `${basePath}/`, privacy: `${basePath}/privacy`, terms: `${basePath}/terms` },
+  { lang: "sk", path: `${basePath}/sk`, privacy: `${basePath}/sk/privacy`, terms: `${basePath}/sk/terms` },
+  { lang: "de", path: `${basePath}/de`, privacy: `${basePath}/de/privacy`, terms: `${basePath}/de/terms` },
 ] as const;
 
 function collectPageErrors(page: Page) {
@@ -27,7 +28,7 @@ for (const locale of locales) {
     await expect(download.first()).toBeVisible();
     await expect(download.first()).toHaveAttribute(
       "href",
-      /\/EdivectWebsite\/downloads\/Edivect-v[\w.-]+\.exe$/,
+      site.release.downloadUrl,
     );
     await expect(page.locator("img[src*=screenshots], a[href*=changelog], header a[href*=github]" )).toHaveCount(0);
     expect(errors).toEqual([]);
@@ -45,18 +46,18 @@ for (const locale of locales) {
 }
 
 test("language switching preserves the equivalent page", async ({ page }) => {
-  await page.goto("/EdivectWebsite/privacy");
+  await page.goto(`${basePath}/privacy`);
   await page.getByRole("navigation", { name: "Language" }).getByRole("link", { name: /SK/ }).click();
-  await expect(page).toHaveURL(/\/EdivectWebsite\/sk\/privacy$/);
+  await expect(page).toHaveURL(new RegExp(`${basePath}/sk/privacy$`));
   await expect(page.locator("html")).toHaveAttribute("lang", "sk");
 
   await page.getByRole("navigation", { name: "Jazyk" }).getByRole("link", { name: /DE/ }).click();
-  await expect(page).toHaveURL(/\/EdivectWebsite\/de\/privacy$/);
+  await expect(page).toHaveURL(new RegExp(`${basePath}/de/privacy$`));
   await expect(page.locator("html")).toHaveAttribute("lang", "de");
 });
 
 test("navigation, FAQ and legal download path work", async ({ page }) => {
-  await page.goto("/EdivectWebsite/");
+  await page.goto(`${basePath}/`);
   await page.locator("header").getByRole("link", { name: "Features" }).click();
   await expect(page).toHaveURL(/#features$/);
   await expect(page.locator("#features")).toBeVisible();
@@ -65,13 +66,13 @@ test("navigation, FAQ and legal download path work", async ({ page }) => {
   await questions.nth(1).click();
   await expect(questions.nth(1)).toHaveAttribute("aria-expanded", "true");
 
-  await page.goto("/EdivectWebsite/terms");
+  await page.goto(`${basePath}/terms`);
   const download = page.locator("header").getByRole("link", { name: "Download" });
-  await expect(download).toHaveAttribute("href", /\/EdivectWebsite\/?#download$/);
+  await expect(download).toHaveAttribute("href", `${basePath}/#download`);
 });
 
 test("unknown routes use the branded 404 page", async ({ page }) => {
-  const response = await page.goto("/EdivectWebsite/missing-page-for-smoke-test");
+  const response = await page.goto(`${basePath}/missing-page-for-smoke-test`);
   expect(response?.status()).toBe(404);
   await expect(page.getByRole("heading", { level: 1, name: "Page not found" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Go to the home page" })).toBeVisible();
@@ -79,11 +80,11 @@ test("unknown routes use the branded 404 page", async ({ page }) => {
 
 test("mobile navigation and legal layout fit a narrow viewport", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  await page.goto("/EdivectWebsite/");
+  await page.goto(`${basePath}/`);
   await page.getByRole("button", { name: "Menu" }).click();
   await expect(page.locator("#mobile-menu").getByRole("link", { name: "Download for Windows" })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
-  await page.goto("/EdivectWebsite/privacy");
+  await page.goto(`${basePath}/privacy`);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

@@ -14,7 +14,8 @@ const assetPath = capture(/publicAssetPath\s*=\s*\n?\s*"([^"]+)"/, "asset path")
 const version = capture(/version:\s*"([^"]+)"/, "version");
 const displayedSize = capture(/size:\s*"([^"]+)"/, "display size");
 const expectedHash = capture(/sha256:\s*"([A-Fa-f0-9]{64})"/, "SHA-256").toUpperCase();
-const file = join("public", ...assetPath.split("/").filter(Boolean));
+const expectedBytes = Number(capture(/sizeBytes:\s*(\d+)/, "exact release size"));
+const file = join("releases", basename(assetPath));
 const stats = statSync(file);
 const actualSize = `${(stats.size / 1024 / 1024).toFixed(1)} MB`;
 const actualHash = await new Promise((resolve, reject) => {
@@ -24,6 +25,7 @@ const actualHash = await new Promise((resolve, reject) => {
 
 const filename = basename(file);
 const failures = [];
+if (stats.size !== expectedBytes) failures.push("exact file size differs from sizeBytes");
 if (actualHash !== expectedHash) failures.push("SHA-256 does not match the executable");
 if (actualSize !== displayedSize) failures.push(`display size is ${displayedSize}, actual is ${actualSize}`);
 if (!filename.includes(`v${version}`)) failures.push("filename does not contain the configured version");
@@ -35,4 +37,17 @@ if (failures.length) {
 } else {
   console.log(`Release verified: ${filename}`);
   console.log(`${stats.size} bytes · ${actualSize} · SHA-256 ${actualHash}`);
+}
+
+if (process.argv.includes("--remote")) {
+  const url = capture(/releaseDownloadUrl\s*=\s*"([^"]+)"/, "public download URL");
+  const response = await fetch(url, { signal: AbortSignal.timeout(120000) });
+  if (!response.ok || !response.body) throw new Error(`Download failed: ${response.status}`);
+  const hash = createHash("sha256");
+  let bytes = 0;
+  for await (const chunk of response.body) { hash.update(chunk); bytes += chunk.length; }
+  if (bytes !== stats.size || hash.digest("hex").toUpperCase() !== expectedHash) {
+    throw new Error("Public R2 download differs from the verified release");
+  }
+  console.log(`Public download verified: ${url} (${bytes} bytes)`);
 }
