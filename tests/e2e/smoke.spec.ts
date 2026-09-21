@@ -68,7 +68,7 @@ test("navigation, FAQ and legal download path work", async ({ page }) => {
 
   await page.goto(`${basePath}/terms`);
   const download = page.locator("header").getByRole("link", { name: "Download" });
-  await expect(download).toHaveAttribute("href", `${basePath}/#download`);
+  await expect(download).toHaveAttribute("href", `${basePath || "/"}#download`);
 });
 
 test("unknown routes use the branded 404 page", async ({ page }) => {

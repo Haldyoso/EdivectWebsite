@@ -159,6 +159,10 @@ incumbent loses 10–0 reads as a strawman.
 
 ## Deployment
 
+Production: **https://edivect.com**, served by Cloudflare Worker `edivect`.
+Downloads are served by R2 at **https://downloads.edivect.com**.
+The GitHub Pages workflow below remains available during migration.
+
 Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 lint → typecheck → `next build` → publish `out/` to GitHub Pages. Live at
 **https://haldyoso.github.io/EdivectWebsite/**.
