@@ -12,6 +12,7 @@
     "test": "playwright test",
     "test:e2e": "playwright test tests/e2e/smoke.spec.ts",
     "test:a11y": "playwright test tests/e2e/accessibility.spec.ts",
+    "test:distribution": "node tools/test-distribution.mjs",
     "check:links": "node tools/check-links.mjs",
     "check:links:external": "node tools/check-links.mjs --external",
     "verify:release": "node tools/verify-release.mjs",

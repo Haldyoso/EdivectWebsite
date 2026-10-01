@@ -20,6 +20,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Leave both repository variables empty until the real Store release is published.
+      # They do not change the portable download or its version.
+      NEXT_PUBLIC_MICROSOFT_STORE_URL: ${{ vars.NEXT_PUBLIC_MICROSOFT_STORE_URL }}
+      NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION: ${{ vars.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION }}
     steps:
       - uses: actions/checkout@v4
 
@@ -34,6 +39,7 @@ jobs:
       # or lint failure should stop the site from shipping, not land on it.
       - run: npm run lint
       - run: npm run typecheck
+      - run: npm run test:distribution
 
       # next.config.ts sets output:"export", so this writes out/ instead of
       # starting a server. basePath comes from lib/site.ts.

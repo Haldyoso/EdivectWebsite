@@ -1,7 +1,8 @@
 # Edivect — official website
 
-Marketing site for **Edivect**, the portable Windows screen-annotation app whose
-annotations stay fully editable. One conversion goal: download one portable EXE; choose the licence mode in the app.
+Marketing site for **Edivect**, the Windows screen-annotation app whose
+annotations stay fully editable. Download choices: Microsoft Store (prepared for
+a future publication) and portable EXE; choose the licence mode in the app.
 Published in English, Slovak and German.
 
 The handoff bundle below still says "Edivect" throughout — that was the working name
@@ -70,6 +71,32 @@ FAQ `Accordion`.
 Production launch notes and operational checklists live in [`docs/`](docs/):
 the readiness audit, licensing decisions, release procedure, custom-domain
 migration, and security/analytics guidance.
+
+## Microsoft Store and portable downloads
+
+The download section has separate Store and portable cards in all three languages.
+Portable remains **1.0.0**, with its existing download URL, size and SHA-256.
+The Store card says it is coming soon and has a disabled button until a real
+published release is configured. No placeholder Product ID or Store version is
+shown to visitors.
+
+After Store publication, configure both values from [`.env.example`](.env.example)
+in `.env.local` for local work, or as GitHub Actions **repository variables**:
+
+- `NEXT_PUBLIC_MICROSOFT_STORE_URL`: the actual canonical product page URL.
+- `NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION`: the product version displayed
+  in the published application, rather than its mapped MSIX package version.
+
+The Pages build workflow passes these variables to the static build. Empty values
+keep the Store option pending; partial or invalid configuration stops the build.
+Store and portable versions are independent, so a newer Store release does not
+require replacing the older portable EXE. Portable metadata and structured data
+still use `site.release`.
+
+Run `npm run test:distribution`, `npm run typecheck` and `npm run lint` to check
+configuration and source changes without opening a browser. See the Slovak
+[distribution guide](docs/distribution-release.sk.md) for activation and publishing.
+The current preparation is local only: no push, Store upload or deployment.
 
 ## Languages
 

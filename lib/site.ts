@@ -18,6 +18,8 @@
  * Empty string on a root domain. Kept here rather than in next.config.ts so the
  * config and the app can't drift apart.
  */
+import { getMicrosoftStoreRelease } from "./distribution";
+
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
 const publicAssetPath = "/downloads/Edivect-v1.0.0.exe";
@@ -32,6 +34,13 @@ export const site = {
   // point at the website repository so visitors never land on a GitHub 404.
   repo: "https://github.com/Haldyoso/EdivectWebsite",
   issuesUrl: "https://github.com/Haldyoso/EdivectWebsite/issues/new",
+  distribution: {
+    publicReleaseRepo: "Haldyoso/EdivectWebsite",
+    microsoftStore: getMicrosoftStoreRelease(
+      process.env.NEXT_PUBLIC_MICROSOFT_STORE_URL,
+      process.env.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION,
+    ),
+  },
   legal: {
     // Author named by the application metadata. Business/address details remain
     // a separate decision before any paid launch.
@@ -40,6 +49,7 @@ export const site = {
     // not the desired long-term contact channel.
     supportEmail: null,
   },
+  // Portable metadata deliberately stays independent of the Store product version.
   release: {
     version: "1.0.0",
     size: "72.7 MB",
