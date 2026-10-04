@@ -1,4 +1,5 @@
 import usageTerms from "@/lib/usage-terms.json";
+import storeUsageTerms from "@/lib/store-usage-terms.json";
 import type { Lang } from "@/lib/i18n";
 
 export type LegalPageKind = "privacy" | "terms";
@@ -31,7 +32,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "How the Edivect website and downloaded application handle personal information, cookies, telemetry and third-party services.",
     intro:
       "Edivect is designed to collect as little information as possible. This policy separates the static website from the Windows application you download.",
-    lastUpdated: "21 September 2026",
+    lastUpdated: "3 October 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Operator",
     ownerPending: "Legal owner details must be added before commercial launch.",
@@ -44,7 +45,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Scope",
         paragraphs: [
-          "This policy applies to the Edivect marketing website and the Edivect application distributed from it. It does not cover websites reached through third-party links.",
+          "This policy applies to the Edivect marketing website and the Windows application distributed as a portable download or through Microsoft Store. It does not cover websites reached through third-party links.",
         ],
       },
       {
@@ -66,15 +67,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
         ],
       },
       {
-        title: "Downloaded application",
+        title: "Local screen, clipboard and OCR processing",
         paragraphs: [
-          "Screenshots, annotations and project files created in Edivect remain on your computer unless you choose to share or move them. The application does not need a network connection for its normal operation.",
+          "When you invoke screen capture, clipboard operations or text recognition, Edivect processes the corresponding content locally on your computer. Open windows and clipboard data may contain personal or confidential information. You decide which content to use and whether to share it. Screen content, projects and OCR results are not sent to the developer.",
+          "The application works offline without user accounts, telemetry or cloud synchronisation. Screenshots, annotations and project files remain on your computer unless you choose to share or move them.",
+        ],
+      },
+      {
+        title: "Local storage and licence state",
+        paragraphs: [
+          "Settings, templates, recovery of unsaved work and diagnostic logs remain in local storage. Store editions use writable user storage outside the installation directory. Diagnostic logs are not automatically transmitted; review their contents before voluntarily sharing them with support.",
+          "The licence mode and trial timing information are stored locally. Current editions protect these records with Windows DPAPI and a redundant local record. Older portable editions may use an earlier local storage format. No payment card or remote account is required for the trial.",
+        ],
+      },
+      {
+        title: "Exports, sharing and deletion",
+        paragraphs: [
+          "Exports are saved to Documents\\Edivect\\Captures, a fallback folder when Documents is unavailable, or a location you choose. Saved projects may include annotations and separate background screenshots. If you choose a folder synchronised by a service such as OneDrive, that service handles synchronisation under your settings and its own privacy policy.",
+          "You manage the sharing and deletion of projects and exports through the application or the file system. Uninstalling the Store application may remove its local profile; exports outside that profile may remain. Some local licence records may persist, so uninstalling does not mean all data is deleted or the trial is reset. Back up important work before uninstalling.",
         ],
       },
       {
         title: "Downloads and external services",
         paragraphs: [
           "The application download is served from Cloudflare R2 at downloads.edivect.com. Links to GitHub, including the repository and issue tracker, take you to a third-party service whose own terms and privacy policy apply.",
+          "For the Store edition, Microsoft Store handles acquisition, updates and related operations under Microsoft's policies. Edivect has no direct access to your Store account data. GitHub Issues support is public: do not post personal or confidential content or screenshots containing sensitive information.",
         ],
       },
       {
@@ -91,7 +108,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Ako web Edivect a stiahnutá aplikácia pracujú s osobnými údajmi, cookies, telemetriou a službami tretích strán.",
     intro:
       "Edivect je navrhnutý tak, aby zhromažďoval čo najmenej údajov. Tieto zásady odlišujú statickú webovú stránku od aplikácie pre Windows, ktorú si stiahnete.",
-    lastUpdated: "21. septembra 2026",
+    lastUpdated: "3. októbra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Prevádzkovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
@@ -104,7 +121,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Rozsah",
         paragraphs: [
-          "Tieto zásady sa vzťahujú na marketingový web Edivect a aplikáciu Edivect, ktorá sa z neho distribuuje. Nevzťahujú sa na weby otvorené cez odkazy tretích strán.",
+          "Tieto zásady sa vzťahujú na marketingový web Edivect a aplikáciu pre Windows distribuovanú ako portable download alebo cez Microsoft Store. Nevzťahujú sa na weby otvorené cez odkazy tretích strán.",
         ],
       },
       {
@@ -126,15 +143,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
         ],
       },
       {
-        title: "Stiahnutá aplikácia",
+        title: "Lokálne spracovanie obrazovky, schránky a OCR",
         paragraphs: [
-          "Snímky obrazovky, anotácie a projektové súbory vytvorené v Edivectu zostávajú vo vašom počítači, pokiaľ sa ich sami nerozhodnete zdieľať alebo presunúť. Aplikácia na bežnú prevádzku nepotrebuje sieťové pripojenie.",
+          "Keď vyvoláte snímanie obrazovky, prácu so schránkou alebo rozpoznávanie textu, Edivect spracuje príslušný obsah lokálne na vašom počítači. Otvorené okná a schránka môžu obsahovať osobné alebo dôverné údaje. Vy rozhodujete, ktorý obsah použijete a či ho budete zdieľať. Obsah obrazovky, projekty ani výsledky OCR sa neposielajú vývojárovi.",
+          "Aplikácia pracuje offline bez používateľských účtov, telemetrie a cloudovej synchronizácie. Snímky, anotácie a projektové súbory zostávajú vo vašom počítači, pokiaľ sa ich sami nerozhodnete zdieľať alebo presunúť.",
+        ],
+      },
+      {
+        title: "Lokálne úložisko a licenčný stav",
+        paragraphs: [
+          "Nastavenia, šablóny, obnova neuloženej práce a diagnostické logy zostávajú v lokálnom úložisku. Store verzia používa zapisovateľné používateľské úložisko mimo inštalačného priečinka. Logy sa neodosielajú automaticky; pred dobrovoľným zdieľaním s podporou skontrolujte ich obsah.",
+          "Licenčný režim a časové údaje trialu sa ukladajú lokálne. Aktuálne vydania chránia tieto záznamy pomocou Windows DPAPI a záložného lokálneho záznamu. Staršie portable vydania môžu používať skorší formát lokálneho úložiska. Trial nevyžaduje platobnú kartu ani vzdialený účet.",
+        ],
+      },
+      {
+        title: "Exporty, zdieľanie a mazanie",
+        paragraphs: [
+          "Exporty sa ukladajú do Dokumenty\\Edivect\\Captures, do náhradného priečinka pri nedostupných Dokumentoch alebo do vami zvoleného umiestnenia. Projekty môžu obsahovať anotácie a samostatné snímky pozadia. Ak zvolíte priečinok synchronizovaný napríklad cez OneDrive, synchronizáciu vykonáva daná služba podľa vašich nastavení a jej vlastných zásad.",
+          "Zdieľanie a mazanie projektov a exportov spravujete vy cez aplikáciu alebo súborový systém. Odinštalovanie Store aplikácie môže odstrániť jej lokálny profil; exporty mimo profilu môžu zostať. Niektoré miestne licenčné záznamy môžu pretrvať, preto odinštalovanie neznamená vymazanie všetkých údajov ani obnovenie trialu. Pred odinštalovaním si zálohujte dôležitú prácu.",
         ],
       },
       {
         title: "Sťahovanie a externé služby",
         paragraphs: [
           "Aplikácia sa sťahuje z úložiska Cloudflare R2 na downloads.edivect.com. Odkazy na GitHub, vrátane repozitára a hlásenia chýb, vedú na službu tretej strany, pre ktorú platia jej vlastné podmienky a zásady súkromia.",
+          "Pri Store verzii zabezpečuje Microsoft Store získanie aplikácie, aktualizácie a súvisiace operácie podľa zásad Microsoftu. Edivect nemá priamy prístup k údajom vášho Store účtu. Podpora cez GitHub Issues je verejná: nevkladajte osobný ani dôverný obsah alebo snímky s citlivými údajmi.",
         ],
       },
       {
@@ -151,7 +184,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Wie die Edivect-Website und die heruntergeladene Anwendung mit personenbezogenen Daten, Cookies, Telemetrie und Drittanbietern umgehen.",
     intro:
       "Edivect ist darauf ausgelegt, so wenige Daten wie möglich zu erfassen. Diese Erklärung unterscheidet zwischen der statischen Website und der heruntergeladenen Windows-Anwendung.",
-    lastUpdated: "21. September 2026",
+    lastUpdated: "3. Oktober 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Betreiber",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
@@ -164,7 +197,7 @@ const privacy: Record<Lang, LegalPageCopy> = {
       {
         title: "Geltungsbereich",
         paragraphs: [
-          "Diese Erklärung gilt für die Edivect-Marketingwebsite und die darüber bereitgestellte Edivect-Anwendung. Sie gilt nicht für Websites, die über Links zu Drittanbietern aufgerufen werden.",
+          "Diese Erklärung gilt für die Edivect-Marketingwebsite und die Windows-Anwendung als portablen Download oder aus dem Microsoft Store. Sie gilt nicht für Websites, die über Links zu Drittanbietern aufgerufen werden.",
         ],
       },
       {
@@ -186,15 +219,31 @@ const privacy: Record<Lang, LegalPageCopy> = {
         ],
       },
       {
-        title: "Heruntergeladene Anwendung",
+        title: "Lokale Verarbeitung von Bildschirm, Zwischenablage und OCR",
         paragraphs: [
-          "Screenshots, Anmerkungen und Projektdateien, die Sie in Edivect erstellen, bleiben auf Ihrem Computer, sofern Sie sie nicht selbst teilen oder verschieben. Für den normalen Betrieb benötigt die Anwendung keine Netzwerkverbindung.",
+          "Wenn Sie Bildschirmaufnahmen, Zwischenablagefunktionen oder Texterkennung aufrufen, verarbeitet Edivect die entsprechenden Inhalte lokal auf Ihrem Computer. Geöffnete Fenster und die Zwischenablage können persönliche oder vertrauliche Daten enthalten. Sie entscheiden, welche Inhalte Sie verwenden und ob Sie sie teilen. Bildschirminhalte, Projekte und OCR-Ergebnisse werden nicht an den Entwickler gesendet.",
+          "Die Anwendung funktioniert offline ohne Benutzerkonten, Telemetrie oder Cloud-Synchronisierung. Screenshots, Anmerkungen und Projektdateien bleiben auf Ihrem Computer, sofern Sie sie nicht selbst teilen oder verschieben.",
+        ],
+      },
+      {
+        title: "Lokaler Speicher und Lizenzstatus",
+        paragraphs: [
+          "Einstellungen, Vorlagen, Wiederherstellung ungespeicherter Arbeit und Diagnoseprotokolle bleiben im lokalen Speicher. Store-Versionen nutzen beschreibbaren Benutzerspeicher außerhalb des Installationsverzeichnisses. Protokolle werden nicht automatisch übertragen; prüfen Sie ihren Inhalt, bevor Sie sie freiwillig mit dem Support teilen.",
+          "Lizenzmodus und Zeitangaben zum Test werden lokal gespeichert. Aktuelle Versionen schützen diese Daten mit Windows DPAPI und einem zusätzlichen lokalen Datensatz. Ältere portable Versionen können ein früheres lokales Speicherformat verwenden. Der Test erfordert weder eine Zahlungskarte noch ein Onlinekonto.",
+        ],
+      },
+      {
+        title: "Exporte, Teilen und Löschen",
+        paragraphs: [
+          "Exporte werden in Dokumente\\Edivect\\Captures, bei nicht verfügbaren Dokumenten in einem Ersatzordner oder an einem von Ihnen gewählten Ort gespeichert. Projekte können Anmerkungen und separate Hintergrundbilder enthalten. Bei einem synchronisierten Ordner, etwa in OneDrive, übernimmt der jeweilige Dienst die Synchronisierung nach Ihren Einstellungen und seinen Datenschutzbestimmungen.",
+          "Sie verwalten das Teilen und Löschen von Projekten und Exporten über die Anwendung oder das Dateisystem. Eine Deinstallation der Store-Anwendung kann das lokale Profil entfernen; Exporte außerhalb des Profils können erhalten bleiben. Manche lokalen Lizenzdaten können bestehen bleiben. Die Deinstallation bedeutet daher weder die Löschung aller Daten noch einen Neustart des Tests. Sichern Sie wichtige Arbeit vor der Deinstallation.",
         ],
       },
       {
         title: "Downloads und externe Dienste",
         paragraphs: [
           "Der Anwendungsdownload wird über Cloudflare R2 unter downloads.edivect.com bereitgestellt. Links zu GitHub, einschließlich Repository und Fehlerverwaltung, führen zu einem Drittanbieter, für den dessen eigene Bedingungen und Datenschutzerklärung gelten.",
+          "Bei der Store-Version übernimmt Microsoft Store Bezug, Updates und zugehörige Vorgänge nach Microsofts Bestimmungen. Edivect hat keinen direkten Zugriff auf Ihre Store-Kontodaten. GitHub Issues ist öffentlich: Veröffentlichen Sie dort keine persönlichen oder vertraulichen Inhalte oder Screenshots mit sensiblen Daten.",
         ],
       },
       {
@@ -213,7 +262,7 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Terms governing use of the Edivect website and the software download made available through it.",
     intro: "Terms for the website, Edivect Personal and the 30-day Commercial Trial.",
-    lastUpdated: "12 September 2026",
+    lastUpdated: "3 October 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Provider",
     ownerPending: "Legal owner details must be added before commercial launch.",
@@ -239,16 +288,18 @@ const terms: Record<Lang, LegalPageCopy> = {
         title: "Software download and integrity",
         paragraphs: [
           "Edivect is currently distributed as a portable Windows executable. Verify the published filename, version, file size and SHA-256 before running it. Do not run a copy whose checksum does not match the value shown on the official download page.",
+          "The Microsoft Store edition is a separate distribution channel. Obtain it through the Store link when it is available on the download page. Its published version may differ from the portable version; each channel shows its own version. These Store licence terms describe the prepared Store edition and do not replace the terms included in an older portable download.",
         ],
       },
-      { title: "Personal / Commercial Trial", paragraphs: usageTerms.en.split("\n\n") },
+      { title: "Personal / Commercial Trial — portable download", paragraphs: usageTerms.en.split("\n\n") },
+      { title: "Personal / Commercial Trial — Microsoft Store edition", paragraphs: storeUsageTerms.en.split("\n\n") },
       {
         title: "Intellectual property",
         paragraphs: [
           "Edivect, its website content, branding and software remain the property of their respective rights holders. No ownership is transferred by viewing the website or downloading a build. Third-party names and trademarks belong to their respective owners.",
         ],
       },
-      { title: "Availability and changes", paragraphs: ["Personal has no time limit. Commercial Trial lasts 30 days from its first activation; opening, saving and exporting existing work remain available after expiry. Updates and trial extensions are not guaranteed."] },
+      { title: "Availability and changes", paragraphs: ["Personal has no time limit. Commercial Trial lasts 30 days from its first activation; opening, saving and exporting existing work remain available after expiry. The prepared Store edition offers the one-time extension described above. Older portable editions follow their included licence terms. Updates are not guaranteed."] },
       {
         title: "No warranty and limitation of liability",
         paragraphs: [
@@ -268,7 +319,7 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Podmienky používania webu Edivect a softvéru, ktorý je prostredníctvom neho dostupný na stiahnutie.",
     intro: "Podmienky webu, Edivect Personal a 30-dňového Commercial Trial.",
-    lastUpdated: "12. septembra 2026",
+    lastUpdated: "3. októbra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Poskytovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
@@ -294,16 +345,18 @@ const terms: Record<Lang, LegalPageCopy> = {
         title: "Stiahnutie a integrita softvéru",
         paragraphs: [
           "Edivect sa momentálne distribuuje ako prenosný spustiteľný súbor pre Windows. Pred spustením overte zverejnený názov súboru, verziu, veľkosť a SHA-256. Nespúšťajte kópiu, ktorej kontrolný súčet sa nezhoduje s hodnotou na oficiálnej stránke sťahovania.",
+          "Verzia z Microsoft Store je samostatný distribučný kanál. Získajte ju cez Store odkaz, keď bude dostupný na stránke sťahovania. Jej vydaná verzia sa môže líšiť od portable verzie; každý kanál uvádza vlastnú verziu. Tieto Store podmienky opisujú pripravovanú Store verziu a nenahrádzajú podmienky vložené do staršieho portable downloadu.",
         ],
       },
-      { title: "Personal / Commercial Trial", paragraphs: usageTerms.sk.split("\n\n") },
+      { title: "Personal / Commercial Trial — portable download", paragraphs: usageTerms.sk.split("\n\n") },
+      { title: "Personal / Commercial Trial — verzia z Microsoft Store", paragraphs: storeUsageTerms.sk.split("\n\n") },
       {
         title: "Duševné vlastníctvo",
         paragraphs: [
           "Edivect, obsah webu, značka a softvér zostávajú vlastníctvom príslušných držiteľov práv. Zobrazením webu ani stiahnutím zostavenia sa vlastníctvo neprevádza. Názvy a ochranné známky tretích strán patria ich vlastníkom.",
         ],
       },
-      { title: "Dostupnos\u0165 a zmeny", paragraphs: ["Personal nemá časový limit. Commercial Trial trvá 30 dní od prvej aktivácie; otvorenie, uloženie a export existujúcej práce zostávajú dostupné aj po vypršaní. Aktualizácie a predĺženia trialu nie sú zaručené."] },
+      { title: "Dostupnos\u0165 a zmeny", paragraphs: ["Personal nemá časový limit. Commercial Trial trvá 30 dní od prvej aktivácie; otvorenie, uloženie a export existujúcej práce zostávajú dostupné aj po vypršaní. Pripravovaná Store verzia ponúka jednorazové predĺženie opísané vyššie. Staršie portable vydania sa riadia vloženými podmienkami. Aktualizácie nie sú zaručené."] },
       {
         title: "Bez záruky a obmedzenie zodpovednosti",
         paragraphs: [
@@ -323,7 +376,7 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Bedingungen für die Nutzung der Edivect-Website und des darüber bereitgestellten Softwaredownloads.",
     intro: "Bedingungen für die Website, Edivect Personal und den 30-tägigen Commercial Trial.",
-    lastUpdated: "12. September 2026",
+    lastUpdated: "3. Oktober 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Anbieter",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
@@ -349,16 +402,18 @@ const terms: Record<Lang, LegalPageCopy> = {
         title: "Softwaredownload und Integrität",
         paragraphs: [
           "Edivect wird derzeit als portable Windows-Programmdatei bereitgestellt. Prüfen Sie vor dem Start den veröffentlichten Dateinamen, die Version, Dateigröße und SHA-256-Prüfsumme. Führen Sie keine Kopie aus, deren Prüfsumme nicht mit der offiziellen Downloadseite übereinstimmt.",
+          "Die Microsoft-Store-Version ist ein eigener Vertriebskanal. Beziehen Sie sie über den Store-Link, sobald dieser auf der Downloadseite verfügbar ist. Ihre veröffentlichte Version kann von der portablen Version abweichen; jeder Kanal zeigt seine eigene Version. Diese Store-Lizenzbedingungen beschreiben die vorbereitete Store-Version und ersetzen nicht die Bedingungen eines älteren portablen Downloads.",
         ],
       },
-      { title: "Personal / Commercial Trial", paragraphs: usageTerms.de.split("\n\n") },
+      { title: "Personal / Commercial Trial — portabler Download", paragraphs: usageTerms.de.split("\n\n") },
+      { title: "Personal / Commercial Trial — Microsoft-Store-Version", paragraphs: storeUsageTerms.de.split("\n\n") },
       {
         title: "Geistiges Eigentum",
         paragraphs: [
           "Edivect, Website-Inhalte, Marke und Software bleiben Eigentum der jeweiligen Rechteinhaber. Durch den Besuch der Website oder den Download eines Builds wird kein Eigentum übertragen. Namen und Marken Dritter gehören ihren jeweiligen Inhabern.",
         ],
       },
-      { title: "Verf\u00fcgbarkeit und \u00c4nderungen", paragraphs: ["Personal hat kein Zeitlimit. Commercial Trial läuft 30 Tage ab erster Aktivierung; vorhandene Arbeit bleibt danach zum Öffnen, Speichern und Export verfügbar. Updates und Testverlängerungen sind nicht garantiert."] },
+      { title: "Verf\u00fcgbarkeit und \u00c4nderungen", paragraphs: ["Personal hat kein Zeitlimit. Commercial Trial läuft 30 Tage ab erster Aktivierung; vorhandene Arbeit bleibt danach zum Öffnen, Speichern und Export verfügbar. Die vorbereitete Store-Version bietet die oben beschriebene einmalige Verlängerung. Ältere portable Versionen folgen ihren enthaltenen Lizenzbedingungen. Updates sind nicht garantiert."] },
       {
         title: "Keine Gewährleistung und Haftungsbegrenzung",
         paragraphs: [
