@@ -18,7 +18,7 @@
  * Empty string on a root domain. Kept here rather than in next.config.ts so the
  * config and the app can't drift apart.
  */
-import { getMicrosoftStoreRelease } from "./distribution";
+import { getMicrosoftStoreRelease, publishedMicrosoftStoreRelease } from "./distribution";
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/EdivectWebsite";
 
@@ -37,8 +37,8 @@ export const site = {
   distribution: {
     publicReleaseRepo: "Haldyoso/EdivectWebsite",
     microsoftStore: getMicrosoftStoreRelease(
-      process.env.NEXT_PUBLIC_MICROSOFT_STORE_URL,
-      process.env.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION,
+      process.env.NEXT_PUBLIC_MICROSOFT_STORE_URL || publishedMicrosoftStoreRelease.url,
+      process.env.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION || publishedMicrosoftStoreRelease.productVersion,
     ),
   },
   legal: {

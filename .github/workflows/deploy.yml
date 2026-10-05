@@ -21,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Leave both repository variables empty until the real Store release is published.
+      # Optional overrides; empty variables use the published Store release in source.
       # They do not change the portable download or its version.
       NEXT_PUBLIC_MICROSOFT_STORE_URL: ${{ vars.NEXT_PUBLIC_MICROSOFT_STORE_URL }}
       NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION: ${{ vars.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION }}

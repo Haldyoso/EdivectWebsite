@@ -1,4 +1,10 @@
-/** Enable only after the real product page has been published and approved. */
+/** First published Store release; independent of the portable release. */
+export const publishedMicrosoftStoreRelease = {
+  url: "https://apps.microsoft.com/detail/9N9W449D59G7",
+  productVersion: "1.0.0.3",
+} as const;
+
+/** Accept only a canonical Microsoft Store product page. */
 export function validateMicrosoftStoreUrl(value: string | undefined): string | null {
   if (!value?.trim()) return null;
   if (!/^https:\/\/apps\.microsoft\.com\/detail\/[a-zA-Z0-9]{12}$/.test(value)) {

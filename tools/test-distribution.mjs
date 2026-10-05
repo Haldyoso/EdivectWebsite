@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { getMicrosoftStoreRelease, validateMicrosoftStoreUrl, distributionCopy } from "../lib/distribution.ts";
+import { getMicrosoftStoreRelease, validateMicrosoftStoreUrl, distributionCopy, publishedMicrosoftStoreRelease } from "../lib/distribution.ts";
 
 assert.equal(validateMicrosoftStoreUrl(undefined), null);
 assert.equal(validateMicrosoftStoreUrl(""), null);
@@ -23,4 +23,12 @@ assert.deepEqual(getMicrosoftStoreRelease(testUrl, "1.1.0"), { url: testUrl, pro
 for (const version of ["TODO", "1.0", "1.0.0.-1", "1.0.0.65536", "1.0.0.1.0", "1.0.0-beta"]) {
   assert.throws(() => getMicrosoftStoreRelease(testUrl, version), /published application version/);
 }
-console.log("Distribution configuration: PASS (25 assertions; no browser or deployment).");
+assert.deepEqual(publishedMicrosoftStoreRelease, {
+  url: "https://apps.microsoft.com/detail/9N9W449D59G7",
+  productVersion: "1.0.0.3",
+});
+assert.deepEqual(
+  getMicrosoftStoreRelease(publishedMicrosoftStoreRelease.url, publishedMicrosoftStoreRelease.productVersion),
+  publishedMicrosoftStoreRelease,
+);
+console.log("Distribution configuration: PASS (including the published Store release; no browser or deployment).");

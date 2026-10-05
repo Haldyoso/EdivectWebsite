@@ -30,6 +30,15 @@ for (const locale of locales) {
       "href",
       site.release.downloadUrl,
     );
+    const store = site.distribution.microsoftStore;
+    if (store) {
+      const storeLink = page.locator(`#download a[href="${store.url}"]`);
+      await expect(storeLink).toHaveCount(1);
+      await expect(storeLink).toBeVisible();
+      await expect(storeLink).not.toHaveAttribute("aria-disabled", "true");
+      await expect(page.locator("#store-heading").locator("..")).toContainText(store.productVersion);
+      await expect(page.locator("#store-pending")).toHaveCount(0);
+    }
     await expect(page.locator("img[src*=screenshots], a[href*=changelog], header a[href*=github]" )).toHaveCount(0);
     expect(errors).toEqual([]);
   });
