@@ -11,6 +11,14 @@ Aktuálny spoločný download v `lib/site.ts` je
 zostávajú zachované až do samostatne schváleného publikovania novej verzie.
 Lokálne dve možnosti distribúcie jasne uvádzajú, že Store sa ešte pripravuje.
 
+Aktualizácia 3. októbra 2026: lokálne stránky súkromia EN/SK/DE pokrývajú aj
+Store aplikáciu a podmienky odlišujú existujúci portable download od aktuálnej
+pripravovanej Store verzie. Store podmienky sú prevzaté z aplikácie 1.0.0.3 do
+`lib/store-usage-terms.json`; portable `lib/usage-terms.json` zostáva zachovaný.
+Tieto úpravy ešte nie sú na verejnom webe. Pred certifikáciou treba ich nasadenie
+samostatne schváliť a overiť verejné privacy/terms URL. Finálne licenčné texty
+vždy porovnajte s konkrétnym balíkom každého kanála.
+
 ## Konkrétne prílohy a URL návrh
 
 Pre produkt `1.0.0.1`:
