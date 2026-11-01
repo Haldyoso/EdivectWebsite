@@ -1,11 +1,8 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+"use client";
+
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+
 import { Reveal } from "@/components/motion/reveal";
-import { SectionHeading } from "@/components/ui/section-heading";
 import type { Faq as FaqItem, HeadingCopy } from "@/types";
 
 interface FaqProps {
@@ -13,31 +10,40 @@ interface FaqProps {
   faqs: FaqItem[];
 }
 
+/**
+ * Questions as filled tiles; the open one turns to paper. Answers stay in the
+ * server HTML so they match the FAQPage JSON-LD word for word.
+ */
 export function Faq({ heading, faqs }: FaqProps) {
   return (
-    <section id="faq" className="mx-auto max-w-[820px] scroll-mt-16 px-4 py-24 md:px-6">
-      <SectionHeading {...heading} className="mb-12" />
+    <section id="faq" aria-labelledby="faq-title" className="section wrap">
+      <div className="faq">
+        <header>
+          <Reveal>
+            <h2 id="faq-title" className="h-section">
+              {heading.title}
+            </h2>
+          </Reveal>
+        </header>
 
-      <Reveal>
-        {/*
-         * Answers are server-rendered inside the panels, so they stay indexable
-         * — and match the FAQPage JSON-LD emitted alongside this page word for
-         * word, which is what Google requires of rich-result markup.
-         */}
-        <Accordion
-          type="single"
-          collapsible
-          defaultValue="faq-0"
-          className="overflow-hidden rounded-lg border border-border bg-card"
-        >
+        <AccordionPrimitive.Root type="single" collapsible defaultValue="faq-0" className="faq-list">
           {faqs.map((faq, index) => (
-            <AccordionItem key={faq.question} value={`faq-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
-            </AccordionItem>
+            <AccordionPrimitive.Item key={faq.question} value={`faq-${index}`} className="faq-item">
+              <AccordionPrimitive.Header asChild>
+                <h3>
+                  <AccordionPrimitive.Trigger className="faq-trigger">
+                    {faq.question}
+                    <span className="faq-sign" aria-hidden="true" />
+                  </AccordionPrimitive.Trigger>
+                </h3>
+              </AccordionPrimitive.Header>
+              <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                <p className="faq-answer">{faq.answer}</p>
+              </AccordionPrimitive.Content>
+            </AccordionPrimitive.Item>
           ))}
-        </Accordion>
-      </Reveal>
+        </AccordionPrimitive.Root>
+      </div>
     </section>
   );
 }

@@ -7,6 +7,52 @@ import type { Copy } from "@/types";
  * rather than literal renderings of the English.
  */
 export const de: Copy = {
+  demo: {
+    regionLabel: "Interaktive Demo",
+    canvasLabel: "Zeichenfläche mit synthetischem Beispiel",
+    sampleLabel: "Synthetisches Beispiel",
+    note: "Synthetisches Beispiel. Zeichnen Sie darauf, wählen Sie dann eine Markierung aus und ändern Sie sie.",
+    keyboardHelp: "Tasten: V Auswählen, A Pfeil, L Linie, R Rechteck, N Marker, D Bemaßung. Enter fügt ein Objekt ein. Pfeiltasten verschieben die Auswahl, mit Umschalt um 10 px. + und − ändern die Stärke. Entf löscht sie, Strg+Z macht rückgängig, Esc hebt die Auswahl auf.",
+    panelLabel: "Werkzeugleiste der Demo",
+    toolsLabel: "Werkzeuge",
+    tools: {
+      select: "Auswählen",
+      arrow: "Pfeil",
+      line: "Linie",
+      rectangle: "Rechteck",
+      marker: "Marker",
+      dimension: "Bemaßung",
+    },
+    hints: {
+      select: "Strg+Ziehen = Kopie · Alt+Klick = Stilpipette",
+      line: "Umschalt = 5° · Alt = ohne Fang · Ziffern = Länge",
+      rectangle: "Umschalt = Quadrat · Strg = Füllung · Rad = Ecken",
+      marker: "Rad ändert die Zahl · Rechtsklick = 1,2,3 / a,b,c",
+      dimension: "2 Klicks · Abstand ziehen · 3. Klick setzt",
+    },
+    color: "Farbe",
+    colors: {
+      red: "Rot",
+      yellow: "Gelb",
+      green: "Grün",
+      cyan: "Türkis",
+      purple: "Violett",
+      magenta: "Magenta",
+    },
+    width: "Stärke",
+    thicker: "Dickere Linie",
+    thinner: "Dünnere Linie",
+    actions: "Aktionen",
+    undo: "Rückgängig",
+    redo: "Wiederholen",
+    duplicate: "Duplizieren",
+    remove: "Auswahl löschen",
+    reset: "Beispiel zurücksetzen",
+    layers: "Ebenen",
+    noObjects: "Keine Objekte",
+    selected: "ausgewählt",
+    wordmarkLabel: "Edivect-Schriftzug als bearbeitbares Objekt. Größe per Ziehen am orangefarbenen Griff oder mit den Pfeiltasten ändern.",
+  },
   meta: {
     tagline: "Direkt auf den Bildschirm zeichnen. Alles später bearbeiten.",
     description:

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction A — Inspection Report (sketch)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canary:#f6dc3c; --canary-deep:#e9c81c; --pink:#f4a3b8; --white:#fbfbf7;
+    --ink:#0f5a47; --ink-soft:#3f7f6d; --rule:#0f5a4766;
+    --red:#d42a2a; --green:#18884a; --violet:#5b3fb5; --blue:#1f6fe0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--pink);font-family:Archivo,sans-serif;color:var(--ink)}
+  .sheet{position:absolute;inset:0 0 34px 0;background:var(--canary);
+    background-image:repeating-linear-gradient(0deg,transparent 0 27px,#0f5a4714 27px 28px);}
+  .perf{position:absolute;left:0;right:0;bottom:34px;height:10px;
+    background:radial-gradient(circle at 6px 10px,var(--pink) 3.2px,transparent 3.6px) 0 0/14px 10px;}
+  .copy-tag{position:absolute;bottom:9px;left:48px;font:700 12px/1 Archivo;letter-spacing:.14em;color:#7a2440}
+  header{display:grid;grid-template-columns:330px 1fr auto;border-bottom:3px solid var(--ink);height:76px;margin:0 48px}
+  .brand{display:flex;align-items:center;gap:12px;border-right:1.5px solid var(--ink);font:900 30px/1 Archivo;font-stretch:72%;letter-spacing:.02em}
+  .brand small{display:block;font:600 11px/1.2 Archivo;font-stretch:100%;letter-spacing:.16em;opacity:.8}
+  nav{display:flex}
+  nav a{display:flex;flex-direction:column;justify-content:center;padding:0 22px;border-right:1px solid var(--rule);text-decoration:none;color:var(--ink);font:700 17px/1 Archivo;font-stretch:85%}
+  nav a i{font:600 10px/1 Archivo;font-style:normal;letter-spacing:.16em;opacity:.7;margin-bottom:6px}
+  .langs{display:flex;align-items:center;gap:16px;padding-left:22px;font:700 14px Archivo}
+  .box{display:inline-grid;place-items:center;width:18px;height:18px;border:1.5px solid var(--ink);margin-right:6px;font:700 14px 'Courier Prime'}
+  main{display:grid;grid-template-columns:1fr 470px;gap:0;margin:0 48px;height:calc(100% - 76px - 44px)}
+  .left{border-right:3px solid var(--ink);padding:26px 34px 0 0;display:flex;flex-direction:column}
+  .lbl{font:700 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+  h1{font:900 86px/.9 Archivo;font-stretch:66%;letter-spacing:-.005em;margin-top:10px;text-transform:uppercase}
+  h1 em{font-style:normal;color:var(--red)}
+  .typed{font:400 19px/1.45 'Courier Prime';color:#14261f;margin-top:16px;max-width:640px}
+  .field{position:relative;margin-top:22px;flex:1;border:2px solid var(--ink);background:var(--white);display:grid;grid-template-columns:1fr 210px;min-height:0}
+  .field .cap{position:absolute;top:-1px;left:-1px;background:var(--ink);color:var(--canary);font:700 11px/1 Archivo;letter-spacing:.16em;padding:6px 10px}
+  .draw{position:relative;border-right:1.5px solid var(--rule);
+    background-image:linear-gradient(#0f5a470f 1px,transparent 1px),linear-gradient(90deg,#0f5a470f 1px,transparent 1px);background-size:20px 20px}
+  .draw svg{position:absolute;inset:0;width:100%;height:100%}
+  .synthetic{position:absolute;right:10px;bottom:8px;font:600 10px Archivo;letter-spacing:.14em;color:var(--ink-soft)}
+  .log{padding:34px 14px 12px;font:400 14px/1.3 'Courier Prime';color:#14261f}
+  .log div{display:grid;grid-template-columns:24px 1fr;gap:6px;padding:8px 0;border-bottom:1px dashed var(--rule)}
+  .log b{font:700 12px Archivo;letter-spacing:.1em;color:var(--ink)}
+  .log .now{color:var(--blue)}
+  .right{padding:26px 0 0 30px;display:flex;flex-direction:column}
+  .disp{border:2px solid var(--ink);background:var(--white);margin-top:10px}
+  .disp .row{display:grid;grid-template-columns:1fr;padding:16px 18px;border-bottom:1.5px solid var(--ink)}
+  .disp .row:last-child{border-bottom:0}
+  .disp h2{font:800 25px/1 Archivo;font-stretch:80%;margin:6px 0 6px}
+  .disp p{font:400 14px/1.35 'Courier Prime';color:#14261f}
+  .btn{margin-top:12px;display:flex;align-items:center;justify-content:center;gap:10px;height:52px;background:var(--ink);color:var(--canary);font:800 18px Archivo;font-stretch:85%;letter-spacing:.02em;text-decoration:none;border:2px solid var(--ink)}
+  .meta{margin-top:8px;font:400 13px 'Courier Prime';color:#14261f}
+  .lic{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink)}
+  .lic div{padding:12px 14px;font:400 13.5px/1.35 'Courier Prime';color:#14261f}
+  .lic div+div{border-left:1.5px solid var(--ink)}
+  .lic b{display:block;font:800 16px Archivo;font-stretch:85%;color:var(--ink);margin-bottom:4px}
+  .stamp{position:absolute;left:700px;top:448px;transform:rotate(-9deg);border:5px solid var(--violet);color:var(--violet);padding:10px 18px 8px;font:900 40px/1 Archivo;font-stretch:70%;letter-spacing:.08em;mix-blend-mode:multiply;opacity:.88;border-radius:6px}
+  .stamp small{display:block;font:700 12px/1.2 Archivo;letter-spacing:.2em;font-stretch:100%}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="3" y="3" width="28" height="28" fill="none" stroke="#0f5a47" stroke-width="3"/><path d="M9 25 L24 10 M24 10 h-8 M24 10 v8" stroke="#d42a2a" stroke-width="3" fill="none"/></svg><div>EDIVECT<small>SCREEN ANNOTATION · WINDOWS 10/11</small></div></div>
+    <nav><a href="#"><i>§1</i>Features</a><a href="#"><i>§2</i>How it works</a><a href="#"><i>§3</i>Compare</a><a href="#"><i>§4</i>FAQ</a><a href="#"><i>§5</i>Download</a></nav>
+    <div class="langs"><span><span class="box">✕</span>EN</span><span><span class="box"></span>SK</span><span><span class="box"></span>DE</span></div>
+  </header>
+  <main>
+    <section class="left">
+      <span class="lbl">Item 01 — What it does</span>
+      <h1>Draw directly on your screen.<br><em>Edit everything later.</em></h1>
+      <p class="typed">Every arrow, callout and measurement stays a vector object. Select it, move it, restyle it — hours later. Nothing is flattened until you export.</p>
+      <div class="field">
+        <span class="cap">ITEM 02 — TRY IT: DRAW AN ARROW, THEN SELECT IT</span>
+        <div class="draw">
+          <svg viewBox="0 0 640 330" preserveAspectRatio="xMidYMid meet">
+            <g fill="none" stroke="#0f5a47" stroke-width="2">
+              <rect x="120" y="70" width="330" height="190"/>
+              <circle cx="220" cy="165" r="44"/><circle cx="220" cy="165" r="22" stroke-dasharray="6 4"/>
+              <rect x="320" y="120" width="90" height="90" rx="10"/>
+              <path d="M100 165 H470 M220 50 V280" stroke-dasharray="14 4 3 4" stroke-width="1"/>
+            </g>
+            <g stroke="#d42a2a" stroke-width="5" fill="#d42a2a"><path d="M560 60 L268 140" fill="none"/><path d="M262 142 L290 122 L292 148 Z"/></g>
+            <g fill="#fff" stroke="#1f6fe0" stroke-width="2"><rect x="255" y="52" width="315" height="100" fill="none" stroke-dasharray="5 4"/>
+              <rect x="249" y="46" width="12" height="12"/><rect x="564" y="46" width="12" height="12"/><rect x="249" y="146" width="12" height="12"/><rect x="564" y="146" width="12" height="12"/><circle cx="412" cy="28" r="7"/></g>
+            <g font-family="Archivo" font-weight="800" font-size="20"><circle cx="560" cy="250" r="20" fill="none" stroke="#d42a2a" stroke-width="3"/><text x="553" y="257" fill="#d42a2a">1</text></g>
+          </svg>
+          <span class="synthetic">DEMO DRAWING — SYNTHETIC</span>
+        </div>
+        <div class="log">
+          <div><b>A</b><span>Arrow drawn</span></div>
+          <div><b>B</b><span class="now">Selected · 8 handles</span></div>
+          <div><b>C</b><span>Colour → red</span></div>
+          <div><b>D</b><span>Moved 40 px</span></div>
+          <div><b>E</b><span>Still an object ✓</span></div>
+        </div>
+      </div>
+    </section>
+    <aside class="right">
+      <span class="lbl">Item 03 — Release · choose a channel</span>
+      <div class="disp">
+        <div class="row"><span class="lbl">Channel A</span><h2>Microsoft Store</h2><p>Install and receive updates through Microsoft Store.</p><a class="btn" href="#">⊞ Get from Microsoft Store</a><span class="meta">Version 1.0.0.3</span></div>
+        <div class="row"><span class="lbl">Channel B</span><h2>Portable EXE</h2><p>Standalone EXE without installation.</p><a class="btn" href="#">↓ Download portable EXE</a><span class="meta">Version 1.0.0 · 72.7 MB · SHA-256 1E9E57FE…A25FCB</span></div>
+      </div>
+      <div class="lic"><div><b>Personal</b>All features, no time limit. Private use.</div><div><b>Commercial Trial</b>All features for 30 days at work.</div></div>
+    </aside>
+  </main>
+  <div class="stamp"><small>OBJECT STATUS</small>EDITABLE</div>
+</div>
+<div class="perf"></div>
+<span class="copy-tag">COPY 2 OF 3 — CANARY · FEATURES CONTINUE ON PINK COPY ↓</span>
+</body>
+</html>

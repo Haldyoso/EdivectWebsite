@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Windows Desktop — live overlay (sketch)</title>
+<style>
+  :root{--bg:#0B0D14;--bg2:#0F1219;--s:#161A22;--s2:#1E222C;--b:#2A3040;--b2:#3A4152;--t:#E8EAF0;--tm:#9AA1B2;--tf:#7E8698;
+    --blue:#2D7DF6;--blue6:#1E63D6;--blue3:#7FA8F9;--orange:#F5842B;--red:#E53335;--yellow:#FFD400;--green:#23A55A;--cyan:#35E2FF;--purple:#8B5CF6;--mag:#FF4FD8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--bg);color:var(--t);font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+  .mono{font-family:"Cascadia Mono","Cascadia Code",Consolas,monospace}
+  header{height:60px;display:flex;align-items:center;padding:0 56px;border-bottom:1px solid var(--b)}
+  .brand{display:flex;align-items:center;gap:10px;font:600 19px "Segoe UI Variable Display","Segoe UI";margin-right:auto}
+  nav{display:flex;gap:30px;font-size:14.5px;color:var(--tm)}
+  .langs{margin-left:34px;display:flex;border:1px solid var(--b2);border-radius:4px;overflow:hidden;font:600 12.5px "Segoe UI"}
+  .langs span{padding:6px 10px;color:var(--tm)}.langs .on{background:var(--s2);color:var(--t)}
+  .hdl{display:grid;grid-template-columns:1fr 520px;gap:56px;padding:46px 56px 0;align-items:end}
+  h1{font:600 60px/1.04 "Segoe UI Variable Display","Segoe UI";letter-spacing:-.022em}
+  h1 span{color:var(--tm)}
+  .lead{margin-top:16px;font-size:18px;line-height:1.55;color:var(--tm);max-width:640px}
+  .dl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .ch{border:1px solid var(--b);border-radius:12px;background:var(--s);padding:16px}
+  .ch small{font-size:12px;color:var(--tf);letter-spacing:.02em}
+  .ch b{display:block;font:600 17px "Segoe UI Variable Display","Segoe UI";margin:4px 0 12px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;height:42px;border-radius:6px;background:var(--blue6);color:#fff;font:600 14px "Segoe UI";text-decoration:none}
+  .btn.sec{background:var(--s2);border:1px solid var(--b2);color:var(--t)}
+  .ch p{margin-top:10px;font-size:12px;color:var(--tf)}
+  /* the stage: a synthetic monitor with the live overlay */
+  .stage{position:relative;margin:30px 56px 0;height:520px;border:1px solid var(--b);border-radius:12px 12px 0 0;overflow:hidden;background:#13161d}
+  .screen{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:32px 32px}
+  .screen svg{position:absolute;left:180px;top:40px;width:820px;height:440px}
+  .tag{position:absolute;left:16px;top:14px;font-size:12px;color:var(--tf)}
+  .frozen{position:absolute;right:16px;top:12px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--blue3);border:1px solid #1A50AE;background:#0F1E3A;border-radius:4px;padding:4px 8px}
+  .panel{position:absolute;left:24px;top:52px;width:132px;background:#1E222C;border:1px solid var(--b2);border-radius:8px;padding:8px;box-shadow:0 16px 48px #03060f8c}
+  .panel h6{font:700 10.5px "Segoe UI";letter-spacing:.08em;color:var(--tf);margin:6px 2px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+  .tool{height:26px;border-radius:4px;display:grid;place-items:center;background:#2C3242;color:var(--t);font-size:12px}
+  .tool.on{outline:2px solid var(--orange);outline-offset:-2px;background:#3A2A1A}
+  .sw{height:20px;border-radius:3px}
+  .sw.on{outline:2px solid #fff;outline-offset:1px}
+  .status{margin-top:8px;font-size:10.5px;color:var(--tf);line-height:1.35}
+  .pop{position:absolute;left:910px;top:150px;width:200px;background:#1E222C;border:1px solid var(--b2);border-radius:8px;padding:10px 12px;box-shadow:0 16px 48px #03060f8c;font-size:12.5px}
+  .pop .row{display:flex;justify-content:space-between;padding:5px 0;color:var(--tm)}
+  .pop .row b{color:var(--t);font-weight:600}
+  .hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:16px;font-size:12.5px;color:var(--tm);background:#12151DF2;border:1px solid var(--b);border-radius:6px;padding:7px 12px}
+  kbd{font:600 11.5px "Cascadia Mono",Consolas,monospace;border:1px solid var(--b2);border-bottom-width:2px;border-radius:3px;padding:1px 5px;color:var(--t);margin-right:5px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><svg width="26" height="26" viewBox="30 36 200 184"><path d="M121.5 48 H61 A23 23 0 0 0 38 71 V185 A23 23 0 0 0 61 208 H189.5" fill="none" stroke="#2D7DF6" stroke-width="17"/><g fill="#E8EAF0"><rect x="76" y="124" width="34" height="9"/><rect x="133" y="124" width="34" height="9"/><rect x="117" y="84" width="9" height="34"/><rect x="117" y="140" width="9" height="34"/></g><path d="M138 49 H212 V110" fill="none" stroke="#F5842B" stroke-width="6"/><rect x="132" y="43" width="11" height="11" fill="#F5842B"/><rect x="206" y="104" width="11" height="11" fill="#F5842B"/><g stroke="#2D7DF6" fill="none" stroke-width="3" stroke-dasharray="10 8"><path d="M171 129 H205"/><path d="M212 142 V193"/></g><rect x="205" y="122" width="13.5" height="13.5" fill="#2D7DF6"/><circle cx="212" cy="49" r="13" fill="#fff"/><circle cx="212" cy="49" r="9" fill="#2D7DF6"/><circle cx="212" cy="206" r="13" fill="#fff"/><circle cx="212" cy="206" r="9" fill="#2D7DF6"/></svg>Edivect</div>
+  <nav><span>Features</span><span>How it works</span><span>Compare</span><span>FAQ</span></nav>
+  <div class="langs"><span class="on">EN</span><span>SK</span><span>DE</span></div>
+</header>
+
+<section class="hdl">
+  <div>
+    <h1>Draw directly on your screen.<br><span>Edit everything later.</span></h1>
+    <p class="lead">Screen annotation for Windows 10 and 11. Every arrow, callout and measurement stays a vector object — select it, move it, restyle it, hours later.</p>
+  </div>
+  <div class="dl">
+    <div class="ch"><small>Microsoft Store · v1.0.0.3</small><b>Automatic updates</b><a class="btn" href="#">Get from Microsoft Store</a><p>Installs per user</p></div>
+    <div class="ch"><small>Portable EXE · v1.0.0 · 72.7 MB</small><b>No installation</b><a class="btn" href="#">Download portable EXE</a><p class="mono">SHA-256 1E9E57FE…A25FCB</p></div>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="screen">
+    <svg viewBox="0 0 820 440">
+      <g fill="none" stroke="#5B6273" stroke-width="1.6"><rect x="120" y="70" width="420" height="290"/><circle cx="250" cy="215" r="64"/><circle cx="250" cy="215" r="30"/><rect x="380" y="150" width="110" height="130" rx="12"/><path d="M90 215 H570 M250 40 V390" stroke-dasharray="16 5 3 5" stroke-width="1"/><path d="M120 395 H540 M120 385 V405 M540 385 V405" stroke-width="1"/></g>
+      <text x="318" y="420" fill="#7E8698" font-family="Cascadia Mono, Consolas" font-size="13">160.00</text>
+      <path d="M640 80 L445 160" stroke="#E53335" stroke-width="5" fill="none"/><path d="M436 164 L458 144 L462 168Z" fill="#E53335"/>
+      <g stroke="#2D7DF6" stroke-width="1.5" fill="#fff"><rect x="432" y="72" width="216" height="100" fill="none" stroke-dasharray="4 3"/><rect x="427" y="67" width="9" height="9"/><rect x="427" y="167" width="9" height="9"/><rect x="643" y="167" width="9" height="9"/><circle cx="540" cy="50" r="5"/></g>
+      <rect x="643" y="67" width="9" height="9" fill="#F5842B"/>
+      <circle cx="680" cy="300" r="18" fill="none" stroke="#23A55A" stroke-width="3"/><text x="674" y="306" fill="#23A55A" font-family="Segoe UI" font-weight="700" font-size="16">1</text>
+      <rect x="150" y="300" width="80" height="40" fill="none" stroke="#FFD400" stroke-width="3"/>
+    </svg>
+  </div>
+  <span class="tag">Interactive demo · synthetic drawing</span>
+  <span class="frozen">❄ Freeze on · Monitor 1</span>
+  <div class="panel">
+    <h6>TOOLS</h6>
+    <div class="grid"><span class="tool">↖</span><span class="tool">✎</span><span class="tool">▭</span><span class="tool on">↗</span><span class="tool">○</span><span class="tool">T</span><span class="tool">①</span><span class="tool">∠</span></div>
+    <h6>COLOR</h6>
+    <div class="grid"><span class="sw on" style="background:#E53335"></span><span class="sw" style="background:#F5842B"></span><span class="sw" style="background:#FFD400"></span><span class="sw" style="background:#23A55A"></span><span class="sw" style="background:#35E2FF"></span><span class="sw" style="background:#2D7DF6"></span><span class="sw" style="background:#8B5CF6"></span><span class="sw" style="background:#FF4FD8"></span></div>
+    <div class="status">Red · 5 px · 100 %<br>Shift = 5° snap</div>
+  </div>
+  <div class="pop">
+    <div class="row"><span>Arrow</span><b>selected</b></div>
+    <div class="row"><span>Colour</span><b>Red</b></div>
+    <div class="row"><span>Width</span><b>5 px</b></div>
+    <div class="row"><span>Angle</span><b>22.3°</b></div>
+    <div class="row"><span>Opacity</span><b>100 %</b></div>
+  </div>
+  <div class="hint"><span><kbd>A</kbd>Arrow</span><span><kbd>V</kbd>Select</span><span><kbd>Del</kbd>Delete</span><span><kbd>Ctrl Z</kbd>Undo</span><span>Drag a handle to edit</span></div>
+</div>
+</body>
+</html>

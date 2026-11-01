@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exploded View — app colours (sketch)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F7F9FC;--ink:#14181F;--muted:#5C6473;--hair:#CDD2DE;--g100:#E8EAF0;--g700:#2C3242;--g950:#0B0D14;
+    --blue:#2D7DF6;--blue600:#1E63D6;--orange:#F5842B;--orange700:#B5520F;--red:#E53335;--green:#23A55A;--yellow:#FFD400;--purple:#8B5CF6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--paper);font-family:'Schibsted Grotesk',sans-serif;color:var(--ink)}
+  header{display:flex;align-items:center;height:64px;padding:0 48px;border-bottom:1px solid var(--ink)}
+  .brand{display:flex;align-items:center;gap:10px;font:900 24px 'Schibsted Grotesk';letter-spacing:-.01em;margin-right:auto}
+  nav{display:flex;gap:34px;font:500 16px 'Schibsted Grotesk'}
+  nav span{color:var(--muted);margin-right:4px;font:400 12px 'Martian Mono'}
+  .langs{margin-left:40px;display:flex;gap:14px;font:600 13px 'Martian Mono'}
+  .langs .on{color:var(--blue600);text-decoration:underline;text-underline-offset:5px}
+  h1{position:absolute;left:48px;top:104px;width:540px;font:900 62px/.96 'Schibsted Grotesk';letter-spacing:-.035em}
+  h1 span{color:var(--blue600)}
+  .lead{position:absolute;left:48px;top:376px;width:470px;font:400 19px/1.5 'Schibsted Grotesk'}
+  .ctas{position:absolute;left:48px;top:506px;width:520px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .ctas div{border-top:2px solid var(--ink);padding-top:10px}
+  .ctas i{font:600 12px 'Martian Mono';font-style:normal;letter-spacing:.06em;color:var(--muted)}
+  .ctas h2{font:700 21px 'Schibsted Grotesk';margin:6px 0 2px}
+  .ctas p{font:400 13px 'Martian Mono';color:var(--muted)}
+  .ctas a{margin-top:12px;display:flex;align-items:center;justify-content:center;height:50px;background:var(--blue600);color:#fff;text-decoration:none;font:700 16px 'Schibsted Grotesk'}
+  .art{position:absolute;left:600px;top:72px;width:800px;height:640px}
+  .art svg{width:100%;height:100%}
+  .cap{position:absolute;left:640px;top:690px;font:600 13px 'Martian Mono';color:var(--orange700);letter-spacing:.03em}
+  .parts{position:absolute;left:48px;right:48px;bottom:30px;border-top:2px solid var(--ink);display:grid;grid-template-columns:70px 1.2fr 2fr 1.4fr;font:400 13.5px 'Martian Mono'}
+  .parts span{padding:9px 10px;border-bottom:1px solid var(--hair)}
+  .parts .h{font-weight:600;letter-spacing:.06em}
+  .chip{display:inline-block;width:10px;height:10px;margin-right:8px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><svg width="30" height="30" viewBox="30 36 200 184"><path d="M121.5 48 H61 A23 23 0 0 0 38 71 V185 A23 23 0 0 0 61 208 H189.5" fill="none" stroke="#2D7DF6" stroke-width="17"/><g fill="#14181F"><rect x="76" y="124" width="34" height="9"/><rect x="133" y="124" width="34" height="9"/><rect x="117" y="84" width="9" height="34"/><rect x="117" y="140" width="9" height="34"/></g><path d="M138 49 H212 V110" fill="none" stroke="#F5842B" stroke-width="6"/><rect x="132" y="43" width="11" height="11" fill="#F5842B"/><rect x="206" y="104" width="11" height="11" fill="#F5842B"/><g stroke="#2D7DF6" fill="none" stroke-width="3" stroke-dasharray="10 8"><path d="M171 129 H205"/><path d="M212 142 V193"/></g><rect x="205" y="122" width="13.5" height="13.5" fill="#2D7DF6"/><circle cx="212" cy="49" r="13" fill="#14181F"/><circle cx="212" cy="49" r="9" fill="#2D7DF6"/><circle cx="212" cy="206" r="13" fill="#14181F"/><circle cx="212" cy="206" r="9" fill="#2D7DF6"/></svg>Edivect</div>
+  <nav><a><span>01</span>Features</a><a><span>02</span>How it works</a><a><span>03</span>Compare</a><a><span>04</span>FAQ</a></nav>
+  <div class="langs"><span class="on">EN</span><span>SK</span><span>DE</span></div>
+</header>
+<h1>Draw directly on your screen. <span>Edit everything later.</span></h1>
+<p class="lead">Your marks live on their own layer above the screen — vector objects you can lift, move and restyle. They meet the pixels only at export.</p>
+<div class="ctas">
+  <div><i>PART A</i><h2>Microsoft Store</h2><p>v1.0.0.3 · auto-updates</p><a href="#">Get from Microsoft Store</a></div>
+  <div><i>PART B</i><h2>Portable EXE</h2><p>v1.0.0 · 72.7 MB</p><a href="#">Download portable EXE</a></div>
+</div>
+<div class="art">
+  <svg viewBox="0 0 800 640">
+    <defs><marker id="dot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="6" markerHeight="6"><circle cx="3" cy="3" r="2.5" fill="#14181F"/></marker></defs>
+    <g stroke="#A6ADBD" stroke-dasharray="6 6" stroke-width="1.2"><path d="M150 470 L530 250"/><path d="M450 560 L700 415"/><path d="M150 330 L530 110"/><path d="M450 420 L700 275"/></g>
+    <!-- layer 1: the screen, rendered in the app's dark canvas -->
+    <g transform="matrix(0.87 -0.5 0 1 120 470)">
+      <rect x="0" y="-240" width="360" height="230" fill="#161A22" stroke="#14181F" stroke-width="2.5"/>
+      <g fill="none" stroke="#7E8698" stroke-width="1.6"><rect x="40" y="-200" width="200" height="140"/><circle cx="110" cy="-130" r="34"/><circle cx="110" cy="-130" r="15"/><rect x="170" y="-165" width="50" height="70" rx="6"/></g>
+    </g>
+    <!-- layer 2: annotation layer in the app's drawing inks -->
+    <g transform="matrix(0.87 -0.5 0 1 410 560)">
+      <rect x="0" y="-240" width="360" height="230" fill="#ffffffd9" stroke="#2D7DF6" stroke-width="1.5" stroke-dasharray="8 5"/>
+      <path d="M330 -220 L150 -150" stroke="#E53335" stroke-width="7" fill="none"/>
+      <path d="M140 -146 L166 -166 L168 -140 Z" fill="#E53335"/>
+      <rect x="60" y="-110" width="120" height="70" fill="none" stroke="#FFD400" stroke-width="5"/>
+      <circle cx="270" cy="-70" r="20" fill="none" stroke="#23A55A" stroke-width="4"/>
+      <g stroke="#2D7DF6" stroke-width="1.8" fill="#fff"><rect x="140" y="-228" width="196" height="88" fill="none" stroke-dasharray="4 4"/><rect x="135" y="-233" width="10" height="10"/><rect x="135" y="-145" width="10" height="10"/><rect x="331" y="-145" width="10" height="10"/></g>
+      <rect x="331" y="-233" width="10" height="10" fill="#F5842B"/>
+    </g>
+    <g font-family="Schibsted Grotesk" font-size="16" fill="#14181F">
+      <g stroke="#14181F" stroke-width="1.2" marker-start="url(#dot)"><path d="M190 380 L80 560 H40" fill="none"/><path d="M640 260 L700 140 H770" fill="none"/><path d="M560 470 L640 600 H760" fill="none"/></g>
+      <circle cx="28" cy="560" r="15" fill="none" stroke="#14181F" stroke-width="1.6"/><text x="23" y="566" font-weight="700">1</text>
+      <circle cx="782" cy="140" r="15" fill="none" stroke="#14181F" stroke-width="1.6"/><text x="777" y="146" font-weight="700">2</text>
+      <circle cx="772" cy="600" r="15" fill="none" stroke="#14181F" stroke-width="1.6"/><text x="767" y="606" font-weight="700">3</text>
+    </g>
+  </svg>
+</div>
+<span class="cap">Drag the red arrow on layer 2 — it lifts, moves, restyles. Demo drawing, synthetic.</span>
+<div class="parts">
+  <span class="h">ITEM</span><span class="h">PART</span><span class="h">WHAT IT DOES</span><span class="h">STATE</span>
+  <span>1</span><span>Screen</span><span>Your live or frozen screen, never touched</span><span><i class="chip" style="background:#161A22"></i>pixels</span>
+  <span>2</span><span>Annotation layer</span><span>Arrows, shapes, measurements, stamps, blur</span><span><i class="chip" style="background:#F5842B"></i>vector · editable</span>
+  <span>3</span><span>Export</span><span>Clipboard, PNG/JPG, or editable JSON project</span><span><i class="chip" style="background:#2D7DF6"></i>flattened only here</span>
+</div>
+</body>
+</html>

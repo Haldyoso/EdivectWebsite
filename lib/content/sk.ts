@@ -7,6 +7,52 @@ import type { Copy } from "@/types";
  * "bublina", "značka", "fajka", "pečiatka", "zmrazená obrazovka".
  */
 export const sk: Copy = {
+  demo: {
+    regionLabel: "Interaktívne demo",
+    canvasLabel: "Kresliaca plocha s ukážkovou kresbou",
+    sampleLabel: "Ukážková kresba",
+    note: "Ukážková kresba. Kreslite po nej, potom označte značku a upravte ju.",
+    keyboardHelp: "Klávesy: V výber, A šípka, L čiara, R obdĺžnik, N značka, D kóta. Enter pridá objekt. Šípky posúvajú výber, so Shiftom o 10 px. + a − menia hrúbku. Delete ho zmaže, Ctrl+Z vráti krok, Esc zruší výber.",
+    panelLabel: "Panel nástrojov dema",
+    toolsLabel: "Nástroje",
+    tools: {
+      select: "Výber",
+      arrow: "Šípka",
+      line: "Čiara",
+      rectangle: "Obdĺžnik",
+      marker: "Značka",
+      dimension: "Kóta",
+    },
+    hints: {
+      select: "Ctrl+ťahanie = kópia · Alt+klik = kvapátko štýlu",
+      line: "Shift = 5° · Alt = bez magnetov · číslice = dĺžka",
+      rectangle: "Shift = štvorec · Ctrl = výplň · koliesko = rohy",
+      marker: "Koliesko mení číslo · pravý klik = čísla/písmená",
+      dimension: "2 kliky · ťahaj odsadenie · 3. klik potvrdí",
+    },
+    color: "Farba",
+    colors: {
+      red: "Červená",
+      yellow: "Žltá",
+      green: "Zelená",
+      cyan: "Tyrkysová",
+      purple: "Fialová",
+      magenta: "Purpurová",
+    },
+    width: "Hrúbka",
+    thicker: "Hrubšia čiara",
+    thinner: "Tenšia čiara",
+    actions: "Akcie",
+    undo: "Krok späť",
+    redo: "Znova",
+    duplicate: "Duplikovať",
+    remove: "Zmazať výber",
+    reset: "Obnoviť ukážku",
+    layers: "Vrstvy",
+    noObjects: "Žiadne objekty",
+    selected: "vybraté",
+    wordmarkLabel: "Logo Edivect ako upraviteľný objekt. Veľkosť zmeníte potiahnutím oranžového úchytu alebo šípkami.",
+  },
   meta: {
     tagline: "Kreslite priamo po obrazovke. Upravujte kedykoľvek potom.",
     description:

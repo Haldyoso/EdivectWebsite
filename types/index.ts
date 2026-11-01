@@ -125,6 +125,38 @@ export interface HeadingCopy {
  * mean a wrong `false` could hide in one locale forever.
  */
 export interface Copy {
+  /**
+   * The hero's interactive drawing surface. Tool names, hints, action and
+   * colour names are the app's own strings (Resources/Lang/*.json in the
+   * application repository), so the demo speaks the product's language. Only
+   * the region labels, the sample note and the keyboard help are web-only.
+   */
+  demo: {
+    regionLabel: string;
+    canvasLabel: string;
+    sampleLabel: string;
+    note: string;
+    keyboardHelp: string;
+    panelLabel: string;
+    toolsLabel: string;
+    tools: Record<DemoToolId, string>;
+    hints: Record<DemoHintId, string>;
+    color: string;
+    colors: Record<DemoColorId, string>;
+    width: string;
+    thicker: string;
+    thinner: string;
+    actions: string;
+    undo: string;
+    redo: string;
+    duplicate: string;
+    remove: string;
+    reset: string;
+    layers: string;
+    noObjects: string;
+    selected: string;
+    wordmarkLabel: string;
+  };
   meta: {
     tagline: string;
     description: string;
@@ -239,6 +271,10 @@ export interface Copy {
 }
 
 export type NavId = "features" | "how" | "compare" | "faq";
+
+export type DemoToolId = "select" | "arrow" | "line" | "rectangle" | "marker" | "dimension";
+export type DemoHintId = "select" | "line" | "rectangle" | "marker" | "dimension";
+export type DemoColorId = "red" | "yellow" | "green" | "cyan" | "purple" | "magenta";
 
 export type BenefitId = "speed" | "editable" | "private" | "cad";
 

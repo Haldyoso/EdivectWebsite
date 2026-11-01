@@ -6,6 +6,52 @@ import type { Copy } from "@/types";
  * up, which is the whole point of keying them off one interface.
  */
 export const en: Copy = {
+  demo: {
+    regionLabel: "Interactive demo",
+    canvasLabel: "Drawing surface with a synthetic sample",
+    sampleLabel: "Synthetic sample",
+    note: "Synthetic sample. Draw on it, then select a mark and change it.",
+    keyboardHelp: "Keys: V select, A arrow, L line, R rectangle, N marker, D dimension. Enter adds an object. Arrow keys move the selection, Shift moves 10 px. + and − change the width. Delete removes it, Ctrl+Z undoes, Esc deselects.",
+    panelLabel: "Demo tool panel",
+    toolsLabel: "Tools",
+    tools: {
+      select: "Select",
+      arrow: "Arrow",
+      line: "Line",
+      rectangle: "Rectangle",
+      marker: "Marker",
+      dimension: "Dimension",
+    },
+    hints: {
+      select: "Ctrl+drag = copy · Alt+click = style picker",
+      line: "Shift = 5° · Alt = no snapping · digits = length",
+      rectangle: "Shift = square · Ctrl = fill · wheel = corners",
+      marker: "Wheel = number · right-click = 1,2,3 or a,b,c",
+      dimension: "2 clicks · drag offset · 3rd click sets it",
+    },
+    color: "Color",
+    colors: {
+      red: "Red",
+      yellow: "Yellow",
+      green: "Green",
+      cyan: "Cyan",
+      purple: "Purple",
+      magenta: "Magenta",
+    },
+    width: "Width",
+    thicker: "Thicker line",
+    thinner: "Thinner line",
+    actions: "Actions",
+    undo: "Undo",
+    redo: "Redo",
+    duplicate: "Duplicate",
+    remove: "Delete selection",
+    reset: "Reset sample",
+    layers: "Layers",
+    noObjects: "No objects",
+    selected: "selected",
+    wordmarkLabel: "Edivect wordmark, an editable object. Drag the orange handle or press the arrow keys to resize it.",
+  },
   meta: {
     tagline: "Draw directly on your screen. Edit everything later.",
     description:

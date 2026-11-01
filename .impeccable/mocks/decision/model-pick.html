@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction B — Redline Drawing Sheet (sketch)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=B612+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--sheet:#f4f6f7;--line:#14181c;--thin:#14181c99;--red:#d0201b;--blue:#1f6fe0;--table:#262b30}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--table);font-family:B612,sans-serif;color:var(--line)}
+  .sheet{position:absolute;inset:14px;background:var(--sheet);border:1px solid #000}
+  .zones{position:absolute;inset:0;pointer-events:none}
+  .frame{position:absolute;inset:26px;border:2.5px solid var(--line)}
+  .zx,.zy{position:absolute;font:700 12px 'B612 Mono';color:var(--thin);display:flex}
+  .zx{left:26px;right:26px;justify-content:space-around}
+  .zx.t{top:7px}.zx.b{bottom:7px}
+  .zy{top:26px;bottom:26px;flex-direction:column;justify-content:space-around}
+  .zy.l{left:9px}.zy.r{right:9px}
+  header{position:absolute;left:26px;right:26px;top:26px;height:58px;border-bottom:1.5px solid var(--line);display:grid;grid-template-columns:250px 1fr 280px}
+  .brand{display:flex;align-items:center;gap:12px;padding-left:20px;border-right:1.5px solid var(--line);font:700 24px B612;letter-spacing:.06em}
+  nav{display:flex;align-items:stretch}
+  nav a{display:flex;align-items:center;padding:0 24px;border-right:1px solid var(--thin);font:400 15px B612;color:var(--line);text-decoration:none;letter-spacing:.04em}
+  .langs{display:flex;align-items:center;justify-content:flex-end;gap:18px;padding-right:20px;font:700 14px 'B612 Mono'}
+  .langs .on{border:1.5px solid var(--line);padding:3px 7px}
+  h1{position:absolute;left:66px;top:118px;width:660px;font:700 66px/1.02 B612;letter-spacing:-.01em;text-transform:uppercase}
+  h1 span{color:var(--red)}
+  .note{position:absolute;left:66px;top:400px;width:520px;font:400 17px/1.55 B612}
+  .note b{font:700 12px 'B612 Mono';letter-spacing:.14em;display:block;margin-bottom:8px;color:var(--thin)}
+  .drawing{position:absolute;left:640px;top:200px;width:560px;height:400px}
+  .drawing svg{width:100%;height:100%}
+  .try{position:absolute;left:66px;top:560px;width:500px;line-height:1.7;font:700 12px 'B612 Mono';letter-spacing:.12em;color:var(--red)}
+  .rev{position:absolute;right:26px;top:84px;width:300px;border-left:1.5px solid var(--line);border-bottom:1.5px solid var(--line);font:400 13px 'B612 Mono';background:var(--sheet)}
+  .rev div{display:grid;grid-template-columns:44px 1fr 70px;border-top:1px solid var(--thin)}
+  .rev div span{padding:6px 8px}.rev div span+span{border-left:1px solid var(--thin)}
+  .rev .h{font-weight:700;border-top:0;background:#14181c0d}
+  .rev .live{color:var(--blue)}
+  .tb{position:absolute;right:26px;bottom:26px;width:860px;height:236px;border-top:2.5px solid var(--line);border-left:2.5px solid var(--line);display:grid;grid-template-columns:200px 1fr 1fr;grid-template-rows:1fr 46px 40px;grid-template-areas:'title a b' 'title lic lic' 'sha sha sha';background:var(--sheet)}
+  .tb>div{border-right:1.5px solid var(--line);border-bottom:1.5px solid var(--line);padding:9px 12px;display:flex;flex-direction:column;justify-content:space-between}
+  .tb .ca{grid-area:a}.tb .cb{grid-area:b;border-right:0}.tb .big{grid-area:title}.tb .lic{grid-area:lic;border-right:0}.tb .sha{grid-area:sha;border-right:0;border-bottom:0}
+  .tb i{font:700 10.5px 'B612 Mono';font-style:normal;letter-spacing:.14em;color:var(--thin)}
+  .tb h2{font:700 20px B612}
+  .tb p{font:400 12.5px 'B612 Mono'}
+  .tb a{display:flex;align-items:center;justify-content:center;height:40px;background:var(--line);color:var(--sheet);text-decoration:none;font:700 15px B612;letter-spacing:.02em;margin-top:6px}
+  .tb .lic,.tb .sha{flex-direction:row;align-items:center;gap:22px;justify-content:flex-start}
+  .tb .wide p{font-size:12px}
+  
+  .tb .big strong{font:700 30px B612;letter-spacing:.06em}
+  .left-strip{position:absolute;left:66px;bottom:66px;display:flex;gap:18px;font:400 12px 'B612 Mono';color:var(--thin)}
+  .left-strip b{color:var(--line)}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="zones">
+    <div class="zx t"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+    <div class="zx b"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+    <div class="zy l"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+    <div class="zy r"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+  </div>
+  <div class="frame"></div>
+  <header>
+    <div class="brand"><svg width="30" height="30" viewBox="0 0 30 30"><rect x="2" y="2" width="26" height="26" fill="none" stroke="#14181c" stroke-width="2.5"/><path d="M7 23 L22 8 M22 8 h-7 M22 8 v7" stroke="#d0201b" stroke-width="2.5" fill="none"/></svg>EDIVECT</div>
+    <nav><a href="#">FEATURES</a><a href="#">HOW IT WORKS</a><a href="#">COMPARE</a><a href="#">FAQ</a></nav>
+    <div class="langs"><span class="on">EN</span><span>SK</span><span>DE</span></div>
+  </header>
+
+  <h1>Draw directly on your screen. <span>Edit everything later.</span></h1>
+  <p class="note"><b>NOTE 1</b>Every arrow, callout and measurement stays a vector object — move it, restyle it, regroup it, hours later. Nothing is flattened until export.</p>
+
+  <div class="drawing">
+    <svg viewBox="0 0 740 520">
+      <g fill="none" stroke="#14181c" stroke-width="2">
+        <path d="M120 110 H520 V400 H120 Z"/>
+        <circle cx="250" cy="255" r="70"/><circle cx="250" cy="255" r="34"/>
+        <rect x="380" y="190" width="100" height="130" rx="14"/>
+        <path d="M90 255 H560 M250 80 V430" stroke-width="1" stroke-dasharray="18 5 3 5"/>
+        <path d="M120 450 H520 M120 440 V460 M520 440 V460" stroke-width="1"/>
+      </g>
+      <text x="300" y="472" font-family="B612 Mono" font-size="15" fill="#14181c">160</text>
+      <g fill="none" stroke="#d0201b" stroke-width="3.5">
+        <path d="M352 168 q-14 -26 12 -36 q8 -26 36 -14 q20 -20 40 2 q28 -6 30 22 q24 12 6 34 q8 28 -22 30 q-14 22 -38 6 q-26 14 -38 -10 q-28 -2 -26 -34z"/>
+        <path d="M680 70 L470 170"/>
+      </g>
+      <path d="M462 174 L484 152 L492 176 Z" fill="#d0201b"/>
+      <g stroke="#1f6fe0" stroke-width="2" fill="#fff"><rect x="455" y="58" width="236" height="124" fill="none" stroke-dasharray="5 4"/><rect x="449" y="52" width="12" height="12"/><rect x="685" y="52" width="12" height="12"/><rect x="449" y="176" width="12" height="12"/><rect x="685" y="176" width="12" height="12"/><circle cx="573" cy="34" r="7"/></g>
+      <g font-family="B612" font-weight="700"><path d="M640 300 l26 -45 l26 45 z" fill="none" stroke="#d0201b" stroke-width="3"/><text x="658" y="294" font-size="20" fill="#d0201b">B</text></g>
+    </svg>
+  </div>
+  <span class="try">▲ DRAW A REDLINE ARROW — THEN CLICK IT. IT IS STILL AN OBJECT.   DEMO DRAWING — SYNTHETIC</span>
+
+  <div class="rev">
+    <div class="h"><span>REV</span><span>DESCRIPTION</span><span>STATE</span></div>
+    <div><span>A</span><span>Arrow drawn</span><span>object</span></div>
+    <div><span>B</span><span>Arrow moved</span><span>object</span></div>
+    <div class="live"><span>C</span><span>Colour, width</span><span>selected</span></div>
+  </div>
+
+  <div class="left-strip"><span><b>OFFLINE</b></span><span><b>NO TELEMETRY</b></span><span><b>NO ADMIN RIGHTS</b></span><span><b>MULTI-MONITOR</b></span></div>
+
+  <div class="tb">
+    <div class="big"><i>TITLE</i><strong>EDIVECT</strong><p>WINDOWS 10/11 · 64-BIT</p><p>STORE ID 9N9W449D59G7</p><p>SHEET 1 / 1</p></div>
+    <div class="ca"><i>CHANNEL A</i><h2>Microsoft Store</h2><p>Installs and updates via Store · v1.0.0.3</p><a href="#">Get from Microsoft Store</a></div>
+    <div class="cb"><i>CHANNEL B</i><h2>Portable EXE</h2><p>No installation · v1.0.0 · 72.7 MB</p><a href="#">Download portable EXE</a></div>
+    <div class="lic"><i>LICENCE</i><p><b>PERSONAL</b> — private use, no expiry</p><p><b>COMMERCIAL TRIAL</b> — 30 days at work</p></div>
+    <div class="sha"><i>SHA-256</i><p>1E9E57FEC86834CF87CA5E1E805F78BAA6B792B5781AA632F97F291263A25FCB</p></div>
+  </div>
+</div>
+</body>
+</html>

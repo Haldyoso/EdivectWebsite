@@ -9,7 +9,6 @@ import { FeatureGrid } from "@/components/sections/feature-grid";
 import { FeatureShowcase } from "@/components/sections/feature-showcase";
 import { Hero } from "@/components/sections/hero";
 import { HowItWorks } from "@/components/sections/how-it-works";
-import { PageBackdrop } from "@/components/layout/page-backdrop";
 import { Shortcuts } from "@/components/sections/shortcuts";
 import { getContent } from "@/lib/content";
 import { homePath, langs, type Lang } from "@/lib/i18n";
@@ -19,6 +18,10 @@ import { faqPageJsonLd, softwareApplicationJsonLd } from "@/lib/structured-data"
  * The landing page itself. All three locale routes render this and differ only
  * in the Lang they hand it, so a section added here appears in every language
  * or in none — there is no per-language page to forget.
+ *
+ * Order follows the argument: the claim and its live proof, why it matters,
+ * what each capability does, how a session runs, the whole toolkit, how it
+ * compares, the keys, the questions, and the download.
  */
 export function Landing({ lang }: { lang: Lang }) {
   const content = getContent(lang);
@@ -29,20 +32,20 @@ export function Landing({ lang }: { lang: Lang }) {
   ) as Record<Lang, string>;
 
   return (
-    <div data-page-root className="relative min-h-screen overflow-x-hidden">
-      <PageBackdrop />
-
+    <div data-page-root className="page">
       <SkipLink label={copy.ui.skipToContent} />
       <Navbar lang={lang} copy={copy} nav={content.nav} langPaths={langPaths} />
 
       {/* tabIndex -1 so the skip link actually moves focus here, not just scroll. */}
-      <main id="top" tabIndex={-1} className="relative z-1 focus:outline-none">
-        <Hero
-          copy={copy}
-          chips={content.hero.chips}
-        />
+      <main id="top" tabIndex={-1} className="focus:outline-none">
+        <Hero copy={copy} lang={lang} chips={content.hero.chips} />
         <Benefits benefits={content.benefits} label={copy.ui.benefitsLabel} />
-        <FeatureShowcase heading={copy.showcase.heading} features={content.showcase} />
+        <FeatureShowcase
+          heading={copy.showcase.heading}
+          features={content.showcase}
+          lang={lang}
+          sampleLabel={copy.demo.sampleLabel}
+        />
         <HowItWorks heading={copy.howItWorks.heading} steps={content.steps} />
         <FeatureGrid heading={copy.featureGrid.heading} features={content.gridFeatures} />
         <ComparisonTable copy={copy} rows={content.compareRows} />

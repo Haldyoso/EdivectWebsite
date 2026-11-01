@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction — Shop Floor (sketch)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--floor:#c3c2bc;--floor-dk:#b3b2ab;--ink:#17191a;--yellow:#f3c614;--white:#f7f7f2;--red:#d3261e;--blue:#1d5fd0;--board:#e9e6dd}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{font-family:Barlow,sans-serif;color:var(--ink);background:var(--floor);
+    background-image:radial-gradient(circle at 20% 30%,#0000000a 0 1px,transparent 1.5px),radial-gradient(circle at 70% 60%,#ffffff22 0 1px,transparent 1.5px),
+    linear-gradient(90deg,transparent 719px,#00000014 719px 721px,transparent 721px);background-size:7px 7px,11px 11px,1440px 900px}
+  .aisle{position:absolute;left:0;right:0;top:0;height:62px;display:flex;align-items:center;gap:0;
+    border-bottom:10px solid var(--yellow);padding:0 40px}
+  .brand{display:flex;align-items:center;gap:12px;font:900 34px/1 'Big Shoulders Stencil Display';letter-spacing:.04em;margin-right:auto}
+  nav{display:flex;gap:6px}
+  nav a{font:700 17px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:9px 16px;background:var(--yellow)}
+  .langs{margin-left:26px;display:flex;gap:4px;font:700 16px 'Barlow Condensed'}
+  .langs span{padding:8px 10px;border:2px solid var(--ink)}.langs .on{background:var(--ink);color:var(--floor)}
+  /* floor zone corners */
+  .zone{position:absolute}
+  .zone::before,.zone::after{content:"";position:absolute;width:44px;height:44px;border:10px solid var(--white)}
+  .zone::before{left:0;top:0;border-right:0;border-bottom:0}.zone::after{right:0;bottom:0;border-left:0;border-top:0}
+  .head{left:40px;top:96px;width:620px;height:450px;padding:34px 34px}
+  .tag{display:inline-block;font:700 15px 'Barlow Condensed';letter-spacing:.14em;background:var(--ink);color:var(--yellow);padding:5px 10px}
+  h1{font:900 70px/.9 'Big Shoulders Stencil Display';text-transform:uppercase;margin-top:18px;letter-spacing:.01em}
+  h1 span{color:var(--red)}
+  .lead{font:500 18px/1.45 Barlow;margin-top:18px;max-width:540px}
+  .cell{position:absolute;left:700px;top:100px;width:500px;height:600px;padding:14px;
+    background:repeating-linear-gradient(-45deg,var(--yellow) 0 22px,var(--ink) 22px 44px)}
+  .cell .inner{position:relative;width:100%;height:100%;background:var(--floor-dk);}
+  .cell .inner::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#00000012 1px,transparent 1px),linear-gradient(90deg,#00000012 1px,transparent 1px);background-size:24px 24px}
+  .cell-label{position:absolute;left:14px;top:-34px;font:700 15px 'Barlow Condensed';letter-spacing:.12em}
+  .cell svg{position:absolute;inset:0;width:100%;height:100%}
+  .syn{position:absolute;left:12px;bottom:10px;font:700 13px 'Barlow Condensed';letter-spacing:.12em;color:#3a3d3e}
+  .readout{position:absolute;right:12px;bottom:10px;background:var(--ink);color:var(--white);font:600 14px 'Barlow Condensed';letter-spacing:.06em;padding:6px 10px}
+  .board{position:absolute;left:1232px;top:100px;width:170px;height:600px;background:var(--board);border:3px solid var(--ink);padding:14px 12px;
+    background-image:radial-gradient(circle,#00000030 1.6px,transparent 2px);background-size:18px 18px}
+  .board h3{font:700 14px 'Barlow Condensed';letter-spacing:.14em;background:var(--ink);color:var(--yellow);padding:5px 8px;margin-bottom:12px}
+  .slot{height:66px;margin-bottom:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;position:relative}
+  .slot svg{width:56px;height:46px}
+  .slot b{font:700 13px 'Barlow Condensed';letter-spacing:.1em;background:var(--board);padding:0 4px}
+  .slot.out b{color:var(--red)}
+  .bays{position:absolute;left:40px;top:572px;width:620px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .bay{border:8px solid var(--white);padding:16px 18px;background:#c9c8c2}
+  .bay i{font:700 14px 'Barlow Condensed';font-style:normal;letter-spacing:.14em}
+  .bay h2{font:900 30px/1 'Big Shoulders Stencil Display';text-transform:uppercase;margin:6px 0 4px}
+  .bay p{font:500 15px Barlow}
+  .bay a{margin-top:12px;display:flex;align-items:center;justify-content:center;height:50px;background:var(--ink);color:var(--yellow);font:700 18px 'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+  .lic{position:absolute;left:40px;top:812px;width:1362px;display:flex;gap:28px;align-items:center;font:600 16px Barlow;border-top:10px solid var(--yellow);padding-top:14px}
+  .lic b{font:700 16px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="aisle">
+    <div class="brand"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="3" y="3" width="28" height="28" fill="none" stroke="#17191a" stroke-width="4"/><path d="M9 25 L24 10 M24 10 h-9 M24 10 v9" stroke="#d3261e" stroke-width="4" fill="none"/></svg>EDIVECT</div>
+    <nav><a href="#">Features</a><a href="#">How it works</a><a href="#">Compare</a><a href="#">FAQ</a></nav>
+    <div class="langs"><span class="on">EN</span><span>SK</span><span>DE</span></div>
+  </div>
+
+  <div class="zone head">
+    <span class="tag">ZONE 01 · WINDOWS 10 / 11</span>
+    <h1>Draw directly on your screen. <span>Edit everything later.</span></h1>
+    <p class="lead">Marks are laid like floor tape: put down fast, picked up and re-laid whenever the layout changes. Every arrow, callout and measurement stays a vector object until you export.</p>
+  </div>
+
+  <span class="cell-label" style="position:absolute;left:714px;top:72px">WORK CELL — LAY AN ARROW, THEN PICK IT UP AND MOVE IT</span>
+  <div class="cell"><div class="inner">
+    <svg viewBox="0 0 472 572">
+      <g fill="none" stroke="#17191a" stroke-width="2.5"><rect x="70" y="150" width="300" height="230"/><circle cx="170" cy="265" r="50"/><circle cx="170" cy="265" r="22"/><rect x="262" y="210" width="80" height="110" rx="10"/><path d="M50 265 H395 M170 120 V410" stroke-width="1.2" stroke-dasharray="14 5 3 5"/></g>
+      <g stroke="#d3261e" stroke-width="12" stroke-linecap="square" fill="none"><path d="M420 80 L250 196"/></g>
+      <path d="M236 206 L262 168 L276 196 Z" fill="#d3261e"/>
+      <g stroke="#1d5fd0" stroke-width="2.5" fill="#f7f7f2"><rect x="228" y="66" width="206" height="150" fill="none" stroke-dasharray="6 5"/><rect x="222" y="60" width="13" height="13"/><rect x="428" y="60" width="13" height="13"/><rect x="222" y="210" width="13" height="13"/><rect x="428" y="210" width="13" height="13"/><circle cx="331" cy="38" r="8"/></g>
+      <g><rect x="80" y="440" width="130" height="58" fill="none" stroke="#1d5fd0" stroke-width="10"/><circle cx="330" cy="470" r="26" fill="none" stroke="#d3261e" stroke-width="6"/><text x="320" y="481" font-family="Barlow Condensed" font-weight="700" font-size="32" fill="#d3261e">1</text></g>
+    </svg>
+    <span class="syn">DEMO DRAWING — SYNTHETIC</span>
+    <span class="readout">ARROW · SELECTED · 12 PX · 34°</span>
+  </div></div>
+
+  <aside class="board">
+    <h3>TOOL BOARD</h3>
+    <div class="slot out"><svg viewBox="0 0 56 46"><path d="M8 38 L44 10 M44 10 h-14 M44 10 v14" stroke="#17191a" stroke-width="2" stroke-dasharray="4 3" fill="none"/></svg><b>ARROW · IN USE</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><rect x="8" y="8" width="40" height="30" fill="#17191a"/></svg><b>RECTANGLE · R</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><text x="14" y="38" font-family="Barlow" font-weight="700" font-size="40" fill="#17191a">T</text></svg><b>TEXT · T</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><circle cx="28" cy="23" r="17" fill="#17191a"/><text x="22" y="31" font-family="Barlow" font-weight="700" font-size="22" fill="#e9e6dd">1</text></svg><b>MARKERS · N</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><path d="M6 36 H50 M6 30 V42 M50 30 V42" stroke="#17191a" stroke-width="4"/></svg><b>DIMENSION · D</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><path d="M8 40 L48 40 M8 40 L40 10" stroke="#17191a" stroke-width="4" fill="none"/></svg><b>ANGLE · G</b></div>
+    <div class="slot"><svg viewBox="0 0 56 46"><rect x="6" y="10" width="44" height="26" fill="#17191a" opacity=".45"/></svg><b>BLUR · B</b></div>
+  </aside>
+
+  <div class="bays">
+    <div class="bay"><i>BAY A</i><h2>Microsoft Store</h2><p>Install and update through Store · v1.0.0.3</p><a href="#">Get from Microsoft Store</a></div>
+    <div class="bay"><i>BAY B</i><h2>Portable EXE</h2><p>No installation · v1.0.0 · 72.7 MB</p><a href="#">Download portable EXE</a></div>
+  </div>
+  <div class="lic"><span><b>Personal</b> — all features, private use, no expiry</span><span><b>Commercial Trial</b> — all features, 30 days at work</span><span><b>Offline · No account · No telemetry</b></span></div>
+</body>
+</html>

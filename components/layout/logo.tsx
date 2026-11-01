@@ -1,73 +1,66 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The Edivect mark: a capture bracket, a measurement crosshair and one
- * orange node — the product's real icon, transcribed from the brand icon set.
- *
- * This is that set's `small` level of detail. The full mark also carries
- * dash-dot guides and a dimension chain, which the icon spec says turn to mush
- * below ~40px — and the only places this site draws it are a 26–28px lockup.
- *
- * Both hues are token-driven rather than hard-coded so the mark inverts with
- * the theme: the crosshair rides on `fg`, which is the brand's
- * crosshair-on-dark / crosshair-on-light pair already expressed as one token.
+ * The Edivect app icon, transcribed from app/icon.svg without changes: the
+ * capture frame, the crosshair and the editable annotation with its orange
+ * handle, on the dark tile the app ships with. Inline so it costs no request
+ * and inherits nothing from the page's theme.
  */
-function Mark({ className }: { className?: string }) {
+export function Mark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 256 256" aria-hidden="true" className={className}>
-      <g transform="translate(-2.906 -1.891) scale(1.01477)">
+      <rect width="256" height="256" rx="57" fill="#0D0E13" />
+      <g transform="translate(8.027,7.791) scale(0.94281)">
         <path
-          d="M118 44 H58 A26 26 0 0 0 32 70 V186 A26 26 0 0 0 58 212 H178"
+          d="M121.5 48 H61 A23 23 0 0 0 38 71 V185 A23 23 0 0 0 61 208 H189.5"
           fill="none"
-          strokeWidth="28"
+          stroke="#1167F5"
+          strokeWidth="17"
+          strokeLinecap="butt"
           strokeLinejoin="round"
-          className="stroke-accent"
         />
-        <g className="fill-fg">
-          <rect x="64" y="118" width="38" height="18" />
-          <rect x="134" y="118" width="38" height="18" />
-          <rect x="109" y="73" width="18" height="38" />
-          <rect x="109" y="143" width="18" height="38" />
+        <g fill="#FFFFFF">
+          <rect x="76.25" y="124.5" width="34" height="9" />
+          <rect x="132.75" y="124.5" width="34" height="9" />
+          <rect x="117" y="83.75" width="9" height="34" />
+          <rect x="117" y="140.25" width="9" height="34" />
         </g>
-        {/*
-         * The one place the site is allowed to spend Mark Orange: in the logo
-         * it *is* the selected, still-editable handle, which is the single
-         * meaning the brand reserves that hue for.
-         */}
-        <circle cx="214" cy="44" r="26" className="fill-mark" />
-        <circle cx="214" cy="212" r="26" className="fill-accent" />
+        <path d="M138 49 H212 V110" fill="none" stroke="#FC8B19" strokeWidth="6" />
+        <rect x="132.5" y="43.5" width="11" height="11" fill="#FC8B19" />
+        <rect x="206.5" y="104.5" width="11" height="11" fill="#FC8B19" />
+        <g stroke="#1167F5" fill="none" strokeWidth="3" strokeDasharray="10 8">
+          <path d="M171 129 H205.25" />
+          <path d="M212 142 V193" />
+        </g>
+        <rect x="205.25" y="122.25" width="13.5" height="13.5" fill="#1167F5" />
+        <circle cx="212" cy="49" r="13" fill="#FFFFFF" />
+        <circle cx="212" cy="49" r="9" fill="#1167F5" />
+        <circle cx="212" cy="206" r="13" fill="#FFFFFF" />
+        <circle cx="212" cy="206" r="9" fill="#1167F5" />
       </g>
     </svg>
   );
 }
 
-/** Mark + wordmark. The mark is decorative; the wordmark is the accessible text. */
+/** Icon + wordmark. The icon is decorative; the wordmark is the accessible text. */
 export function Logo({
   className,
   markClassName,
-  glow = false,
 }: {
   className?: string;
   markClassName?: string;
+  /** Kept for callers from the previous design; the mark no longer glows. */
   glow?: boolean;
 }) {
   return (
     <span
       className={cn(
-        "flex items-center gap-2.5 text-base font-bold tracking-[-0.2px] text-fg",
+        "flex items-center gap-2.5 font-display text-[18px] font-semibold tracking-[-0.01em] text-fg",
         className,
       )}
     >
-      <Mark
-        className={cn(
-          "size-7 shrink-0",
-          glow && "drop-shadow-[0_4px_14px_rgb(45_125_246/0.35)]",
-          markClassName,
-        )}
-      />
-      <span>
-        Edi<span className="text-accent">vect</span>
-      </span>
+      <Mark className={cn("size-7 shrink-0", markClassName)} />
+      <span>Edivect</span>
     </span>
   );
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Product Datasheet (sketch)</title>
+<style>
+  :root{--bg:#F4F6FA;--paper:#FFFFFF;--t:#14181F;--tm:#5C6473;--b:#DDE2EC;--b2:#C4CBD8;--blue:#2D7DF6;--blue6:#1E63D6;--blue7:#1A50AE;--orange:#F5842B;--red:#E53335;--green:#23A55A;--yellow:#FFD400;--g950:#0B0D14}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--bg);color:var(--t);font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+  .mono{font-family:"Cascadia Mono","Cascadia Code",Consolas,monospace}
+  .sheet{position:absolute;left:56px;right:56px;top:0;bottom:0;background:var(--paper);border-left:1px solid var(--b);border-right:1px solid var(--b)}
+  header{height:56px;display:flex;align-items:center;padding:0 40px;border-bottom:1px solid var(--b)}
+  .brand{display:flex;align-items:center;gap:10px;font:600 18px "Segoe UI Variable Display","Segoe UI";margin-right:auto}
+  nav{display:flex;gap:28px;font-size:14px;color:var(--tm)}
+  .langs{margin-left:32px;display:flex;gap:12px;font:600 12.5px "Segoe UI";color:var(--tm)}.langs .on{color:var(--blue7)}
+  .band{display:grid;grid-template-columns:1fr auto;align-items:end;padding:34px 40px 22px;border-bottom:3px solid var(--blue6)}
+  .band h1{font:600 54px/1.04 "Segoe UI Variable Display","Segoe UI";letter-spacing:-.02em;max-width:820px}
+  .band h1 span{color:var(--blue6)}
+  .band .id{text-align:right;font-size:13px;line-height:1.7;color:var(--tm)}
+  .band .id b{color:var(--t);font-weight:600}
+  .cols{display:grid;grid-template-columns:400px 1fr;border-bottom:1px solid var(--b)}
+  .feat{padding:22px 40px 22px;border-right:1px solid var(--b)}
+  h2{font:600 13px "Segoe UI";letter-spacing:.06em;text-transform:uppercase;color:var(--tm);margin-bottom:12px}
+  .feat p{font-size:16px;line-height:1.5;margin-bottom:16px}
+  .feat ul{list-style:none;font-size:14.5px;line-height:1.45}
+  .feat li{padding:6px 0 6px 18px;border-top:1px solid var(--b);position:relative}
+  .feat li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:2px;background:var(--blue6)}
+  .fig{padding:22px 32px 18px;position:relative}
+  .canvas{position:relative;height:330px;background:#161A22;border-radius:8px;overflow:hidden}
+  .canvas svg{width:100%;height:100%}
+  .figcap{display:flex;justify-content:space-between;margin-top:10px;font-size:13px;color:var(--tm)}
+  .figcap b{color:var(--t);font-weight:600}
+  .order{padding:18px 40px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{font:600 12px "Segoe UI";letter-spacing:.05em;text-transform:uppercase;color:var(--tm);text-align:left;padding:8px 10px;border-bottom:1px solid var(--b2)}
+  td{padding:10px 10px;border-bottom:1px solid var(--b);vertical-align:middle}
+  td b{font-weight:600}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:38px;padding:0 18px;border-radius:4px;background:var(--blue6);color:#fff;font:600 14px "Segoe UI";text-decoration:none;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div class="brand"><svg width="24" height="24" viewBox="30 36 200 184"><path d="M121.5 48 H61 A23 23 0 0 0 38 71 V185 A23 23 0 0 0 61 208 H189.5" fill="none" stroke="#2D7DF6" stroke-width="17"/><g fill="#14181F"><rect x="76" y="124" width="34" height="9"/><rect x="133" y="124" width="34" height="9"/><rect x="117" y="84" width="9" height="34"/><rect x="117" y="140" width="9" height="34"/></g><path d="M138 49 H212 V110" fill="none" stroke="#F5842B" stroke-width="6"/><rect x="205" y="122" width="13.5" height="13.5" fill="#2D7DF6"/><circle cx="212" cy="49" r="9" fill="#2D7DF6"/><circle cx="212" cy="206" r="9" fill="#2D7DF6"/></svg>Edivect</div>
+    <nav><span>Features</span><span>How it works</span><span>Compare</span><span>FAQ</span></nav>
+    <div class="langs"><span class="on">EN</span><span>SK</span><span>DE</span></div>
+  </header>
+  <div class="band">
+    <h1>Draw directly on your screen. <span>Edit everything later.</span></h1>
+    <div class="id"><b>Windows 10 / 11 · 64-bit</b><br>Offline · No account · No telemetry<br><span class="mono">Store ID 9N9W449D59G7</span></div>
+  </div>
+  <div class="cols">
+    <div class="feat">
+      <h2>Description</h2>
+      <p>Screen annotation in which every mark stays a vector object. Nothing is flattened until export.</p>
+      <ul><li>Arrows, shapes, text, numbered markers, stamps</li><li>3-point arc and angle measurement</li><li>Freeze mode for live screens, multi-monitor</li><li>Layers, groups, named undo history</li><li>Export to clipboard, PNG/JPG or editable JSON</li></ul>
+    </div>
+    <div class="fig">
+      <h2>Fig. 1 — Try it: draw an arrow, then select and restyle it</h2>
+      <div class="canvas"><svg viewBox="0 0 860 330">
+        <g fill="none" stroke="#5B6273" stroke-width="1.6"><rect x="150" y="50" width="380" height="230"/><circle cx="270" cy="165" r="56"/><circle cx="270" cy="165" r="26"/><rect x="390" y="110" width="100" height="110" rx="10"/><path d="M120 165 H560 M270 25 V305" stroke-dasharray="16 5 3 5" stroke-width="1"/></g>
+        <path d="M700 60 L500 125" stroke="#E53335" stroke-width="5" fill="none"/><path d="M490 128 L512 109 L516 133Z" fill="#E53335"/>
+        <g stroke="#2D7DF6" stroke-width="1.5" fill="#fff"><rect x="486" y="52" width="222" height="84" fill="none" stroke-dasharray="4 3"/><rect x="481" y="47" width="9" height="9"/><rect x="481" y="131" width="9" height="9"/><rect x="703" y="131" width="9" height="9"/></g><rect x="703" y="47" width="9" height="9" fill="#F5842B"/>
+        <g font-family="Segoe UI" font-size="12.5"><rect x="600" y="170" width="180" height="104" rx="6" fill="#1E222C" stroke="#3A4152"/><text x="614" y="194" fill="#9AA1B2">Colour</text><text x="740" y="194" fill="#E8EAF0">Red</text><text x="614" y="218" fill="#9AA1B2">Width</text><text x="740" y="218" fill="#E8EAF0">5 px</text><text x="614" y="242" fill="#9AA1B2">Angle</text><text x="728" y="242" fill="#E8EAF0">17.8°</text><text x="614" y="264" fill="#9AA1B2">State</text><text x="704" y="264" fill="#F7A559">editable</text></g>
+      </svg></div>
+      <div class="figcap"><span>Interactive demo · synthetic drawing</span><span>Real screenshots: <b>slot reserved</b></span></div>
+    </div>
+  </div>
+  <div class="order">
+    <h2>Ordering information — free, no account</h2>
+    <table>
+      <tr><th>Channel</th><th>Version</th><th>Updates</th><th>Package</th><th></th></tr>
+      <tr><td><b>Microsoft Store</b></td><td class="mono">1.0.0.3</td><td>Automatic via Store</td><td>Store install</td><td style="text-align:right"><a class="btn" href="#">Get from Microsoft Store</a></td></tr>
+      <tr><td><b>Portable EXE</b></td><td class="mono">1.0.0</td><td>Manual</td><td class="mono">72.7 MB · SHA-256 1E9E57FE…A25FCB</td><td style="text-align:right"><a class="btn" href="#">Download portable EXE</a></td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

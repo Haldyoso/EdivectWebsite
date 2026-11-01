@@ -1,69 +1,64 @@
 @import "tailwindcss";
+@import "./landing.css";
 
 /* =============================================================================
    Edivect design tokens.
 
-   The palette derives from the product's own brand definition in
-   `brand/tokens.json`. Theme-specific text and action variants are adjusted
-   here where the raw brand swatch would not meet WCAG AA on a web surface.
+   Values come from the app's brand definition (brand/tokens.json in the
+   application repository): Signal Blue for identity and actions, Mark Orange
+   only for "this is selected / the active handle", and the blue-biased
+   Graphite ramp for everything neutral. Text and action variants are taken one
+   step darker or lighter where the raw swatch would miss WCAG AA.
 
-   Dark is the primary theme. The light token set is applied only when :root
-   carries data-theme="light" — the prototype and every screenshot are dark.
-   That attribute is written by the navbar's theme toggle and replayed before
-   first paint from localStorage; with no stored choice the dark set below
-   stands, so the default the brand intended is also the default a visitor
-   gets. See lib/theme.ts.
+   The landing page is a graphite work surface with objects laid on it: paper
+   (light sheets), slab (the dark sheet) and stage (the drawing surface, dark in
+   both themes because it stands for a screen). Dark is the default; the light
+   set applies when :root carries data-theme="light" (see lib/theme.ts).
    ========================================================================== */
 @theme {
-  /* --- surfaces: Graphite, a blue-biased grey ramp (never pure grey) --- */
-  --color-bg: #0b0d14;
-  --color-surface: #161a22;
-  --color-surface-elevated: #1e222c;
+  /* --- surfaces: Graphite --- */
+  --color-bg: #181c24;
+  --color-surface: #1e222c;
+  --color-surface-elevated: #2c3242;
   --color-card: #12151d;
   --color-border: #2a3040;
-  --color-divider: #1e222c;
-  --color-code-bg: #0f1219;
-
-  /* Hover/inactive shades the prototype uses but the token table never named. */
-  --color-border-strong: #3a4152; /* secondary button hover edge */
-  --color-surface-hover: #2c3242; /* elevated button hover fill */
-  --color-tile: #1e222c; /* inactive icon tile in the showcase */
-
-  /*
-   * Translucent scrim behind the navbar once the page scrolls. A token rather
-   * than a literal because it is one of the few surfaces that has to invert
-   * with the theme — a dark bar over a light page reads as a foreign element.
-   */
-  --color-nav-scrim: rgb(14 15 17 / 0.82);
-
-  /* The showcase panel's hatch, two steps apart at the same lightness. */
+  --color-divider: #262b38;
+  --color-code-bg: #12151d;
+  --color-border-strong: #3a4152;
+  --color-surface-hover: #2c3242;
+  --color-tile: #1e222c;
+  --color-nav-scrim: #181c24;
   --color-hatch-a: #0f1219;
   --color-hatch-b: #12151d;
 
-  /* --- text: fg = text.primary · fg-muted = text.secondary · fg-subtle = text.disabled --- */
+  /* --- the objects on the surface --- */
+  --color-paper: #e8eaf0;
+  --color-paper-ink: #0b0d14;
+  --color-paper-muted: #3e4453;
+  --color-slab: #0b0d14;
+  --color-slab-ink: #f4f6fa;
+  --color-stage: #12151d;
+
+  /* --- text --- */
   --color-fg: #e8eaf0;
-  --color-fg-muted: #9aa1b2;
-  --color-fg-subtle: #7e8698;
-  --color-fg-icon: #7e8698; /* inactive showcase icon */
+  --color-fg-muted: #a6adbd;
+  --color-fg-subtle: #959cad;
+  --color-fg-icon: #959cad;
 
-  /* --- accent: Signal Blue — identity, primary action, links, focus --- */
-  --color-accent: #2d7df6;
-  --color-accent-hover: #4a93ff;
-  --color-accent-pressed: #1e63d6;
-  --color-accent-subtle: #122142;
-  --color-accent-soft: #7fa8f9; /* blue-300 — far end of the headline gradient */
+  /* --- Signal Blue: identity, links, focus --- */
+  --color-accent: #5591f7;
+  --color-accent-hover: #7fa8f9;
+  --color-accent-pressed: #2d7df6;
+  --color-accent-subtle: #16305e;
+  --color-accent-soft: #7fa8f9;
+  --color-signal: #2d7df6;
 
-  /* Filled actions need more contrast than the brand/link blue. */
-  --color-action: #246fe5;
-  --color-action-hover: #1e63d6;
-  --color-action-pressed: #1a50ae;
+  /* Filled actions carry white text, so they use blue-600 (5.3:1). */
+  --color-action: #1e63d6;
+  --color-action-hover: #1a50ae;
+  --color-action-pressed: #193f82;
 
-  /*
-   * Mark Orange. The brand spends this hue on exactly one meaning: "this
-   * object is selected and editable, right now". That is a product state, not
-   * a decoration — so it is deliberately absent from the site's chrome and
-   * appears only inside screenshots, on real annotation handles.
-   */
+  /* Mark Orange: the selected / editable state. Never decoration. */
   --color-mark: #f5842b;
 
   /* --- status --- */
@@ -71,24 +66,25 @@
   --color-warning: #f5a524;
   --color-danger: #e53335;
 
-  /* --- typography --- */
-  --font-sans: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "Cascadia Code", "Cascadia Mono", Consolas, monospace;
+  /* --- typography: system faces only, nothing is fetched --- */
+  --font-sans: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --font-mono: "Cascadia Mono", "Cascadia Code", Consolas, monospace;
 
-  /* --- radius --- */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  /* --- radius: 4px controls, square sheets --- */
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
 
-  /* --- elevation: shadows are blue-black and restrained, never neutral --- */
+  /* Shadows only for what floats (menus, the skip link). */
   --shadow-e1: 0 2px 6px rgb(3 6 15 / 0.45);
   --shadow-e2: 0 8px 24px rgb(3 6 15 / 0.5);
   --shadow-e3: 0 16px 48px rgb(3 6 15 / 0.55);
-  --shadow-glow: 0 8px 24px rgb(45 125 246 / 0.32);
-  --shadow-glow-sm: 0 4px 14px rgb(45 125 246 / 0.28);
+  --shadow-glow: none;
+  --shadow-glow-sm: none;
 
-  /* --- motion: nothing over 400ms for UI transitions, no bounce --- */
+  /* --- motion: quick and precise, one curve --- */
   --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ease-exit: cubic-bezier(0.4, 0, 1, 1);
 
@@ -117,34 +113,39 @@
   }
 }
 
-/* Light token set — secondary theme, opt-in via <html data-theme="light">. */
+/* Light token set, opt-in via <html data-theme="light">. */
 :root[data-theme="light"] {
-  --color-bg: #f4f6fa;
+  --color-bg: #dde2ec;
   --color-surface: #ffffff;
   --color-surface-elevated: #ffffff;
   --color-card: #ffffff;
-  --color-border: #dde2ec;
-  --color-divider: #eef1f6;
-  --color-code-bg: #eef1f6;
-  --color-border-strong: #c4cbd8;
+  --color-border: #c4cbd8;
+  --color-divider: #cdd2de;
+  --color-code-bg: #e8eaf0;
+  --color-border-strong: #a6adbd;
   --color-surface-hover: #eef1f6;
   --color-tile: #eef1f6;
-  --color-fg: #14181f;
-  --color-fg-muted: #5c6473;
-  --color-fg-subtle: #636c7d;
-  --color-fg-icon: #5c6473;
-  /* Text/link blue is one step darker on light surfaces to retain AA contrast. */
-  --color-accent: #1e63d6;
-  --color-accent-hover: #1a50ae;
-  --color-accent-pressed: #153f8f;
-  --color-accent-subtle: #eef4fe;
-  --color-accent-soft: #1a50ae;
-  --color-action: #246fe5;
-  --color-action-hover: #1e63d6;
-  --color-action-pressed: #1a50ae;
-  --color-nav-scrim: rgb(255 255 255 / 0.82);
+  --color-nav-scrim: #dde2ec;
   --color-hatch-a: #e9edf4;
   --color-hatch-b: #f2f5f9;
+
+  --color-paper: #ffffff;
+  --color-paper-ink: #0b0d14;
+  --color-paper-muted: #3e4453;
+  --color-slab: #12151d;
+  --color-slab-ink: #f4f6fa;
+  --color-stage: #12151d;
+
+  --color-fg: #12151d;
+  --color-fg-muted: #3e4453;
+  --color-fg-subtle: #474e5f;
+  --color-fg-icon: #474e5f;
+  --color-accent: #1a50ae;
+  --color-accent-hover: #193f82;
+  --color-accent-pressed: #16305e;
+  --color-accent-subtle: #d6e4fd;
+  --color-accent-soft: #1a50ae;
+  --color-signal: #1e63d6;
   color-scheme: light;
 }
 

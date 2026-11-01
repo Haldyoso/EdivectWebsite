@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Category standard (sketch)</title>
+<style>
+  :root{--bg:#FFFFFF;--bg2:#F4F6FA;--t:#14181F;--tm:#5C6473;--b:#DDE2EC;--blue:#2D7DF6;--blue6:#1E63D6;--orange:#F5842B}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1440px;height:900px;overflow:hidden}
+  body{background:var(--bg);color:var(--t);font-family:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif}
+  header{height:64px;display:flex;align-items:center;padding:0 72px}
+  .brand{display:flex;align-items:center;gap:10px;font:600 19px "Segoe UI Variable Display","Segoe UI";margin-right:auto}
+  nav{display:flex;gap:30px;font-size:15px;color:var(--tm)}
+  .cta{margin-left:30px;height:38px;padding:0 16px;border-radius:6px;background:var(--blue6);color:#fff;display:flex;align-items:center;font:600 14px "Segoe UI"}
+  .hero{display:grid;grid-template-columns:520px 1fr;gap:56px;padding:56px 72px 0;align-items:center}
+  h1{font:600 58px/1.05 "Segoe UI Variable Display","Segoe UI";letter-spacing:-.025em}
+  h1 span{color:var(--blue6)}
+  .lead{margin-top:18px;font-size:19px;line-height:1.55;color:var(--tm)}
+  .btns{display:flex;gap:12px;margin-top:30px}
+  .btn{display:flex;align-items:center;justify-content:center;height:48px;padding:0 20px;border-radius:6px;background:var(--blue6);color:#fff;font:600 15px "Segoe UI";text-decoration:none}
+  .btn.sec{background:#fff;color:var(--t);border:1px solid #C4CBD8}
+  .meta{margin-top:14px;font-size:13px;color:var(--tm)}
+  .media{height:560px;border-radius:16px;background:var(--bg2);border:1px solid var(--b);position:relative;overflow:hidden}
+  .media .demo{position:absolute;inset:28px;border-radius:10px;background:#161A22;box-shadow:0 16px 48px #0b0d1440}
+  .media svg{width:100%;height:100%}
+  .media span{position:absolute;left:44px;bottom:42px;font-size:12px;color:#9AA1B2}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:40px 72px 0}
+  .row div{border-top:1px solid var(--b);padding-top:14px}
+  .row b{display:block;font:600 16px "Segoe UI Variable Display","Segoe UI"}
+  .row p{font-size:14px;color:var(--tm);margin-top:4px;line-height:1.45}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><svg width="26" height="26" viewBox="30 36 200 184"><path d="M121.5 48 H61 A23 23 0 0 0 38 71 V185 A23 23 0 0 0 61 208 H189.5" fill="none" stroke="#2D7DF6" stroke-width="17"/><g fill="#14181F"><rect x="76" y="124" width="34" height="9"/><rect x="133" y="124" width="34" height="9"/><rect x="117" y="84" width="9" height="34"/><rect x="117" y="140" width="9" height="34"/></g><path d="M138 49 H212 V110" fill="none" stroke="#F5842B" stroke-width="6"/><rect x="205" y="122" width="13.5" height="13.5" fill="#2D7DF6"/><circle cx="212" cy="49" r="9" fill="#2D7DF6"/><circle cx="212" cy="206" r="9" fill="#2D7DF6"/></svg>Edivect</div>
+  <nav><span>Features</span><span>How it works</span><span>Compare</span><span>FAQ</span><span>EN · SK · DE</span></nav>
+  <span class="cta">Download</span>
+</header>
+<section class="hero">
+  <div>
+    <h1>Draw directly on your screen. <span>Edit everything later.</span></h1>
+    <p class="lead">Screen annotation for Windows where every arrow, callout and measurement stays editable. Offline, no account, no telemetry.</p>
+    <div class="btns"><a class="btn" href="#">Get from Microsoft Store</a><a class="btn" href="#">Download portable EXE</a></div>
+    <p class="meta">Store v1.0.0.3 · Portable v1.0.0, 72.7 MB · Windows 10/11</p>
+  </div>
+  <div class="media"><div class="demo"><svg viewBox="0 0 700 500">
+    <g fill="none" stroke="#5B6273" stroke-width="1.6"><rect x="110" y="90" width="380" height="270"/><circle cx="230" cy="225" r="60"/><circle cx="230" cy="225" r="28"/><rect x="350" y="160" width="100" height="120" rx="10"/></g>
+    <path d="M600 90 L360 170" stroke="#E53335" stroke-width="5" fill="none"/><path d="M350 173 L372 154 L376 178Z" fill="#E53335"/>
+    <g stroke="#2D7DF6" stroke-width="1.5" fill="#fff"><rect x="346" y="82" width="262" height="96" fill="none" stroke-dasharray="4 3"/><rect x="341" y="77" width="9" height="9"/><rect x="341" y="173" width="9" height="9"/><rect x="603" y="173" width="9" height="9"/></g><rect x="603" y="77" width="9" height="9" fill="#F5842B"/>
+  </svg></div><span>Interactive demo · synthetic drawing</span></div>
+</section>
+<div class="row">
+  <div><b>Open → Draw → Export</b><p>Launch to first stroke in under two seconds.</p></div>
+  <div><b>Everything stays editable</b><p>Select, move, restyle any object, hours later.</p></div>
+  <div><b>Private by design</b><p>Offline. No account, no telemetry.</p></div>
+  <div><b>Built for CAD workflows</b><p>3-point arcs and angle measurement.</p></div>
+</div>
+</body>
+</html>

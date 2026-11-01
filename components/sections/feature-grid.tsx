@@ -1,6 +1,4 @@
 import { Reveal } from "@/components/motion/reveal";
-import { Card, IconTile } from "@/components/ui/card";
-import { SectionHeading } from "@/components/ui/section-heading";
 import type { GridFeature, HeadingCopy } from "@/types";
 
 interface FeatureGridProps {
@@ -8,21 +6,21 @@ interface FeatureGridProps {
   features: GridFeature[];
 }
 
+/** The full toolkit on one sheet of paper that spans the page. */
 export function FeatureGrid({ heading, features }: FeatureGridProps) {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-24 md:px-6">
-      <SectionHeading {...heading} align="left" className="mb-12" />
+    <section aria-labelledby="toolkit-title" className="field paper">
+      <Reveal>
+        <h2 id="toolkit-title" className="h-section">
+          {heading.title}
+        </h2>
+      </Reveal>
 
-      <ul className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
-        {features.map(({ icon: Icon, title, description }, index) => (
-          <Reveal as="li" key={title} index={index % 3} className="h-full">
-            <Card interactive className="h-full p-[22px]">
-              <IconTile size="sm" className="mb-3.5">
-                <Icon aria-hidden="true" strokeWidth={1.75} className="size-5" />
-              </IconTile>
-              <h3 className="mb-1.5 text-base font-semibold">{title}</h3>
-              <p className="text-sm leading-[1.55] text-fg-muted">{description}</p>
-            </Card>
+      <ul className="toolkit">
+        {features.map(({ title, description }, index) => (
+          <Reveal as="li" key={title} index={index % 3}>
+            <h3>{title}</h3>
+            <p>{description}</p>
           </Reveal>
         ))}
       </ul>

@@ -11,7 +11,7 @@ interface RevealProps {
 }
 
 /**
- * Fade-up 16px, once, when 12% in view.
+ * Fade-up 16px, once, as soon as it enters the view.
  *
  * The hidden state lives in CSS behind html[data-js="on"] (set by an inline
  * script before first paint) rather than in an inline style, so the content is
@@ -40,7 +40,7 @@ export function Reveal({ children, className, index = 0, as = "div" }: RevealPro
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.12 },
+      { threshold: 0, rootMargin: "0px 0px -6% 0px" },
     );
 
     observer.observe(element);
