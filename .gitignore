@@ -42,3 +42,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design tooling: working output, mock-ups and private references (not published)
+/.taste-skill/
+/.impeccable/mocks/
+/docs/reference/

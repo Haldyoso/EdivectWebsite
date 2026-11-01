@@ -20,6 +20,14 @@ const eslintConfig = [
       "next-env.d.ts",
       // Read-only design references shipped with the handoff, not project source.
       "Edivect UX redesign/**",
+      // Agent skills, their scripts and their working output: tooling, not site source.
+      ".agents/**",
+      ".claude/**",
+      ".github/skills/**",
+      ".github/agents/**",
+      ".github/hooks/**",
+      ".impeccable/**",
+      ".taste-skill/**",
     ],
   },
 ];
