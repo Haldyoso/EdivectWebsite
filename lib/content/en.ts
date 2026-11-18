@@ -410,7 +410,7 @@ export const en: Copy = {
     label: "Who makes Edivect",
     role: "Lead design engineer, automotive plastics · Slovakia",
     quote:
-      "I review drawings on screen every day. Screenshot, PowerPoint, email — and the comment gets lost. So I built the tool I was missing.",
+      "I review 3D CAD in sections every day. My comments kept ending up in screenshots nobody could find. So I built the tool I was missing.",
     linkedin: "Follow on LinkedIn",
     photoAlt: "Portrait of Martin Haluš",
   },

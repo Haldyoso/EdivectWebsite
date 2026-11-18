@@ -411,7 +411,7 @@ export const sk: Copy = {
     label: "Kto stojí za Edivectom",
     role: "Vedúci konštruktér plastových dielov v automotive · Slovensko",
     quote:
-      "Výkresy pripomienkujem na obrazovke každý deň. Screenshot, PowerPoint, e-mail – a pripomienka sa stratí. Tak som si postavil nástroj, ktorý mi chýbal.",
+      "Každý deň kontrolujem 3D CAD v rezoch. Moje pripomienky končili v screenshotoch, ktoré potom nikto nenašiel. Tak som si postavil nástroj, ktorý mi chýbal.",
     linkedin: "Sledovať na LinkedIn",
     photoAlt: "Portrét Martina Haluša",
   },
