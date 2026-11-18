@@ -409,9 +409,9 @@ export const sk: Copy = {
   },
   maker: {
     label: "Kto stojí za Edivectom",
-    role: "Vedúci konštruktér plastových dielov v automotive · Slovensko",
+    role: "Lead design engineer, plastové diely pre automotive · Slovensko",
     quote:
-      "Každý deň kontrolujem 3D CAD v rezoch. Moje pripomienky končili v screenshotoch, ktoré potom nikto nenašiel. Tak som si postavil nástroj, ktorý mi chýbal.",
+      "Som lead design engineer, nie marketér. Edivect vyrástol z mojej každodennej práce s rezmi v 3D CAD a dodnes je súčasťou každého review, ktoré robím.",
     linkedin: "Sledovať na LinkedIn",
     photoAlt: "Portrét Martina Haluša",
   },

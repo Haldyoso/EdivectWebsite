@@ -411,7 +411,7 @@ export const de: Copy = {
     label: "Wer hinter Edivect steht",
     role: "Lead Design Engineer für Kunststoffteile im Automobilbau · Slowakei",
     quote:
-      "Ich prüfe jeden Tag 3D-CAD im Schnitt. Meine Anmerkungen landeten in Screenshots, die niemand mehr fand. Also habe ich das Werkzeug gebaut, das mir gefehlt hat.",
+      "Ich bin Lead Design Engineer, kein Marketer. Edivect ist aus meiner täglichen Arbeit mit 3D-CAD-Schnitten entstanden und gehört bis heute zu jedem Review, das ich mache.",
     linkedin: "Auf LinkedIn folgen",
     photoAlt: "Porträt von Martin Haluš",
   },
