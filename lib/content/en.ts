@@ -388,6 +388,11 @@ export const en: Copy = {
         answer:
           "Windows 10 and Windows 11, 64-bit. The interface uses native Segoe UI and Fluent conventions, scales correctly on high-DPI displays, and honors your system light/dark and reduced-motion settings.",
       },
+      company: {
+        question: "Can my company buy a licence?",
+        answer:
+          "Licences for teams and companies are being prepared. Until then, your team can evaluate Edivect with the 30-day Commercial Trial, and we offer free pilots for companies. Write to licensing@edivect.com with your company name and the number of users.",
+      },
     },
   },
   downloadCta: {
@@ -422,6 +427,9 @@ export const en: Copy = {
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       issues: "Report an issue",
+      contact: "Email us",
+      support: "Support",
+      licensing: "Licensing for companies",
     },
     legal: "© 2026 Edivect.",
     traits: "Portable · Offline · No telemetry",

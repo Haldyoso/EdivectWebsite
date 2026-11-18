@@ -9,6 +9,7 @@ import {
   termsPath,
   type Lang,
 } from "@/lib/i18n";
+import { site } from "@/lib/site";
 import { de } from "@/lib/content/de";
 import { en } from "@/lib/content/en";
 import { sk } from "@/lib/content/sk";
@@ -156,6 +157,15 @@ function buildFooterColumns(lang: Lang, copy: Copy): FooterColumn[] {
         { label: l.shortcuts, href: `${home}#shortcuts` },
         { label: l.privacy, href: privacyPath(lang) },
         { label: l.terms, href: termsPath(lang) },
+      ],
+    },
+    {
+      title: copy.footer.columns.connect,
+      links: [
+        { label: l.contact, href: `mailto:${site.contact.general}` },
+        { label: l.support, href: `mailto:${site.contact.support}` },
+        { label: l.licensing, href: `mailto:${site.contact.licensing}` },
+        { label: l.issues, href: site.issuesUrl, external: true },
       ],
     },
   ];

@@ -1,6 +1,6 @@
 import type { Lang } from "@/lib/i18n";
 
-export const licensing: Record<Lang, { heading: string; personal: string; trial: string; personalButton: string; trialButton: string; shared: string; expiry: string; contact: string; terms: string }> = {
+export const licensing: Record<Lang, { heading: string; personal: string; trial: string; personalButton: string; trialButton: string; shared: string; expiry: string; contact: string; terms: string; company: { title: string; text: string; button: string; subject: string; body: string } }> = {
   en: {
     heading: "Choose how you use Edivect",
     personal: "All features, free without a time limit. For private hobbies, personal projects and your own study. Not for work, business or client projects.",
@@ -9,6 +9,13 @@ export const licensing: Record<Lang, { heading: string; personal: string; trial:
     shared: "Two licence modes: Personal or Commercial Trial, chosen on first launch. No export watermarks. Change modes by clicking the licence label in the panel. Store and portable downloads may have different versions.",
     expiry: "Commercial licences are not yet sold. After the trial, opening, saving and exporting existing work remain available. The prepared Store edition offers a one-time 30-day extension directly in the app during the last 7 days or after expiry. Older portable editions follow their included terms. Personal remains available for private use.",
     contact: "Licence support", terms: "Licence and terms",
+    company: {
+      title: "Using Edivect at your company?",
+      text: "Licences for teams and companies are being prepared. Tell us how many people would use Edivect and we'll get back to you about licensing, invoicing and a free pilot for your team.",
+      button: "Contact licensing",
+      subject: "Edivect licence enquiry",
+      body: "Company:\nCountry:\nNumber of users:\nHow you use Edivect (e.g. design review, QA, training):\nInvoice / purchase order needed: yes / no\n",
+    },
   },
   sk: {
     heading: "Vyberte si, ako používate Edivect",
@@ -18,6 +25,13 @@ export const licensing: Record<Lang, { heading: string; personal: string; trial:
     shared: "Dva licenčné režimy: Personal alebo Commercial Trial, ktoré vyberiete pri prvom spustení. Bez watermarkov v exporte. Režim zmeníte kliknutím na označenie licencie v paneli. Store a portable download môžu mať rôzne verzie.",
     expiry: "Komerčné licencie zatiaľ nie sú v predaji. Po triale zostáva otvorenie, uloženie a export existujúcej práce. Pripravovaná Store verzia ponúka jednorazové predĺženie o 30 dní priamo v aplikácii počas posledných 7 dní alebo po vypršaní. Staršie portable vydania sa riadia vloženými podmienkami. Personal zostáva dostupný na súkromné použitie.",
     contact: "Podpora k licencii", terms: "Licencia a podmienky",
+    company: {
+      title: "Používate Edivect vo firme?",
+      text: "Licencie pre tímy a firmy pripravujeme. Napíšte nám, koľko ľudí by Edivect používalo, a ozveme sa s možnosťami licencie, fakturácie a bezplatného pilotu pre váš tím.",
+      button: "Kontaktovať",
+      subject: "Edivect – otázka k licencii",
+      body: "Firma:\nKrajina:\nPočet používateľov:\nNa čo Edivect používate (napr. pripomienkovanie výkresov, kvalita, školenia):\nPotrebujete faktúru / objednávku: áno / nie\n",
+    },
   },
   de: {
     heading: "Wählen Sie Ihre Nutzung von Edivect",
@@ -27,5 +41,12 @@ export const licensing: Record<Lang, { heading: string; personal: string; trial:
     shared: "Zwei Lizenzmodi: Personal oder Commercial Trial, gewählt beim ersten Start. Keine Wasserzeichen im Export. Zum Wechseln klicken Sie auf die Lizenzanzeige im Panel. Store und portabler Download können unterschiedliche Versionen haben.",
     expiry: "Kommerzielle Lizenzen werden noch nicht verkauft. Nach dem Test bleiben Öffnen, Speichern und Export vorhandener Arbeit möglich. Die vorbereitete Store-Version bietet direkt in der App eine einmalige Verlängerung um 30 Tage in den letzten 7 Tagen oder nach Ablauf. Ältere portable Versionen folgen ihren enthaltenen Bedingungen. Personal bleibt für private Nutzung verfügbar.",
     contact: "Lizenzsupport", terms: "Lizenz und Bedingungen",
+    company: {
+      title: "Edivect im Unternehmen nutzen?",
+      text: "Lizenzen für Teams und Unternehmen sind in Vorbereitung. Schreiben Sie uns, wie viele Personen Edivect nutzen würden – wir melden uns zu Lizenzoptionen, Rechnungsstellung und einem kostenlosen Pilot für Ihr Team.",
+      button: "Kontakt aufnehmen",
+      subject: "Edivect – Lizenzanfrage",
+      body: "Unternehmen:\nLand:\nAnzahl der Nutzer:\nWofür Sie Edivect nutzen (z. B. Design-Review, Qualität, Schulung):\nRechnung / Bestellung erforderlich: ja / nein\n",
+    },
   },
 };

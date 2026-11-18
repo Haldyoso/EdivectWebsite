@@ -41,13 +41,18 @@ export const site = {
       process.env.NEXT_PUBLIC_MICROSOFT_STORE_PRODUCT_VERSION || publishedMicrosoftStoreRelease.productVersion,
     ),
   },
+  // Public addresses on the domain, forwarded by Cloudflare Email Routing.
+  contact: {
+    general: "contact@edivect.com",
+    support: "support@edivect.com",
+    licensing: "licensing@edivect.com",
+  },
   legal: {
     // Author named by the application metadata. Business/address details remain
     // a separate decision before any paid launch.
     owner: "Martin Haluš",
-    // TODO(launch): add a dedicated support/privacy email if GitHub Issues is
-    // not the desired long-term contact channel.
-    supportEmail: null,
+    // Privacy and terms questions go to the support address.
+    supportEmail: "support@edivect.com",
   },
   // Portable metadata deliberately stays independent of the Store product version.
   release: {

@@ -195,6 +195,7 @@ export const faqIds = [
   "monitors",
   "reopen",
   "windows",
+  "company",
 ] as const;
 
 export const compareRowIds: CompareRowId[] = [

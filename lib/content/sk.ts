@@ -389,6 +389,11 @@ export const sk: Copy = {
         answer:
           "Windows 10 a Windows 11, 64-bitové. Rozhranie používa natívne Segoe UI a konvencie Fluent, správne sa škáluje na displejoch s vysokým DPI a rešpektuje systémové nastavenie svetlého či tmavého motívu aj obmedzenia pohybu.",
       },
+      company: {
+        question: "Môže si naša firma kúpiť licenciu?",
+        answer:
+          "Licencie pre tímy a firmy pripravujeme. Dovtedy môže váš tím vyskúšať Edivect v 30-dňovom režime Commercial Trial a firmám ponúkame bezplatný pilot. Napíšte na licensing@edivect.com názov firmy a počet používateľov.",
+      },
     },
   },
   downloadCta: {
@@ -423,6 +428,9 @@ export const sk: Copy = {
       privacy: "Ochrana súkromia",
       terms: "Podmienky používania",
       issues: "Nahlásiť chybu",
+      contact: "Napíšte nám",
+      support: "Podpora",
+      licensing: "Licencie pre firmy",
     },
     legal: "© 2026 Edivect.",
     traits: "Prenosný · Offline · Bez telemetrie",

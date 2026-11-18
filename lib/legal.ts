@@ -32,14 +32,14 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "How the Edivect website and downloaded application handle personal information, cookies, telemetry and third-party services.",
     intro:
       "Edivect is designed to collect as little information as possible. This policy separates the static website from the Windows application you download.",
-    lastUpdated: "3 October 2026",
+    lastUpdated: "18 November 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Operator",
     ownerPending: "Legal owner details must be added before commercial launch.",
     contactTitle: "Privacy questions",
     contactText:
-      "Until a dedicated privacy email is published, contact the project owner through GitHub Issues. Do not include confidential information in a public issue.",
-    contactLink: "Contact via GitHub Issues",
+      "Write to support@edivect.com with questions about privacy or your data. Please do not send confidential content or screenshots with sensitive information.",
+    contactLink: "Email support@edivect.com",
     back: "Back to the home page",
     sections: [
       {
@@ -108,14 +108,14 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Ako web Edivect a stiahnutá aplikácia pracujú s osobnými údajmi, cookies, telemetriou a službami tretích strán.",
     intro:
       "Edivect je navrhnutý tak, aby zhromažďoval čo najmenej údajov. Tieto zásady odlišujú statickú webovú stránku od aplikácie pre Windows, ktorú si stiahnete.",
-    lastUpdated: "3. októbra 2026",
+    lastUpdated: "18. novembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Prevádzkovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
     contactTitle: "Otázky o súkromí",
     contactText:
-      "Kým nebude zverejnený osobitný e-mail pre otázky súkromia, kontaktujte vlastníka projektu cez GitHub Issues. Do verejného hlásenia nevkladajte dôverné informácie.",
-    contactLink: "Kontaktovať cez GitHub Issues",
+      "S otázkami o súkromí alebo vašich údajoch píšte na support@edivect.com. Neposielajte dôverný obsah ani snímky s citlivými údajmi.",
+    contactLink: "Napísať na support@edivect.com",
     back: "Späť na úvodnú stránku",
     sections: [
       {
@@ -184,14 +184,14 @@ const privacy: Record<Lang, LegalPageCopy> = {
       "Wie die Edivect-Website und die heruntergeladene Anwendung mit personenbezogenen Daten, Cookies, Telemetrie und Drittanbietern umgehen.",
     intro:
       "Edivect ist darauf ausgelegt, so wenige Daten wie möglich zu erfassen. Diese Erklärung unterscheidet zwischen der statischen Website und der heruntergeladenen Windows-Anwendung.",
-    lastUpdated: "3. Oktober 2026",
+    lastUpdated: "18. November 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Betreiber",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
     contactTitle: "Datenschutzfragen",
     contactText:
-      "Bis eine eigene Datenschutz-E-Mail veröffentlicht wird, erreichen Sie den Projektinhaber über GitHub Issues. Stellen Sie dort keine vertraulichen Informationen ein.",
-    contactLink: "Kontakt über GitHub Issues",
+      "Fragen zum Datenschutz oder zu Ihren Daten richten Sie bitte an support@edivect.com. Senden Sie keine vertraulichen Inhalte oder Screenshots mit sensiblen Daten.",
+    contactLink: "E-Mail an support@edivect.com",
     back: "Zurück zur Startseite",
     sections: [
       {
@@ -262,14 +262,14 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Terms governing use of the Edivect website and the software download made available through it.",
     intro: "Terms for the website, Edivect Personal and the 30-day Commercial Trial.",
-    lastUpdated: "3 October 2026",
+    lastUpdated: "18 November 2026",
     lastUpdatedLabel: "Last updated",
     ownerLabel: "Provider",
     ownerPending: "Legal owner details must be added before commercial launch.",
     contactTitle: "Questions about these terms",
     contactText:
-      "Until a dedicated support email is published, contact the project owner through GitHub Issues. Do not include confidential information in a public issue.",
-    contactLink: "Contact via GitHub Issues",
+      "Write to support@edivect.com with questions about these terms. For company licences, write to licensing@edivect.com.",
+    contactLink: "Email support@edivect.com",
     back: "Back to the home page",
     sections: [
       {
@@ -319,14 +319,14 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Podmienky používania webu Edivect a softvéru, ktorý je prostredníctvom neho dostupný na stiahnutie.",
     intro: "Podmienky webu, Edivect Personal a 30-dňového Commercial Trial.",
-    lastUpdated: "3. októbra 2026",
+    lastUpdated: "18. novembra 2026",
     lastUpdatedLabel: "Posledná aktualizácia",
     ownerLabel: "Poskytovateľ",
     ownerPending: "Údaje právneho vlastníka treba doplniť pred komerčným spustením.",
     contactTitle: "Otázky k podmienkam",
     contactText:
-      "Kým nebude zverejnený osobitný e-mail podpory, kontaktujte vlastníka projektu cez GitHub Issues. Do verejného hlásenia nevkladajte dôverné informácie.",
-    contactLink: "Kontaktovať cez GitHub Issues",
+      "S otázkami k týmto podmienkam píšte na support@edivect.com. Pre firemné licencie píšte na licensing@edivect.com.",
+    contactLink: "Napísať na support@edivect.com",
     back: "Späť na úvodnú stránku",
     sections: [
       {
@@ -376,14 +376,14 @@ const terms: Record<Lang, LegalPageCopy> = {
     description:
       "Bedingungen für die Nutzung der Edivect-Website und des darüber bereitgestellten Softwaredownloads.",
     intro: "Bedingungen für die Website, Edivect Personal und den 30-tägigen Commercial Trial.",
-    lastUpdated: "3. Oktober 2026",
+    lastUpdated: "18. November 2026",
     lastUpdatedLabel: "Zuletzt aktualisiert",
     ownerLabel: "Anbieter",
     ownerPending: "Die Angaben zum rechtlichen Betreiber müssen vor dem kommerziellen Start ergänzt werden.",
     contactTitle: "Fragen zu diesen Bedingungen",
     contactText:
-      "Bis eine eigene Support-E-Mail veröffentlicht wird, erreichen Sie den Projektinhaber über GitHub Issues. Stellen Sie dort keine vertraulichen Informationen ein.",
-    contactLink: "Kontakt über GitHub Issues",
+      "Fragen zu diesen Bedingungen richten Sie bitte an support@edivect.com. Für Unternehmenslizenzen schreiben Sie an licensing@edivect.com.",
+    contactLink: "E-Mail an support@edivect.com",
     back: "Zurück zur Startseite",
     sections: [
       {

@@ -389,6 +389,11 @@ export const de: Copy = {
         answer:
           "Windows 10 und Windows 11, 64-Bit. Die Oberfläche nutzt das native Segoe UI und die Fluent-Konventionen, skaliert korrekt auf Displays mit hohem DPI und richtet sich nach Ihren Systemeinstellungen für helles/dunkles Design und reduzierte Bewegung.",
       },
+      company: {
+        question: "Kann unser Unternehmen eine Lizenz kaufen?",
+        answer:
+          "Lizenzen für Teams und Unternehmen sind in Vorbereitung. Bis dahin kann Ihr Team Edivect mit dem 30-tägigen Commercial Trial testen, und wir bieten Unternehmen einen kostenlosen Pilot an. Schreiben Sie an licensing@edivect.com mit Firmenname und Anzahl der Nutzer.",
+      },
     },
   },
   downloadCta: {
@@ -423,6 +428,9 @@ export const de: Copy = {
       privacy: "Datenschutzerklärung",
       terms: "Nutzungsbedingungen",
       issues: "Fehler melden",
+      contact: "Schreiben Sie uns",
+      support: "Support",
+      licensing: "Lizenzen für Unternehmen",
     },
     legal: "© 2026 Edivect.",
     traits: "Portabel · Offline · Keine Telemetrie",

@@ -40,6 +40,14 @@ for (const locale of locales) {
       await expect(page.locator("#store-pending")).toHaveCount(0);
     }
     await expect(page.locator("img[src*=screenshots], a[href*=changelog], header a[href*=github]" )).toHaveCount(0);
+
+    // Companies get a direct licensing contact next to the licence modes and in the footer.
+    const companyMail = page.locator(`#download a[href^="mailto:${site.contact.licensing}?subject="]`);
+    await expect(companyMail).toHaveCount(1);
+    await expect(companyMail).toBeVisible();
+    for (const address of Object.values(site.contact)) {
+      await expect(page.locator(`footer a[href="mailto:${address}"]`)).toHaveCount(1);
+    }
     expect(errors).toEqual([]);
   });
 

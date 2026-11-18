@@ -345,7 +345,8 @@ export type FaqId =
   | "internet"
   | "monitors"
   | "reopen"
-  | "windows";
+  | "windows"
+  | "company";
 
 export type FooterColumnId = "product" | "resources" | "connect";
 
@@ -362,4 +363,7 @@ export type FooterLinkId =
   | "license"
   | "privacy"
   | "terms"
-  | "issues";
+  | "issues"
+  | "contact"
+  | "support"
+  | "licensing";

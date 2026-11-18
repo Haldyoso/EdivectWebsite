@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Building2, Download, Mail } from "lucide-react";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
@@ -19,6 +19,8 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
   const licence = licensing[lang];
   const distribution = distributionCopy[lang];
   const storeRelease = site.distribution.microsoftStore;
+  const company = licence.company;
+  const companyMail = `mailto:${site.contact.licensing}?subject=${encodeURIComponent(company.subject)}&body=${encodeURIComponent(company.body)}`;
 
   return (
     <section id="download" aria-labelledby="download-title" className="section wrap">
@@ -94,6 +96,18 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
                 {licence.terms}
               </Link>
             </p>
+          </div>
+          <div className="licence-company mt-8">
+            <Building2 aria-hidden="true" className="licence-company-icon" />
+            <div className="licence-company-text">
+              <h4>{company.title}</h4>
+              <p>{company.text}</p>
+              <p className="licence-company-mail">{site.contact.licensing}</p>
+            </div>
+            <a className="btn" href={companyMail}>
+              <Mail aria-hidden="true" />
+              {company.button}
+            </a>
           </div>
         </Reveal>
       </div>
