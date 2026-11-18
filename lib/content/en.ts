@@ -404,6 +404,15 @@ export const en: Copy = {
     versionLabel: "Version",
     checksumLabel: "SHA-256",
     checksumPending: "SHA-256 published with the release",
+    scanReport: "Scan report on VirusTotal",
+  },
+  maker: {
+    label: "Who makes Edivect",
+    role: "Lead design engineer, automotive plastics · Slovakia",
+    quote:
+      "I review drawings on screen every day. Screenshot, PowerPoint, email — and the comment gets lost. So I built the tool I was missing.",
+    linkedin: "Follow on LinkedIn",
+    photoAlt: "Portrait of Martin Haluš",
   },
   footer: {
     blurb:

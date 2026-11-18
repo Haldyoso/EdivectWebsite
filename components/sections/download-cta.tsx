@@ -1,12 +1,12 @@
-import { Building2, Download, Mail } from "lucide-react";
+import { Building2, Download, Mail, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
-import { WindowsIcon } from "@/components/ui/github-icon";
+import { LinkedInIcon, WindowsIcon } from "@/components/ui/github-icon";
 import { distributionCopy } from "@/lib/distribution";
 import { termsPath, type Lang } from "@/lib/i18n";
 import { licensing } from "@/lib/licensing";
-import { hasRealRelease, site } from "@/lib/site";
+import { basePath, hasRealRelease, site, virusTotalUrl } from "@/lib/site";
 import type { Copy } from "@/types";
 
 /**
@@ -20,6 +20,7 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
   const distribution = distributionCopy[lang];
   const storeRelease = site.distribution.microsoftStore;
   const company = licence.company;
+  const maker = copy.maker;
   const companyMail = `mailto:${site.contact.licensing}?subject=${encodeURIComponent(company.subject)}&body=${encodeURIComponent(company.body)}`;
 
   return (
@@ -63,10 +64,18 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
             {distribution.portable}
           </a>
           {hasRealRelease ? (
-            <p className="mt-2 text-[14px]">
-              {cta.checksumLabel}
-              <code>{sha256}</code>
-            </p>
+            <>
+              <p className="mt-2 text-[14px]">
+                {cta.checksumLabel}
+                <code>{sha256}</code>
+              </p>
+              <p className="dl-scan">
+                <ShieldCheck aria-hidden="true" />
+                <a className="link" href={virusTotalUrl} target="_blank" rel="noopener noreferrer">
+                  {cta.scanReport}
+                </a>
+              </p>
+            </>
           ) : (
             <p className="mt-2 text-[14px]">{cta.checksumPending}</p>
           )}
@@ -109,6 +118,35 @@ export function DownloadCta({ copy, lang }: { copy: Copy; lang: Lang }) {
               {company.button}
             </a>
           </div>
+          <figure className="maker mt-8" aria-labelledby="maker-name">
+            {/* Plain <img> with basePath: images are unoptimized, see components/ui/screenshot.tsx. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="maker-photo"
+              src={`${basePath}/images/maker.jpg`}
+              alt={maker.photoAlt}
+              width={112}
+              height={112}
+              loading="lazy"
+            />
+            <div className="maker-text">
+              <p className="maker-label">{maker.label}</p>
+              <p id="maker-name" className="maker-name">
+                {site.legal.owner}
+              </p>
+              <p className="maker-role">{maker.role}</p>
+              <blockquote className="maker-quote">{maker.quote}</blockquote>
+              <div className="maker-links">
+                <a className="btn" href={site.social.linkedin} target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon />
+                  {maker.linkedin}
+                </a>
+                <a className="link" href={`mailto:${site.contact.general}`}>
+                  {site.contact.general}
+                </a>
+              </div>
+            </div>
+          </figure>
         </Reveal>
       </div>
     </section>

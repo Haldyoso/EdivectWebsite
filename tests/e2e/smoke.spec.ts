@@ -45,6 +45,15 @@ for (const locale of locales) {
     const companyMail = page.locator(`#download a[href^="mailto:${site.contact.licensing}?subject="]`);
     await expect(companyMail).toHaveCount(1);
     await expect(companyMail).toBeVisible();
+    // Trust: the scan report matches the published checksum, and the author is named with a photo.
+    await expect(
+      page.locator(`#download a[href="https://www.virustotal.com/gui/file/${site.release.sha256.toLowerCase()}"]`),
+    ).toHaveCount(1);
+    const makerPhoto = page.locator("#download img.maker-photo");
+    await makerPhoto.scrollIntoViewIfNeeded();
+    await expect(makerPhoto).toBeVisible();
+    expect(await makerPhoto.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+    await expect(page.locator(`#download a[href="${site.social.linkedin}"]`)).toHaveCount(1);
     for (const address of Object.values(site.contact)) {
       await expect(page.locator(`footer a[href="mailto:${address}"]`)).toHaveCount(1);
     }

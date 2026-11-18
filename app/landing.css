@@ -1238,6 +1238,78 @@
   color: var(--color-fg);
 }
 
+.channel .dl-scan {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.dl-scan svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.maker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 24px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.maker-photo {
+  width: 112px;
+  height: 112px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.maker-text {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.maker-label {
+  font-size: var(--t-small);
+  color: var(--color-fg-muted);
+}
+
+.maker-name {
+  margin-top: 2px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.maker-role {
+  font-size: var(--t-small);
+  color: var(--color-fg-muted);
+}
+
+.maker-quote {
+  margin-top: 12px;
+  max-width: 60ch;
+  font-style: italic;
+}
+
+.maker-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 16px;
+}
+
+.maker-links .btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (min-width: 800px) {
   .channels {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -405,6 +405,15 @@ export const sk: Copy = {
     versionLabel: "Verzia",
     checksumLabel: "SHA-256",
     checksumPending: "SHA-256 sa zverejní spolu s vydaním",
+    scanReport: "Antivírusová kontrola na VirusTotal",
+  },
+  maker: {
+    label: "Kto stojí za Edivectom",
+    role: "Vedúci konštruktér plastových dielov v automotive · Slovensko",
+    quote:
+      "Výkresy pripomienkujem na obrazovke každý deň. Screenshot, PowerPoint, e-mail – a pripomienka sa stratí. Tak som si postavil nástroj, ktorý mi chýbal.",
+    linkedin: "Sledovať na LinkedIn",
+    photoAlt: "Portrét Martina Haluša",
   },
   footer: {
     blurb:

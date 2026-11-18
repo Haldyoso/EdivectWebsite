@@ -47,6 +47,10 @@ export const site = {
     support: "support@edivect.com",
     licensing: "licensing@edivect.com",
   },
+  // Public profiles of the author, linked from the "who makes it" block.
+  social: {
+    linkedin: "https://www.linkedin.com/in/martinhalus/",
+  },
   legal: {
     // Author named by the application metadata. Business/address details remain
     // a separate decision before any paid launch.
@@ -70,3 +74,9 @@ export const site = {
  * placeholder URL or checksum into the page and its structured data.
  */
 export const hasRealRelease = !site.release.downloadUrl.endsWith("#");
+
+/**
+ * VirusTotal file report for the portable EXE. Derived from the checksum so the
+ * link can never point at a different build than the one on the page.
+ */
+export const virusTotalUrl = `https://www.virustotal.com/gui/file/${site.release.sha256.toLowerCase()}`;

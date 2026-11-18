@@ -405,6 +405,15 @@ export const de: Copy = {
     versionLabel: "Version",
     checksumLabel: "SHA-256",
     checksumPending: "SHA-256 wird mit dem Release veröffentlicht",
+    scanReport: "Virenscan-Bericht auf VirusTotal",
+  },
+  maker: {
+    label: "Wer hinter Edivect steht",
+    role: "Lead Design Engineer für Kunststoffteile im Automobilbau · Slowakei",
+    quote:
+      "Ich prüfe jeden Tag Zeichnungen am Bildschirm. Screenshot, PowerPoint, E-Mail – und die Anmerkung geht verloren. Also habe ich das Werkzeug gebaut, das mir gefehlt hat.",
+    linkedin: "Auf LinkedIn folgen",
+    photoAlt: "Porträt von Martin Haluš",
   },
   footer: {
     blurb:

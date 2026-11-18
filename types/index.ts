@@ -243,6 +243,16 @@ export interface Copy {
     checksumLabel: string;
     /** Shown in place of the checksum until a real release exists. */
     checksumPending: string;
+    /** Link text for the VirusTotal report of the portable EXE. */
+    scanReport: string;
+  };
+  /** The person behind Edivect, shown under the licence modes. */
+  maker: {
+    label: string;
+    role: string;
+    quote: string;
+    linkedin: string;
+    photoAlt: string;
   };
   footer: {
     blurb: string;
